@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private Camera mainCamera;
 
     private float lastClickTime;
-    private bool runRequested;
+    private bool runOrder;
 
     void Awake()
     {
@@ -55,11 +55,11 @@ public class PlayerController : MonoBehaviour
         // Detect dbl click
         if (Time.time - lastClickTime <= doubleClickTime)
         {
-            runRequested = true;
+            runOrder = true;
         }
         else
         {
-            runRequested = false;
+            runOrder = false;
         }
 
         lastClickTime = Time.time;
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
             {
 
                 agent.ResetPath(); // Reset pk no faci coses rares si ja es mou
-                agent.speed = runRequested ? runSpeed : walkSpeed;
+                agent.speed = runOrder ? runSpeed : walkSpeed;
                 agent.SetDestination(navHit.position);
             }
         }

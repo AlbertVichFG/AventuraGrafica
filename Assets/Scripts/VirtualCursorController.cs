@@ -10,9 +10,9 @@ public class VirtualCursorController : MonoBehaviour
 
     [Header("UI")]
     [SerializeField]
-    private RectTransform cursorRect;
+    private RectTransform cursorRect; // punter UI
     [SerializeField]
-    private Image cursorImage;
+    private Image cursorImage; 
     [SerializeField]
     private Canvas canvas;
 
@@ -119,6 +119,7 @@ public class VirtualCursorController : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(cursorPosition);
 
+        //Donar prioritat a objectes abans que terra
         //objectes interactuables
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactableLayer))
         {
