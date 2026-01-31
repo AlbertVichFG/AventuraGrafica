@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - WalkZone
+  - Envoir
+  - Talk
+  - Interact
+  - ChangeZone
   layers:
   - Default
   - TransparentFX
@@ -12,9 +16,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - WalkZone
+  - Interact
+  - CursorRaycast
   - 
   - 
   - 
