@@ -99,8 +99,8 @@ public class VirtualCursorController : MonoBehaviour
         cursorPosition.y = Mathf.Clamp(cursorPosition.y, 0, Screen.height);
     }
 
-    //update UI
 
+    //update UI
     void UpdateCursorVisual()
     {
         // Convertim coordenades de pantalla a Canvas
