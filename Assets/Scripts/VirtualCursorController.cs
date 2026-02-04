@@ -38,6 +38,7 @@ public class VirtualCursorController : MonoBehaviour
     private LayerMask interactableLayer;
     [SerializeField] 
     private LayerMask walkZoneLayer;
+    
 
 
     InputMode currentMode = InputMode.Mouse;

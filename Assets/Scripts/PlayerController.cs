@@ -16,16 +16,21 @@ public class PlayerController : MonoBehaviour
     private float runSpeed;
     [SerializeField] 
     private float doubleClickTime;
+
+
     [SerializeField] 
     private float navMeshSampleRadius;
+
+
     [SerializeField] 
     private LayerMask walkZoneLayer;
+    [SerializeField]
+    private LayerMask interactableLayer;
 
     [SerializeField] 
     private float interactionDistance;
 
-    private NPCManager targetNPC;
-    private Transform targetInteractionPoint;
+
 
 
     private NavMeshAgent agent;
@@ -33,6 +38,11 @@ public class PlayerController : MonoBehaviour
 
     private float lastClickTime;
     private bool runOrder;
+    private bool movementLocked = false;
+
+    // Target NPC
+    private NPC targetNPC;
+    private Transform targetPoint;
 
     void Awake()
     {
@@ -43,11 +53,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Si estem anant cap a un NPC, comprovem arribada
+        // Si estem caminant cap a un NPC comprovar arribada
         if (targetNPC != null)
         {
             CheckNPCArrival();
-            return; //no permetre nous clicks mentre hi anem
         }
 
         HandleInput();
@@ -64,6 +73,9 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
+        if (movementLocked)
+            return;
+
         bool click =
             Mouse.current.leftButton.wasPressedThisFrame ||
             (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
@@ -72,40 +84,70 @@ public class PlayerController : MonoBehaviour
         if (!click)
             return;
 
-        // Detect dbl click
-        if (Time.time - lastClickTime <= doubleClickTime)
-        {
-            runOrder = true;
-        }
-        else
-        {
-            runOrder = false;
-        }
-
+        // doble click run
+        runOrder = (Time.time - lastClickTime <= doubleClickTime);
         lastClickTime = Time.time;
 
-        TryMove();
+        TryMoveOrInteract();
     }
 
     //intent mov "inteligent"
-    private void TryMove()
+    private void TryMoveOrInteract()
     {
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f, walkZoneLayer))
+        // PRIORITAT NPC / Objectes interactuables
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactableLayer))
         {
-            if (NavMesh.SamplePosition(
-                hit.point,
-                out NavMeshHit navHit,
-                navMeshSampleRadius,
-                NavMesh.AllAreas))
+            if (hit.collider.CompareTag("Talk"))
             {
+                NPC npc = hit.collider.GetComponentInParent<NPC>();
 
-                agent.ResetPath(); // Reset pk no faci coses rares si ja es mou
-                agent.speed = runOrder ? runSpeed : walkSpeed;
-                agent.SetDestination(navHit.position);
+                if (npc != null)
+                {
+                    StartNPCInteraction(npc);
+                    return;
+                }
             }
         }
+
+        //MOVIMENT terra WalkZone
+        if (Physics.Raycast(ray, out hit, 100f, walkZoneLayer))
+        {
+            MoveToPoint(hit.point);
+        }
+    }
+
+    private void MoveToPoint(Vector3 point)
+    {
+        CancelNPCInteraction();
+
+        if (NavMesh.SamplePosition(point, out NavMeshHit navHit, navMeshSampleRadius, NavMesh.AllAreas))
+        {
+            agent.ResetPath();
+            agent.speed = runOrder ? runSpeed : walkSpeed;
+            agent.SetDestination(navHit.position);
+        }
+    }
+
+    private void StartNPCInteraction(NPC npc)
+    {
+        targetNPC = npc;
+
+        // Buscar InteractionPoint dins del NPC
+        targetPoint = npc.transform.Find("InteractionPoint");
+
+        if (targetPoint == null)
+        {
+            Debug.LogWarning("NPC has no InteractionPoint!");
+            targetNPC = null;
+            return;
+        }
+
+        
+        agent.ResetPath();
+        agent.speed = runOrder ? runSpeed : walkSpeed; // ajustar velocitat
+        agent.SetDestination(targetPoint.position);
     }
 
     private void CheckNPCArrival()
@@ -116,20 +158,34 @@ public class PlayerController : MonoBehaviour
         if (agent.remainingDistance <= interactionDistance)
         {
             agent.ResetPath();
+
+            // Tornar a velocitat normal
+            agent.speed = walkSpeed;
+
+            // Parlar
             targetNPC.Talk();
 
+            // Reset target
             targetNPC = null;
-            targetInteractionPoint = null;
+            targetPoint = null;
         }
     }
 
-    public void GoToNPC(NPCManager npc, Transform interactionPoint)
+    private void CancelNPCInteraction()
     {
-        targetNPC = npc;
-        targetInteractionPoint = interactionPoint;
-
-        agent.ResetPath();
-        agent.speed = walkSpeed; // parlar sempre caminant
-        agent.SetDestination(interactionPoint.position);
+        targetNPC = null;
+        targetPoint = null;
     }
+
+    public void StopMovement()
+    {
+        movementLocked = true;
+        agent.ResetPath();
+    }
+
+    public void ResumeMovement()
+    {
+        movementLocked = false;
+    }
+
 }
