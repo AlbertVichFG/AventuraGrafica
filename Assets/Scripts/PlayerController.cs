@@ -6,14 +6,27 @@ public class PlayerController : MonoBehaviour
 {
 
     [Header("References")]
-    [SerializeField] private VirtualCursorController cursor;
+    [SerializeField] 
+    private VirtualCursorController cursor;
 
     [Header("Movement")]
-    [SerializeField] private float walkSpeed;
-    [SerializeField] private float runSpeed;
-    [SerializeField] private float doubleClickTime;
-    [SerializeField] private float navMeshSampleRadius;
-    [SerializeField] private LayerMask walkZoneLayer;
+    [SerializeField] 
+    private float walkSpeed;
+    [SerializeField] 
+    private float runSpeed;
+    [SerializeField] 
+    private float doubleClickTime;
+    [SerializeField] 
+    private float navMeshSampleRadius;
+    [SerializeField] 
+    private LayerMask walkZoneLayer;
+
+    [SerializeField] 
+    private float interactionDistance;
+
+    private NPCManager targetNPC;
+    private Transform targetInteractionPoint;
+
 
     private NavMeshAgent agent;
     private Camera mainCamera;
@@ -30,6 +43,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Si estem anant cap a un NPC, comprovem arribada
+        if (targetNPC != null)
+        {
+            CheckNPCArrival();
+            return; //no permetre nous clicks mentre hi anem
+        }
+
         HandleInput();
     }
 
@@ -86,5 +106,30 @@ public class PlayerController : MonoBehaviour
                 agent.SetDestination(navHit.position);
             }
         }
+    }
+
+    private void CheckNPCArrival()
+    {
+        if (agent.pathPending)
+            return;
+
+        if (agent.remainingDistance <= interactionDistance)
+        {
+            agent.ResetPath();
+            targetNPC.Talk();
+
+            targetNPC = null;
+            targetInteractionPoint = null;
+        }
+    }
+
+    public void GoToNPC(NPCManager npc, Transform interactionPoint)
+    {
+        targetNPC = npc;
+        targetInteractionPoint = interactionPoint;
+
+        agent.ResetPath();
+        agent.speed = walkSpeed; // parlar sempre caminant
+        agent.SetDestination(interactionPoint.position);
     }
 }
