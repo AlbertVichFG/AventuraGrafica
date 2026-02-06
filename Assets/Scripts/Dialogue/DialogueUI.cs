@@ -1,70 +1,119 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DialogueUI : MonoBehaviour
 {
-    [SerializeField] 
-    private GameObject panel;
-    [SerializeField] 
-    private TMP_Text dialogueText;
-    [SerializeField] 
-    private PlayerController player;
+    [Header("UI")]
+    [SerializeField] private GameObject panel;
+    [SerializeField] private TMP_Text dialogueText;
 
-    private string[] currentLines;
-    private int index;
+    [Header("Typewriter Settings")]
+    [SerializeField] private float letterSpeed = 0.03f;
 
     public bool IsOpen { get; private set; }
+
+    private Coroutine typingCoroutine;
+    private bool isTyping;
+    private string fullLine;
+
+    // Evita que el primer click tanqui el panel instant
+    [SerializeField]
+    private bool canClose = false;
+
+    
 
     void Awake()
     {
         panel.SetActive(false);
+
+    }
+
+    private void Start()
+    {
+        
     }
 
     void Update()
     {
+        bool press =
+    Input.GetMouseButtonDown(0) ||
+    (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
+
         if (!IsOpen)
             return;
 
-        if (Input.GetMouseButtonDown(0))
+        if (press)
         {
-            NextLine();
+            //Si encara està escrivint skip
+            if (isTyping)
+            {
+                FinishTypingInstant();
+                return;
+            }
+
+            //Si ja ha acabat, permet tancar només després d’un frame
+            if (canClose)
+            {
+                Hide();
+            }
         }
     }
 
-    public void StartDialogue(string[] lines)
+    // Mostrar una frase amb efecte
+    public void ShowLine(string line)
     {
-        if (lines == null || lines.Length == 0)
-            return;
-
-        currentLines = lines;
-        index = 0;
-
         IsOpen = true;
         panel.SetActive(true);
 
-        dialogueText.text = currentLines[index];
+        // Reset estat
+        canClose = false;
 
-        // Aturem el temps de moviment del player
-        player.StopMovement();
+        // Cancel·lar typing anterior
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        fullLine = line;
+        typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
-    private void NextLine()
+    // Coroutine lletra per lletra
+    private IEnumerator TypeLine(string line)
     {
-        index++;
+        isTyping = true;
+        dialogueText.text = "";
 
-        if (index >= currentLines.Length)
+        foreach (char letter in line)
         {
-            EndDialogue();
-            return;
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(letterSpeed);
         }
 
-        dialogueText.text = currentLines[index];
+        isTyping = false;
+
+        // Esperar 1 frame abans de permetre tancar
+        yield return null;
+        canClose = true;
     }
 
-    private void EndDialogue()
+    // Click mentre escriu mostrar tot instant
+    private void FinishTypingInstant()
+    {
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        dialogueText.text = fullLine;
+        isTyping = false;
+
+        // Permetre tancar en el següent click
+        canClose = true;
+    }
+
+    // Tancar panel
+    public void Hide()
     {
         IsOpen = false;
         panel.SetActive(false);
-        player.ResumeMovement();
     }
 }

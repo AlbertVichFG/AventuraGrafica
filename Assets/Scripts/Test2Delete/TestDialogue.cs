@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TestDialogue : MonoBehaviour
 {
-    [SerializeField] private DialogueUI dialogueUI;
+   /* [SerializeField] private DialogueUI dialogueUI;
 
     void Start()
     {
@@ -14,5 +14,5 @@ public class TestDialogue : MonoBehaviour
             "Això és una prova.",
             "Si veus això, la UI funciona."
         });
-    }
+    }*/
 }

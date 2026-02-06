@@ -15,11 +15,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float runSpeed;
     [SerializeField] 
-    private float doubleClickTime;
+    private float doubleClickTime; 
 
 
     [SerializeField] 
-    private float navMeshSampleRadius;
+    private float navMeshSampleRadius; //evitar soritr fora navmesh
 
 
     [SerializeField] 
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     private Camera mainCamera;
 
     private float lastClickTime;
-    private bool runOrder;
+    private bool runOrder; 
     private bool movementLocked = false;
 
     // Target NPC
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
 
-        // PRIORITAT NPC / Objectes interactuables
+        // PRIORITAT NPC Objectes interactuables
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactableLayer))
         {
             if (hit.collider.CompareTag("Talk"))
@@ -121,6 +121,8 @@ public class PlayerController : MonoBehaviour
     private void MoveToPoint(Vector3 point)
     {
         CancelNPCInteraction();
+        
+
 
         if (NavMesh.SamplePosition(point, out NavMeshHit navHit, navMeshSampleRadius, NavMesh.AllAreas))
         {
@@ -130,7 +132,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void StartNPCInteraction(NPC npc)
+    private void StartNPCInteraction(NPC npc) 
     {
         targetNPC = npc;
 
