@@ -13,26 +13,40 @@ public class NPC : MonoBehaviour
     [SerializeField] 
     private DialoguePhase[] phases;
 
-    [Header("Reference")]
-    [SerializeField]
+    [Header("References")]
+    [SerializeField] 
     private DialogueUI dialogueUI;
-    
 
+    // Guarda quin índex toca per cada fase
+    private int[] phaseIndexes;
 
+    void Awake()
+    {
+        phaseIndexes = new int[phases.Length]; 
+    }
 
     public void Talk()
     {
-        int phase = GameState.Instance.CurrentPhase;
+        int phase = GameState.Instance.CurrentPhase; 
 
-        if (phase < 0 || phase >= phases.Length)
+        if (phase < 0 || phase >= phases.Length) 
             return;
 
-        dialogueUI.StartDialogue(phases[phase].lines);
-    }
+        string[] lines = phases[phase].lines; 
 
-    void OnMouseDown()
-    {
-        Debug.Log("NPC CLICKED!");
-        Talk();
+        if (lines.Length == 0)
+            return;
+
+        int index = phaseIndexes[phase]; 
+
+        // Mostrar frase actual
+        dialogueUI.ShowLine(lines[index]); 
+
+        // Avançar per la seguent vegada
+        phaseIndexes[phase]++; 
+
+        // Imprimir ultima frase quan s'acaba
+        if (phaseIndexes[phase] >= lines.Length) 
+            phaseIndexes[phase] = lines.Length - 1; 
     }
 }

@@ -390,10 +390,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - Hola
+    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry''s standard '
     - Alvaro
+    - Necessito ajuda en aquest projecte
   - lines:
-    - Hola
+    - "Molt b\xE9"
   dialogueUI: {fileID: 923196666}
 --- !u!1 &324649858
 GameObject:
@@ -1094,7 +1096,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
   panel: {fileID: 523136100}
   dialogueText: {fileID: 2057999126}
-  player: {fileID: 0}
+  letterSpeed: 0.03
+  canClose: 0
 --- !u!114 &923196667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1107,7 +1110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26453d61f67b1b148b9922701b9a61f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestDialogue
-  dialogueUI: {fileID: 923196666}
 --- !u!1 &964457818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,7 +2207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hola Alvaro
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
