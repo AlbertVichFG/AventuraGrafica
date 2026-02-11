@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameData
 {
 
-    public List<GameObject> objetos = new List<GameObject>();
+    public List<Objeto> objetos = new List<Objeto>();
 
     [SerializeField]
     private float playerLife;
