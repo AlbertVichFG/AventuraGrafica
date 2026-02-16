@@ -4,11 +4,11 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
-    private List<GameObject> objetos;
+    [SerializeField] private List<GameObject> objetos;
 
     private void Start()
     {
-        objetos = GameManager.instance.GetGameData.objetos;
+        //objetos = GameManager.instance.GetGameData.objetos;
     }
 
     private void Awake()
@@ -22,7 +22,10 @@ public class Inventory : MonoBehaviour
     public void AddObjeto(GameObject obj)
     {
         if (!objetos.Contains(obj))
+        {
             objetos.Add(obj);
+            obj.SetActive(false);
+        }        
     }
 
     public void RemoveObjeto(GameObject obj)
