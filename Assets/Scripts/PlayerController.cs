@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private NavMeshAgent agent;
     private Camera mainCamera;
+    private Animator animator;
 
     private float lastClickTime;
     private bool runOrder; 
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         mainCamera = Camera.main;
         agent.speed = walkSpeed;
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
         }
 
         HandleInput();
+        HandleAnimations();
     }
 
     void LateUpdate()
@@ -121,14 +124,17 @@ public class PlayerController : MonoBehaviour
     private void MoveToPoint(Vector3 point)
     {
         CancelNPCInteraction();
+
+        animator.SetBool("IsWalking", true);
         
-
-
         if (NavMesh.SamplePosition(point, out NavMeshHit navHit, navMeshSampleRadius, NavMesh.AllAreas))
         {
             agent.ResetPath();
             agent.speed = runOrder ? runSpeed : walkSpeed;
             agent.SetDestination(navHit.position);
+
+            animator.SetBool("IsWalking", !runOrder);
+            animator.SetBool("IsRuning", runOrder);
         }
     }
 
@@ -188,6 +194,19 @@ public class PlayerController : MonoBehaviour
     public void ResumeMovement()
     {
         movementLocked = false;
+    }
+
+    // Animacions
+    private void HandleAnimations()
+    {
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+            {
+                animator.SetBool("IsWalking", false);
+                animator.SetBool("IsRuning", false);
+            }
+        }
     }
 
 }
