@@ -37,8 +37,7 @@ public class DialogueUI : MonoBehaviour
 
     void Update()
     {
-        bool press =
-    Input.GetMouseButtonDown(0) ||
+        bool press = Input.GetMouseButtonDown(0) ||
     (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
 
         if (!IsOpen)
@@ -115,5 +114,8 @@ public class DialogueUI : MonoBehaviour
     {
         IsOpen = false;
         panel.SetActive(false);
+
+        PlayerController player = FindAnyObjectByType<PlayerController>();
+        player.UnlockMovement();
     }
 }

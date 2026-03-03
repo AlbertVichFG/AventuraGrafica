@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class Objeto : MonoBehaviour
@@ -21,10 +19,12 @@ public class Objeto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inRange == true && Input.GetKeyDown(KeyCode.E))
+       if (inRange == true && Input.GetKeyDown(KeyCode.E))
         {
             Inventory.Instance.AddObjeto(gameObject);
         }
+
+
     }
 
     private void OnTriggerEnter(Collider other)

@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float runSpeed;
     [SerializeField] 
-    private float doubleClickTime; 
+    private float doubleClickTime;
+    [SerializeField]
+    private bool movemntLockedOnDialogue = false; // bloquejar moviment durant dialogo
 
 
     [SerializeField] 
@@ -163,12 +165,16 @@ public class PlayerController : MonoBehaviour
         if (agent.pathPending)
             return;
 
-        if (agent.remainingDistance <= interactionDistance)
+        if (!agent.hasPath || agent.remainingDistance <= interactionDistance)
         {
             agent.ResetPath();
-
             // Tornar a velocitat normal
             agent.speed = walkSpeed;
+
+            //Player a interacPoint
+         //   transform.position = targetPoint.position;
+            transform.LookAt(targetNPC.transform); // Mirar al NPC
+
 
             // Parlar
             targetNPC.Talk();
@@ -191,7 +197,7 @@ public class PlayerController : MonoBehaviour
         agent.ResetPath();
     }
 
-    public void ResumeMovement()
+    public void UnlockMovement()
     {
         movementLocked = false;
     }
@@ -199,6 +205,30 @@ public class PlayerController : MonoBehaviour
     // Animacions
     private void HandleAnimations()
     {
+        float speed = agent.velocity.magnitude;
+
+        if (speed > 0.1f)
+        {
+            if (agent.speed == runSpeed)
+            {
+                animator.SetBool("IsWalking", false);
+                animator.SetBool("IsRuning", true);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", true);
+                animator.SetBool("IsRuning", false);
+            }
+        }
+        else
+        {
+
+            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsRuning", false);
+        }
+
+
+        /*
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
@@ -206,7 +236,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("IsWalking", false);
                 animator.SetBool("IsRuning", false);
             }
-        }
+        }*/
     }
 
 }

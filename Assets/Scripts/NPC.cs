@@ -39,6 +39,11 @@ public class NPC : MonoBehaviour
 
         int index = phaseIndexes[phase]; 
 
+
+        //Bloquejar mov abans dialeg
+        PlayerController player = FindAnyObjectByType<PlayerController>();
+        player.StopMovement();
+
         // Mostrar frase actual
         dialogueUI.ShowLine(lines[index]); 
 
