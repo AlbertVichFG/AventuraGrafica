@@ -13320,7 +13320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1601323363808860, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1601323363808860, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_IsActive
@@ -13328,7 +13328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1601323363808860, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_TagString
-      value: WalkZone
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalScale.x
@@ -15982,7 +15982,7 @@ GameObject:
   - component: {fileID: 1396038943}
   - component: {fileID: 1396038942}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
