@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.InputSystem.LowLevel;
 
 public class VirtualCursorController : MonoBehaviour
 {
@@ -76,6 +77,10 @@ public class VirtualCursorController : MonoBehaviour
         {
             currentMode = InputMode.Gamepad;
         }
+
+        //Sinconitzar posició cursor real
+      //  Mouse.current.WarpCursorPosition(cursorPosition);
+       // InputState.Change(Mouse.current.position, cursorPosition);
     }
 
 

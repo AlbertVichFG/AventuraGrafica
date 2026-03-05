@@ -1,6 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -85,11 +88,13 @@ public class PlayerController : MonoBehaviour
             Mouse.current.leftButton.wasPressedThisFrame ||
             (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
 
-        //si no click res
         if (!click)
             return;
 
-        // doble click run
+        // intentar click UI primer
+        if (TryClickUI())
+            return;
+
         runOrder = (Time.time - lastClickTime <= doubleClickTime);
         lastClickTime = Time.time;
 
@@ -100,6 +105,17 @@ public class PlayerController : MonoBehaviour
     private void TryMoveOrInteract()
     {
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
+
+        // Si tenim un objecte seleccionat de l'inventari
+        if (InventoryManager.instance.SelectedItem != null)
+        {
+            Debug.Log("Using item: " + InventoryManager.instance.SelectedItem.itemName);
+
+            InventoryManager.instance.ClearSelection();
+            return;
+        }
+
+
 
         // PRIORITAT NPC Objectes interactuables
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactableLayer))
@@ -113,6 +129,14 @@ public class PlayerController : MonoBehaviour
                     StartNPCInteraction(npc);
                     return;
                 }
+            }
+
+            ItemPickuo pickup = hit.collider.GetComponent<ItemPickuo>();
+
+            if (pickup != null)
+            {
+                pickup.Interact();
+                return;
             }
         }
 
@@ -227,16 +251,35 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsRuning", false);
         }
 
-
-        /*
-        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-        {
-            if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
-            {
-                animator.SetBool("IsWalking", false);
-                animator.SetBool("IsRuning", false);
-            }
-        }*/
     }
+
+
+    bool TryClickUI()
+    {
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = cursor.GetCursorScreenPosition();
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        Debug.Log("UI elements hit: " + results.Count);
+
+        foreach (var r in results)
+        {
+            Button button = r.gameObject.GetComponent<Button>();
+
+            if (button != null)
+            {
+                Debug.Log("CLICK UI BUTTON: " + r.gameObject.name);
+
+                button.onClick.Invoke();
+
+                return true; //això evita que el player torni a clicar
+            }
+        }
+
+        return false;
+    }
+
 
 }

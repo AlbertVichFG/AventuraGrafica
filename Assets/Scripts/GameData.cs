@@ -8,24 +8,15 @@ public class GameData
 
     public List<Objeto> objetos = new List<Objeto>();
 
-    [SerializeField]
-    private float playerLife;
-    [SerializeField]
-    private float playerMaxLife;
+    public List<ItemData> inventoryItems;
+
+    public bool doorUnlocked;
+    public bool talkedToGuard;
+
     [SerializeField]
     private int saveScene;
 
-    public float PlayerLife
-    {
-        get { return playerLife; }
-        set { playerLife = value; }
-    }
 
-    public float PlayerMaxLife
-    {
-        get { return playerMaxLife; }
-        set { playerMaxLife = value; }
-    }
 
     public int SaveScene
     {
