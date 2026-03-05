@@ -40,8 +40,5 @@ public class Inventory : MonoBehaviour
         return objetos.Contains(obj);
     }
 
-    public static implicit operator Inventory(InventoryManager v)
-    {
-        throw new NotImplementedException();
-    }
+
 }

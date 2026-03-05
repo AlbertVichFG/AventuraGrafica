@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     private bool movemntLockedOnDialogue = false; // bloquejar moviment durant dialogo
 
 
+    [Header("Item")]
+    private PickupItem targetPickup;
+
     [SerializeField] 
     private float navMeshSampleRadius; //evitar soritr fora navmesh
 
@@ -66,6 +69,11 @@ public class PlayerController : MonoBehaviour
             CheckNPCArrival();
         }
 
+        if (targetPickup != null)
+        {
+            CheckPickupArrival();
+        }
+
         HandleInput();
         HandleAnimations();
     }
@@ -81,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
-        if (movementLocked)
+        if (movementLocked || InventoryManager.instance.HasItemInHand())
             return;
 
         bool click =
@@ -91,9 +99,10 @@ public class PlayerController : MonoBehaviour
         if (!click)
             return;
 
-        // intentar click UI primer
-        if (TryClickUI())
-            return;
+        // si tenim item al cursor i cliquem fora inventari
+        InventoryManager.instance.CancelItemUse();
+
+
 
         runOrder = (Time.time - lastClickTime <= doubleClickTime);
         lastClickTime = Time.time;
@@ -106,14 +115,6 @@ public class PlayerController : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
 
-        // Si tenim un objecte seleccionat de l'inventari
-        if (InventoryManager.instance.SelectedItem != null)
-        {
-            Debug.Log("Using item: " + InventoryManager.instance.SelectedItem.itemName);
-
-            InventoryManager.instance.ClearSelection();
-            return;
-        }
 
 
 
@@ -131,18 +132,26 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            ItemPickuo pickup = hit.collider.GetComponent<ItemPickuo>();
+            // PICKUP ITEM
+            PickupItem pickup = hit.collider.GetComponentInParent<PickupItem>();
 
             if (pickup != null)
             {
-                pickup.Interact();
+                StartPickupInteraction(pickup);
                 return;
             }
+
         }
 
         //MOVIMENT terra WalkZone
         if (Physics.Raycast(ray, out hit, 100f, walkZoneLayer))
         {
+            // si tenim item al cursor, cancel·lar
+            if (InventoryManager.instance.HasItemInHand())
+            {
+                InventoryManager.instance.ReturnItemToInventory();
+                return;
+            }
             MoveToPoint(hit.point);
         }
     }
@@ -150,6 +159,7 @@ public class PlayerController : MonoBehaviour
     private void MoveToPoint(Vector3 point)
     {
         CancelNPCInteraction();
+        targetPickup = null;
 
         animator.SetBool("IsWalking", true);
         
@@ -226,6 +236,46 @@ public class PlayerController : MonoBehaviour
         movementLocked = false;
     }
 
+
+    void StartPickupInteraction(PickupItem pickup)
+    {
+        targetPickup = pickup;
+
+        targetPoint = pickup.transform.Find("InteractionPoint");
+
+        if (targetPoint == null)
+        {
+            targetPoint = pickup.transform;
+        }
+
+        agent.ResetPath();
+        agent.speed = walkSpeed;
+        agent.SetDestination(targetPoint.position);
+    }
+
+
+    void CheckPickupArrival()
+    {
+        if (agent.pathPending)
+            return;
+
+        if (!agent.hasPath || agent.remainingDistance <= interactionDistance)
+        {
+            agent.ResetPath();
+
+            transform.LookAt(targetPickup.transform);
+
+            animator.SetTrigger("PickItem");
+
+            targetPickup.Pick();
+
+            targetPickup = null;
+            targetPoint = null;
+        }
+    }
+
+
+
     // Animacions
     private void HandleAnimations()
     {
@@ -254,32 +304,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    bool TryClickUI()
-    {
-        PointerEventData pointerData = new PointerEventData(EventSystem.current);
-        pointerData.position = cursor.GetCursorScreenPosition();
 
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerData, results);
-
-        Debug.Log("UI elements hit: " + results.Count);
-
-        foreach (var r in results)
-        {
-            Button button = r.gameObject.GetComponent<Button>();
-
-            if (button != null)
-            {
-                Debug.Log("CLICK UI BUTTON: " + r.gameObject.name);
-
-                button.onClick.Invoke();
-
-                return true; //això evita que el player torni a clicar
-            }
-        }
-
-        return false;
-    }
 
 
 }
