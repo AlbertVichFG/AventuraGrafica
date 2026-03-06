@@ -8,7 +8,7 @@ public class GameData
 
     public List<Objeto> objetos = new List<Objeto>();
 
-    public List<ItemData> inventoryItems;
+
 
     public bool doorUnlocked;
     public bool talkedToGuard;
