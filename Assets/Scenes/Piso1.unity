@@ -679,12 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - "Podr\xEDa hacer algo con esto, pero necesito una herramienta."
   dialogueUI: {fileID: 0}
 --- !u!1 &67559466
 GameObject:
@@ -1613,12 +1608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - "Geppetto tiene por toda la cosa una gran variedad de m\xE1quinas. No s\xE9
+      para qu\xE9 servir\xE1n todas."
   dialogueUI: {fileID: 0}
 --- !u!1001 &114485984
 PrefabInstance:
@@ -2259,12 +2250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - Puedo ver que hay algo en el fondo, pero no pienso meter la mano para averiguarlo.
   dialogueUI: {fileID: 0}
 --- !u!1001 &171714751
 PrefabInstance:
@@ -3581,10 +3567,6 @@ MonoBehaviour:
   - lines:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
   dialogueUI: {fileID: 0}
 --- !u!1001 &300919628
 PrefabInstance:
@@ -3820,12 +3802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - "Geppetto y su nieta peque\xF1a. Parece ser que en esta foto celebran su cumplea\xF1os."
   dialogueUI: {fileID: 0}
 --- !u!1 &309058500
 GameObject:
@@ -8481,12 +8458,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
+    - "Est\xE1 cerrada y bloqueada por tablones de madera. Necesito una llave y alguna
+      herramienta para abrirla.\r\n"
+    - 'Necesito una llave y alguna herramienta para abrirla.
+
+'
   - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - "Sigue bloqueada, deber\xEDa buscar el modo de quitar los tablones de madera.\r\n"
   dialogueUI: {fileID: 0}
 --- !u!1001 &626860598
 PrefabInstance:
@@ -8933,12 +8911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - "Si abro el armario, se me caer\xE1 todo encima.\r\n\r\n"
   dialogueUI: {fileID: 0}
 --- !u!1001 &649185328
 PrefabInstance:
@@ -10738,9 +10711,6 @@ MonoBehaviour:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry''s standard '
     - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
   dialogueUI: {fileID: 0}
 --- !u!1 &791133769
 GameObject:
@@ -18219,10 +18189,6 @@ MonoBehaviour:
   - lines:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
   dialogueUI: {fileID: 0}
 --- !u!1001 &1322113610
 PrefabInstance:
@@ -18682,12 +18648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
-  - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   dialogueUI: {fileID: 0}
 --- !u!1001 &1381658323
 PrefabInstance:
@@ -23585,12 +23546,16 @@ PrefabInstance:
       value: IntWoodFloor01 (28)
       objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1812
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.33
       objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.42
+      value: 2.534
       objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalPosition.z

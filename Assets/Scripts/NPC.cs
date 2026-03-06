@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour
     [SerializeField] 
     private DialogueUI dialogueUI;
 
-    // Guarda quin índex toca per cada fase
+    // Guarda quin ï¿½ndex toca per cada fase
     private int[] phaseIndexes;
 
     void Awake()
@@ -47,7 +47,7 @@ public class NPC : MonoBehaviour
         // Mostrar frase actual
         dialogueUI.ShowLine(lines[index]); 
 
-        // Avançar per la seguent vegada
+        // Avanï¿½ar per la seguent vegada
         phaseIndexes[phase]++; 
 
         // Imprimir ultima frase quan s'acaba
