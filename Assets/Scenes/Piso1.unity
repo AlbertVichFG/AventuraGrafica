@@ -640,9 +640,9 @@ GameObject:
   m_Component:
   - component: {fileID: 59745966}
   - component: {fileID: 59745967}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Tuber\xEDas"
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1348,6 +1348,138 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
   m_PrefabInstance: {fileID: 96408270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &100515799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 100515805}
+  - component: {fileID: 100515804}
+  - component: {fileID: 100515803}
+  - component: {fileID: 100515802}
+  - component: {fileID: 100515801}
+  - component: {fileID: 100515800}
+  m_Layer: 5
+  m_Name: DialogueCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &100515800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100515799}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26453d61f67b1b148b9922701b9a61f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestDialogue
+--- !u!114 &100515801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100515799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe282c42f7a0d24babe77bd244c25dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
+  panel: {fileID: 972014872}
+  dialogueText: {fileID: 404912865}
+  letterSpeed: 0.03
+  canClose: 0
+--- !u!114 &100515802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100515799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &100515803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100515799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &100515804
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100515799}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
+--- !u!224 &100515805
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100515799}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 972014873}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &102178593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,6 +1629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plank2
       objectReference: {fileID: 0}
+    - target: {fileID: 481893572996699409, guid: 6a4c8f4dced1e5a4fa60caab0a708ca0, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2487205976891984208, guid: 6a4c8f4dced1e5a4fa60caab0a708ca0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46600747
@@ -1570,9 +1706,9 @@ GameObject:
   m_Component:
   - component: {fileID: 113027357}
   - component: {fileID: 113027358}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MaquinaRara
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1991,7 +2127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 149096654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2212,9 +2348,9 @@ GameObject:
   m_Component:
   - component: {fileID: 166458236}
   - component: {fileID: 166458237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Ba\xF1era"
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3364,7 +3500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 277180438}
   - component: {fileID: 277180439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3664,9 +3800,9 @@ GameObject:
   m_Component:
   - component: {fileID: 293949545}
   - component: {fileID: 293949546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Nota2.1
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3901,9 +4037,9 @@ GameObject:
   m_Component:
   - component: {fileID: 308241294}
   - component: {fileID: 308241295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FotoGeppetto
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4066,6 +4202,10 @@ PrefabInstance:
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_Name
       value: DoorBIBLIO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
@@ -4936,7 +5076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359663135}
   - component: {fileID: 359663136}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5607,6 +5747,143 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425874899348998, guid: e3b08ca4cbd32534ea8d0b5e519709e2, type: 3}
   m_PrefabInstance: {fileID: 398937451}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &404912864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404912867}
+  - component: {fileID: 404912866}
+  - component: {fileID: 404912865}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &404912865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404912864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: ...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 48.5
+  m_fontSizeBase: 48.5
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &404912866
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404912864}
+  m_CullTransparentMesh: 1
+--- !u!224 &404912867
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404912864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 972014873}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 51.69406}
+  m_SizeDelta: {x: 1618.9838, y: 211.3724}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &411049923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5616,7 +5893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 411049924}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5647,7 +5924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415830322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6707,7 +6984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511628563}
   - component: {fileID: 511628564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6909,6 +7186,10 @@ PrefabInstance:
     - target: {fileID: 481893572996699409, guid: 6a4c8f4dced1e5a4fa60caab0a708ca0, type: 3}
       propertyPath: m_Name
       value: Plank2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 481893572996699409, guid: 6a4c8f4dced1e5a4fa60caab0a708ca0, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2487205976891984208, guid: 6a4c8f4dced1e5a4fa60caab0a708ca0, type: 3}
       propertyPath: m_LocalScale.x
@@ -8558,9 +8839,9 @@ GameObject:
   m_Component:
   - component: {fileID: 621635218}
   - component: {fileID: 621635219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PuertaBiblio
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9011,9 +9292,9 @@ GameObject:
   m_Component:
   - component: {fileID: 647757369}
   - component: {fileID: 647757370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Armario
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9253,7 +9534,7 @@ GameObject:
   - component: {fileID: 656286398}
   - component: {fileID: 656286397}
   - component: {fileID: 656286396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BLOOD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9458,6 +9739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhotoGepetto
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4eb05372a7e6d4a45a2c529ebf64f354, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9551,7 +9836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671399132}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10808,9 +11093,9 @@ GameObject:
   m_Component:
   - component: {fileID: 789396678}
   - component: {fileID: 789396679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\u201CLas Aventuras de Pinocho\u201D"
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11385,9 +11670,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 166458236}
     m_Modifications:
+    - target: {fileID: 1093286597711778, guid: a401c43a1bdde404d89a6bef17ff2c0d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405864455095438, guid: a401c43a1bdde404d89a6bef17ff2c0d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1784596945529646, guid: a401c43a1bdde404d89a6bef17ff2c0d, type: 3}
       propertyPath: m_Name
       value: "Ba\xF1eraSangre"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784596945529646, guid: a401c43a1bdde404d89a6bef17ff2c0d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847114073889304, guid: a401c43a1bdde404d89a6bef17ff2c0d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4539977021472082, guid: a401c43a1bdde404d89a6bef17ff2c0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -12491,6 +12792,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.94
       objectReference: {fileID: 0}
+    - target: {fileID: -4543992567865733544, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -4320508613604554920, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.13
@@ -12503,14 +12808,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.466
       objectReference: {fileID: 0}
+    - target: {fileID: -481850390652258567, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
       propertyPath: m_Name
       value: "Tuber\xEDa (llave inglesa)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1208181404460846958, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 71a42e1801b5cfa4690f8c3d4152295d, type: 2}
+    - target: {fileID: 5668888421862548653, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5697168699697645565, guid: 4144789f42717c545a472fc582d2d6de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12531,7 +12852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 895299854}
   - component: {fileID: 895299855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13491,7 +13812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951155831}
   - component: {fileID: 951155832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13543,7 +13864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 951234725}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13849,6 +14170,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4269697874028422, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
   m_PrefabInstance: {fileID: 970761748}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &972014872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 972014873}
+  - component: {fileID: 972014875}
+  - component: {fileID: 972014874}
+  m_Layer: 5
+  m_Name: TextSpace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &972014873
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972014872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 404912867}
+  m_Father: {fileID: 100515805}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 40}
+  m_SizeDelta: {x: 1738.7482, y: 292.5305}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &972014874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972014872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7882353}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &972014875
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972014872}
+  m_CullTransparentMesh: 1
 --- !u!1001 &973084108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15607,6 +16004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alembic02
       objectReference: {fileID: 0}
+    - target: {fileID: 1506063703518766, guid: 6e9e4a7b4dba70144b6fb564214b013d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4058589881855304, guid: 6e9e4a7b4dba70144b6fb564214b013d, type: 3}
       propertyPath: m_LocalScale.x
       value: 24.620108
@@ -15679,7 +16080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116834968}
   - component: {fileID: 1116834969}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15859,7 +16260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1128214283}
   - component: {fileID: 1128214284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16126,7 +16527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157180055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16300,7 +16701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1172358923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16419,6 +16820,34 @@ PrefabInstance:
     - target: {fileID: 1017316775514278, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
       propertyPath: m_Name
       value: ArmarioGrande
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017316775514278, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109148902398938, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286915740400614, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438529333595508, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598770309157150, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752013246668912, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847485280512392, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4867953396367456, guid: d13fce7de3764704598f3d1300a7586c, type: 3}
       propertyPath: m_LocalScale.x
@@ -17419,6 +17848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (ALMACEN)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.246829
@@ -17611,6 +18044,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0745b91e23ffeb342bb19ba5c4b4f57d, type: 3}
       propertyPath: m_Name
       value: Doll
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0745b91e23ffeb342bb19ba5c4b4f57d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 0745b91e23ffeb342bb19ba5c4b4f57d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17966,7 +18407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282761182}
   - component: {fileID: 1282761183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18303,9 +18744,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1313799894}
   - component: {fileID: 1313799895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Nota2.2
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18503,7 +18944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1331131142}
   - component: {fileID: 1331131143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18555,7 +18996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1337045614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18764,9 +19205,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1355093887}
   - component: {fileID: 1355093888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PuertaAlmacen
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19100,7 +19541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415043706}
   - component: {fileID: 1415043707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19425,7 +19866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1440904596}
   - component: {fileID: 1440904597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20611,7 +21052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536906063}
   - component: {fileID: 1536906064}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TalkTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20873,7 +21314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553872439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20966,7 +21407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575100682}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21115,7 +21556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1578640531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23601,7 +24042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1786535700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26355,7 +26796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021182889}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27020,9 +27461,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2073963246}
   - component: {fileID: 2073963247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Npc1
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27430,9 +27871,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2107196540}
   - component: {fileID: 2107196541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Nota2.3
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27783,6 +28224,10 @@ PrefabInstance:
     - target: {fileID: 173732, guid: 147f183af15640289aa7154f0ea2de5c, type: 3}
       propertyPath: m_Name
       value: Book_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 173732, guid: 147f183af15640289aa7154f0ea2de5c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 473732, guid: 147f183af15640289aa7154f0ea2de5c, type: 3}
       propertyPath: m_LocalScale.x
@@ -28216,6 +28661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nota2.3
       objectReference: {fileID: 0}
+    - target: {fileID: 6139708936678318609, guid: 9dd41213109a5834bbf4f4d6507772cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6809284388676761771, guid: 9dd41213109a5834bbf4f4d6507772cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5381725
@@ -28267,6 +28716,10 @@ PrefabInstance:
     - target: {fileID: 6809284388676761771, guid: 9dd41213109a5834bbf4f4d6507772cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942980140674005586, guid: 9dd41213109a5834bbf4f4d6507772cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28343,9 +28796,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1313799894}
     m_Modifications:
+    - target: {fileID: 311326175251056368, guid: 367e213fc4427ed4ab1c01edae379304, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3547928968259264179, guid: 367e213fc4427ed4ab1c01edae379304, type: 3}
       propertyPath: m_Name
       value: Nota2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547928968259264179, guid: 367e213fc4427ed4ab1c01edae379304, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4212860396737463305, guid: 367e213fc4427ed4ab1c01edae379304, type: 3}
       propertyPath: m_LocalScale.x
@@ -28531,6 +28992,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293949545}
     m_Modifications:
+    - target: {fileID: 5723183482183722828, guid: 736b27513b9002642b89ed30d737dfe6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8163283097462662581, guid: 736b27513b9002642b89ed30d737dfe6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5381724
@@ -28586,6 +29051,10 @@ PrefabInstance:
     - target: {fileID: 8791622500061953807, guid: 736b27513b9002642b89ed30d737dfe6, type: 3}
       propertyPath: m_Name
       value: Nota2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791622500061953807, guid: 736b27513b9002642b89ed30d737dfe6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28737,3 +29206,4 @@ SceneRoots:
   - {fileID: 1161041478}
   - {fileID: 1902716192}
   - {fileID: 1962711512}
+  - {fileID: 100515805}
