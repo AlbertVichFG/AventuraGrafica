@@ -10,48 +10,50 @@ public class NPC : MonoBehaviour
     }
 
     [Header("Dialogue per Phase")]
-    [SerializeField] 
+    [SerializeField]
     private DialoguePhase[] phases;
 
     [Header("References")]
-    [SerializeField] 
+    [SerializeField]
     private DialogueUI dialogueUI;
 
-    // Guarda quin �ndex toca per cada fase
+    [SerializeField]
+    private PlayerController player; 
+
     private int[] phaseIndexes;
 
     void Awake()
     {
-        phaseIndexes = new int[phases.Length]; 
+        phaseIndexes = new int[phases.Length];
+
+        player = FindFirstObjectByType<PlayerController>();
     }
 
     public void Talk()
     {
-        int phase = GameState.Instance.CurrentPhase; 
+        int phase = GameState.Instance.CurrentPhase;
 
-        if (phase < 0 || phase >= phases.Length) 
+        if (phase < 0 || phase >= phases.Length)
             return;
 
-        string[] lines = phases[phase].lines; 
+        string[] lines = phases[phase].lines;
 
         if (lines.Length == 0)
             return;
 
-        int index = phaseIndexes[phase]; 
+        int index = phaseIndexes[phase];
 
-
-        //Bloquejar mov abans dialeg
-        PlayerController player = FindAnyObjectByType<PlayerController>();
+        // bloquejar moviment
         player.StopMovement();
 
-        // Mostrar frase actual
-        dialogueUI.ShowLine(lines[index]); 
+        dialogueUI.SetPlayer(player);
 
-        // Avan�ar per la seguent vegada
-        phaseIndexes[phase]++; 
+        // mostrar frase
+        dialogueUI.ShowLine(lines[index]);
 
-        // Imprimir ultima frase quan s'acaba
-        if (phaseIndexes[phase] >= lines.Length) 
-            phaseIndexes[phase] = lines.Length - 1; 
+        phaseIndexes[phase]++;
+
+        if (phaseIndexes[phase] >= lines.Length)
+            phaseIndexes[phase] = lines.Length - 1;
     }
 }

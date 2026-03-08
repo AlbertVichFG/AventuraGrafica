@@ -410,9 +410,10 @@ GameObject:
   - component: {fileID: 27149375}
   - component: {fileID: 27149374}
   - component: {fileID: 27149373}
-  m_Layer: 0
+  - component: {fileID: 27149376}
+  m_Layer: 7
   m_Name: Pila1 (1)
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,6 +490,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 383845802}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -51.193}
+--- !u!65 &27149376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27149372}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.024757717, y: 0.034823664, z: 0.02470545}
+  m_Center: {x: -0.02740209, y: -0.03359063, z: -0.0016827976}
 --- !u!1001 &27958580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,6 +583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35200164}
   - component: {fileID: 35200165}
+  - component: {fileID: 35200166}
   m_Layer: 7
   m_Name: LibroGepetto
   m_TagString: Talk
@@ -601,6 +624,28 @@ MonoBehaviour:
   - lines:
     - Un manual sencillo. Puede que lo usara como referencia para crearnos.
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &35200166
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35200163}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &36592177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1725,6 +1770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136507676}
   - component: {fileID: 136507677}
+  - component: {fileID: 136507678}
   m_Layer: 7
   m_Name: SillaInicio
   m_TagString: Talk
@@ -1766,6 +1812,28 @@ MonoBehaviour:
   - lines:
     - "Creo que llevaba demasiado tiempo all\xED."
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &136507678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136507675}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &142646863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3659,6 +3727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279389629}
   - component: {fileID: 279389630}
+  - component: {fileID: 279389631}
   m_Layer: 7
   m_Name: Armario
   m_TagString: Talk
@@ -3700,6 +3769,28 @@ MonoBehaviour:
   - lines:
     - Necesito algo para pasar al otro lado.
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &279389631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279389628}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &303154803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3772,6 +3863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308857916}
   - component: {fileID: 308857917}
+  - component: {fileID: 308857918}
   m_Layer: 7
   m_Name: Nota2
   m_TagString: Talk
@@ -3813,6 +3905,28 @@ MonoBehaviour:
   - lines:
     - "\u201CCreo que por fin logr\xE9 crear el prototipo ideal.\""
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &308857918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308857915}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &310078003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4409,10 +4523,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8791622500061953807, guid: 736b27513b9002642b89ed30d737dfe6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1201808055}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 736b27513b9002642b89ed30d737dfe6, type: 3}
 --- !u!4 &340480962 stripped
 Transform:
@@ -5984,9 +6095,10 @@ GameObject:
   - component: {fileID: 450185936}
   - component: {fileID: 450185935}
   - component: {fileID: 450185934}
-  m_Layer: 0
+  - component: {fileID: 450185937}
+  m_Layer: 7
   m_Name: Pila1 (2)
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6063,6 +6175,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 383845802}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 33.456}
+--- !u!65 &450185937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450185933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02475772, y: 0.03482367, z: 0.024705447}
+  m_Center: {x: -0.027403528, y: -0.03359159, z: -0.0016830063}
 --- !u!1001 &459747022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6781,7 +6914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &508837186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8582,10 +8715,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: rust_key
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0669f3d8f4b119f418a4bbe061cc198f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0669f3d8f4b119f418a4bbe061cc198f, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 0669f3d8f4b119f418a4bbe061cc198f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1285399656}
   m_SourcePrefab: {fileID: 100100000, guid: 0669f3d8f4b119f418a4bbe061cc198f, type: 3}
 --- !u!4 &675865912 stripped
 Transform:
@@ -10277,6 +10421,7 @@ GameObject:
   - component: {fileID: 776624287}
   - component: {fileID: 776624286}
   - component: {fileID: 776624288}
+  - component: {fileID: 776624289}
   m_Layer: 7
   m_Name: NPC1
   m_TagString: Talk
@@ -10300,6 +10445,7 @@ MonoBehaviour:
   - lines:
     - "Podr\xEDa hacer algo con esto, pero necesito una herramienta."
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
 --- !u!4 &776624287
 Transform:
   m_ObjectHideFlags: 0
@@ -10332,6 +10478,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases: []
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
+--- !u!65 &776624289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776624285}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 2.05, y: 1, z: 1}
+  m_Center: {x: 1.23, y: 0.9, z: 0}
 --- !u!1001 &777889287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10842,6 +11010,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SillaSubir
       objectReference: {fileID: 0}
+    - target: {fileID: 138348, guid: 28204d4732d744778287ba981af91906, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 138348, guid: 28204d4732d744778287ba981af91906, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 438348, guid: 28204d4732d744778287ba981af91906, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.1497517
@@ -10882,10 +11058,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6538346, guid: 28204d4732d744778287ba981af91906, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 138348, guid: 28204d4732d744778287ba981af91906, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1893032490}
   m_SourcePrefab: {fileID: 100100000, guid: 28204d4732d744778287ba981af91906, type: 3}
 --- !u!4 &800546473 stripped
 Transform:
@@ -11345,6 +11528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825664127}
   - component: {fileID: 825664128}
+  - component: {fileID: 825664129}
   m_Layer: 7
   m_Name: Bocetos
   m_TagString: Talk
@@ -11384,6 +11568,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases: []
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &825664129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825664126}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &829789029
 GameObject:
   m_ObjectHideFlags: 0
@@ -11921,6 +12127,11 @@ Transform:
   - {fileID: 1894090466}
   m_Father: {fileID: 1102986657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &861132843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c0901a722a600cb439d447c27adf380a, type: 3}
+  m_PrefabInstance: {fileID: 1901548202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &867135679
 GameObject:
   m_ObjectHideFlags: 0
@@ -11953,6 +12164,17 @@ Transform:
   - {fileID: 1261665993}
   m_Father: {fileID: 1729296178}
   m_LocalEulerAnglesHint: {x: -6.519, y: -141.086, z: -94.859}
+--- !u!114 &867811857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8697025206151744140, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+  m_PrefabInstance: {fileID: 499810474}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e607fbed73c7db4f986a7d9acfe272b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
 --- !u!1001 &872993857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12976,9 +13198,10 @@ GameObject:
   - component: {fileID: 935665172}
   - component: {fileID: 935665171}
   - component: {fileID: 935665170}
-  m_Layer: 0
+  - component: {fileID: 935665173}
+  m_Layer: 7
   m_Name: Pila1
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13055,6 +13278,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 383845802}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -51.193}
+--- !u!65 &935665173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935665169}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.024757717, y: 0.034823664, z: 0.02470545}
+  m_Center: {x: -0.027401613, y: -0.03359063, z: -0.0016829764}
 --- !u!1 &940980926
 GameObject:
   m_ObjectHideFlags: 0
@@ -13067,7 +13311,7 @@ GameObject:
   - component: {fileID: 940980928}
   m_Layer: 9
   m_Name: TalkTrigger
-  m_TagString: Untagged
+  m_TagString: Talk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16693,32 +16937,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8402015547562204639, guid: 867e4c47bf8b57d488a3e60bab968923, type: 3}
   m_PrefabInstance: {fileID: 1197015526}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1201808054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8791622500061953807, guid: 736b27513b9002642b89ed30d737dfe6, type: 3}
-  m_PrefabInstance: {fileID: 340480961}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1201808055
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201808054}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0778714, y: 1, z: 1}
-  m_Center: {x: -1.3654654, y: -0.011472418, z: 0.1682409}
 --- !u!1 &1205492223
 GameObject:
   m_ObjectHideFlags: 0
@@ -17961,6 +18179,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
   m_PrefabInstance: {fileID: 1276545497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1285399653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0669f3d8f4b119f418a4bbe061cc198f, type: 3}
+  m_PrefabInstance: {fileID: 675865911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1285399656
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285399653}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12193201, y: 0.03910585, z: 0.23262402}
+  m_Center: {x: 2.2204466e-16, y: -0.00000012014061, z: 0.0000009573996}
 --- !u!1001 &1286133369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24111,6 +24355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777768300}
   - component: {fileID: 1777768301}
+  - component: {fileID: 1777768302}
   m_Layer: 7
   m_Name: ElectricalBox
   m_TagString: Talk
@@ -24152,6 +24397,28 @@ MonoBehaviour:
   - lines:
     - "Esta caja el\xE9ctrica debe servir para algo, pero le faltan piezas."
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &1777768302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777768299}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1779733562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25479,6 +25746,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 487878, guid: 4efba74564624dfea3803661732fd71c, type: 3}
   m_PrefabInstance: {fileID: 1885951937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1893032486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 138348, guid: 28204d4732d744778287ba981af91906, type: 3}
+  m_PrefabInstance: {fileID: 800546472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1893032490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893032486}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.54915786, y: 0.53758657, z: 0.55812263}
+  m_Center: {x: 0.0000001192093, y: 0.2687931, z: -0.0000009536743}
 --- !u!1 &1894090465
 GameObject:
   m_ObjectHideFlags: 0
@@ -25905,6 +26198,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pegamento
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0901a722a600cb439d447c27adf380a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0901a722a600cb439d447c27adf380a, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 1138579775031915005, guid: c0901a722a600cb439d447c27adf380a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -26124,13 +26425,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c0901a722a600cb439d447c27adf380a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1901548204}
   m_SourcePrefab: {fileID: 100100000, guid: c0901a722a600cb439d447c27adf380a, type: 3}
 --- !u!4 &1901548203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c0901a722a600cb439d447c27adf380a, type: 3}
   m_PrefabInstance: {fileID: 1901548202}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1901548204
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861132843}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.23, y: 0.26, z: 0.17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1927379449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26300,6 +26625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934337026}
   - component: {fileID: 1934337027}
+  - component: {fileID: 1934337028}
   m_Layer: 7
   m_Name: Libro2
   m_TagString: Talk
@@ -26341,6 +26667,28 @@ MonoBehaviour:
   - lines:
     - "Faltan varias p\xE1ginas\u2026 arrancadas a prop\xF3sito, quiz\xE1."
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &1934337028
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934337025}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1934456930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27871,6 +28219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028186381}
   - component: {fileID: 2028186382}
+  - component: {fileID: 2028186383}
   m_Layer: 7
   m_Name: PuertaCerrada
   m_TagString: Talk
@@ -27912,6 +28261,28 @@ MonoBehaviour:
   - lines:
     - "Est\xE1 cerrada. Necesito una llave para abrirla."
   dialogueUI: {fileID: 1824892032}
+  player: {fileID: 867811857}
+--- !u!65 &2028186383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028186380}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2053322429 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}

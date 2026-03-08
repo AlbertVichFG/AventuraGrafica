@@ -681,6 +681,7 @@ MonoBehaviour:
   - lines:
     - "Podr\xEDa hacer algo con esto, pero necesito una herramienta."
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &67559466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1397,7 @@ MonoBehaviour:
   panel: {fileID: 972014872}
   dialogueText: {fileID: 404912865}
   letterSpeed: 0.03
+  movementUnlockDelay: 1
   canClose: 0
 --- !u!114 &100515802
 MonoBehaviour:
@@ -1748,6 +1750,7 @@ MonoBehaviour:
     - "Geppetto tiene por toda la cosa una gran variedad de m\xE1quinas. No s\xE9
       para qu\xE9 servir\xE1n todas."
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &114485984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2389,6 +2392,7 @@ MonoBehaviour:
   - lines:
     - Puedo ver que hay algo en el fondo, pero no pienso meter la mano para averiguarlo.
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &171714751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3842,6 +3846,7 @@ MonoBehaviour:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry''s standard '
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &300919628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4078,6 +4083,7 @@ MonoBehaviour:
   - lines:
     - "Geppetto y su nieta peque\xF1a. Parece ser que en esta foto celebran su cumplea\xF1os."
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &309058500
 GameObject:
   m_ObjectHideFlags: 0
@@ -8886,6 +8892,7 @@ MonoBehaviour:
   - lines:
     - "Sigue bloqueada, deber\xEDa buscar el modo de quitar los tablones de madera.\r\n"
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &626860598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9333,6 +9340,7 @@ MonoBehaviour:
   - lines:
     - "Si abro el armario, se me caer\xE1 todo encima.\r\n\r\n"
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &649185328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11136,6 +11144,7 @@ MonoBehaviour:
       Lorem Ipsum has been the industry''s standard '
     - Alvaro
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &791133769
 GameObject:
   m_ObjectHideFlags: 0
@@ -18786,6 +18795,7 @@ MonoBehaviour:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry''s standard '
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &1322113610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19246,6 +19256,64 @@ MonoBehaviour:
   - lines:
     - "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
+--- !u!1001 &1378860559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.0271
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -102.84568
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080683909562367120, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751622735621289744, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
+      propertyPath: m_Name
+      value: GameState
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2ec1e91124337a40b337cb49277bfce, type: 3}
 --- !u!1001 &1381658323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27507,6 +27575,7 @@ MonoBehaviour:
     - "Molt b\xE9"
     - "Molt b\xE9"
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &2085703909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27917,6 +27986,7 @@ MonoBehaviour:
     - "Molt b\xE9"
     - "Molt b\xE9"
   dialogueUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &2117616142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29207,3 +29277,4 @@ SceneRoots:
   - {fileID: 1902716192}
   - {fileID: 1962711512}
   - {fileID: 100515805}
+  - {fileID: 1378860559}

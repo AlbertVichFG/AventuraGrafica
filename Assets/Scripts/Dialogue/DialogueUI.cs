@@ -12,47 +12,47 @@ public class DialogueUI : MonoBehaviour
     [Header("Typewriter Settings")]
     [SerializeField] private float letterSpeed = 0.03f;
 
+    [SerializeField] 
+    private float movementUnlockDelay = 1f;
+
     public bool IsOpen { get; private set; }
 
     private Coroutine typingCoroutine;
     private bool isTyping;
     private string fullLine;
 
-    // Evita que el primer click tanqui el panel instant
     [SerializeField]
     private bool canClose = false;
 
-    
+    private PlayerController player; // NOVA REFERÈNCIA
 
     void Awake()
     {
         panel.SetActive(false);
-
     }
 
-    private void Start()
+    public void SetPlayer(PlayerController p)
     {
-        
+        player = p;
     }
 
     void Update()
     {
-        bool press = Input.GetMouseButtonDown(0) ||
-    (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
+        bool press =
+            Input.GetMouseButtonDown(0) ||
+            (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
 
         if (!IsOpen)
             return;
 
         if (press)
         {
-            //Si encara està escrivint skip
             if (isTyping)
             {
                 FinishTypingInstant();
                 return;
             }
 
-            //Si ja ha acabat, permet tancar només després d’un frame
             if (canClose)
             {
                 Hide();
@@ -60,16 +60,13 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    // Mostrar una frase amb efecte
     public void ShowLine(string line)
     {
         IsOpen = true;
         panel.SetActive(true);
 
-        // Reset estat
         canClose = false;
 
-        // Cancel·lar typing anterior
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
@@ -77,7 +74,6 @@ public class DialogueUI : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
-    // Coroutine lletra per lletra
     private IEnumerator TypeLine(string line)
     {
         isTyping = true;
@@ -91,12 +87,10 @@ public class DialogueUI : MonoBehaviour
 
         isTyping = false;
 
-        // Esperar 1 frame abans de permetre tancar
         yield return null;
         canClose = true;
     }
 
-    // Click mentre escriu mostrar tot instant
     private void FinishTypingInstant()
     {
         if (typingCoroutine != null)
@@ -104,18 +98,23 @@ public class DialogueUI : MonoBehaviour
 
         dialogueText.text = fullLine;
         isTyping = false;
-
-        // Permetre tancar en el següent click
         canClose = true;
     }
 
-    // Tancar panel
     public void Hide()
     {
         IsOpen = false;
         panel.SetActive(false);
 
-        PlayerController player = FindAnyObjectByType<PlayerController>();
-        player.UnlockMovement();
+        if (player != null)
+            StartCoroutine(UnlockMovementDelayed());
+    }
+
+    IEnumerator UnlockMovementDelayed()
+    {
+        yield return new WaitForSeconds(movementUnlockDelay);
+
+        if (player != null)
+            player.UnlockMovement();
     }
 }
