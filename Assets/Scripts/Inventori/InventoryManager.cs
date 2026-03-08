@@ -98,4 +98,10 @@ public class InventoryManager : MonoBehaviour
     {
         return itemInHand;
     }
+
+    public void RemoveItemInHand()
+    {
+        itemInHand = null;
+        cursorItemIcon.enabled = false;
+    }
 }

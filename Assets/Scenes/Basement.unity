@@ -24356,6 +24356,7 @@ GameObject:
   - component: {fileID: 1777768300}
   - component: {fileID: 1777768301}
   - component: {fileID: 1777768302}
+  - component: {fileID: 1777768303}
   m_Layer: 7
   m_Name: ElectricalBox
   m_TagString: Talk
@@ -24419,6 +24420,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1777768303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777768299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb85b3499aea69445a1b66992f2f17fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElectriclBox
+  batteryItem: {fileID: 21300000, guid: ff7d47b54bcb1084da5e00129c7b207c, type: 3}
+  batteriesRequired: 3
+  door: {fileID: 1973256573}
 --- !u!1001 &1779733562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27463,6 +27479,11 @@ PrefabInstance:
 --- !u!4 &1973256572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae42be1da73ca424bad262fa85c1a602, type: 3}
+  m_PrefabInstance: {fileID: 1973256571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1973256573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ae42be1da73ca424bad262fa85c1a602, type: 3}
   m_PrefabInstance: {fileID: 1973256571}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1980809253

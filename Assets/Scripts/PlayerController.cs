@@ -141,6 +141,14 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
+            ElectriclBox box = hit.collider.GetComponentInParent<ElectriclBox>();
+
+            if (box != null)
+            {
+                box.Interact();
+                return;
+            }
+
         }
 
         //MOVIMENT terra WalkZone
