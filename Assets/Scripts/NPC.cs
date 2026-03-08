@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC : Interactable
 {
     [System.Serializable]
     public class DialoguePhase
@@ -17,9 +17,8 @@ public class NPC : MonoBehaviour
     [SerializeField]
     private DialogueUI dialogueUI;
 
-    [SerializeField]
-    private PlayerController player; 
 
+    private PlayerController player; 
     private int[] phaseIndexes;
 
     void Awake()
@@ -29,8 +28,10 @@ public class NPC : MonoBehaviour
         player = FindFirstObjectByType<PlayerController>();
     }
 
-    public void Talk()
+    public override void Interact(PlayerController p)
     {
+        player = p;
+
         int phase = GameState.Instance.CurrentPhase;
 
         if (phase < 0 || phase >= phases.Length)
@@ -46,11 +47,13 @@ public class NPC : MonoBehaviour
         // bloquejar moviment
         player.StopMovement();
 
+        // configurar dialogue UI
         dialogueUI.SetPlayer(player);
 
         // mostrar frase
         dialogueUI.ShowLine(lines[index]);
 
+        // avançar index
         phaseIndexes[phase]++;
 
         if (phaseIndexes[phase] >= lines.Length)

@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class PickupItem : MonoBehaviour
+public class PickupItem : Interactable
 {
-    public Sprite itemIcon;
+    [SerializeField] private Sprite itemIcon;
 
-    public void Pick()
+    public override void Interact(PlayerController player)
     {
         InventoryManager.instance.AddItem(itemIcon);
 

@@ -22,8 +22,12 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+
+        public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Slot clicked");
+
         InventoryManager.instance.ClickSlot(this);
     }
+
 }

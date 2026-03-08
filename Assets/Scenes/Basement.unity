@@ -411,6 +411,7 @@ GameObject:
   - component: {fileID: 27149374}
   - component: {fileID: 27149373}
   - component: {fileID: 27149376}
+  - component: {fileID: 27149377}
   m_Layer: 7
   m_Name: Pila1 (1)
   m_TagString: Interact
@@ -509,8 +510,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.024757717, y: 0.034823664, z: 0.02470545}
+  m_Size: {x: 0.14, y: 0.31, z: 0.02470545}
   m_Center: {x: -0.02740209, y: -0.03359063, z: -0.0016827976}
+--- !u!114 &27149377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27149372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  itemIcon: {fileID: 21300000, guid: ff7d47b54bcb1084da5e00129c7b207c, type: 3}
 --- !u!1001 &27958580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -624,7 +638,6 @@ MonoBehaviour:
   - lines:
     - Un manual sencillo. Puede que lo usara como referencia para crearnos.
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &35200166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1812,7 +1825,6 @@ MonoBehaviour:
   - lines:
     - "Creo que llevaba demasiado tiempo all\xED."
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &136507678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3769,7 +3781,6 @@ MonoBehaviour:
   - lines:
     - Necesito algo para pasar al otro lado.
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &279389631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3905,7 +3916,6 @@ MonoBehaviour:
   - lines:
     - "\u201CCreo que por fin logr\xE9 crear el prototipo ideal.\""
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &308857918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4315,6 +4325,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 425586, guid: d8c1ecd27d8b494f99c904bd9a3be8bf, type: 3}
   m_PrefabInstance: {fileID: 322469910}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &322575736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1743466167448312930, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -6096,6 +6117,7 @@ GameObject:
   - component: {fileID: 450185935}
   - component: {fileID: 450185934}
   - component: {fileID: 450185937}
+  - component: {fileID: 450185938}
   m_Layer: 7
   m_Name: Pila1 (2)
   m_TagString: Interact
@@ -6194,8 +6216,32 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02475772, y: 0.03482367, z: 0.024705447}
+  m_Size: {x: 0.2, y: 0.21, z: 0.024705447}
   m_Center: {x: -0.027403528, y: -0.03359159, z: -0.0016830063}
+--- !u!114 &450185938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450185933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  itemIcon: {fileID: 21300000, guid: ff7d47b54bcb1084da5e00129c7b207c, type: 3}
+--- !u!114 &453684951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8409616297059313370, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &459747022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7915,6 +7961,17 @@ Transform:
   - {fileID: 1885773123}
   m_Father: {fileID: 1626049782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &585264352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1620864205647349225, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &594372628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10445,7 +10502,6 @@ MonoBehaviour:
   - lines:
     - "Podr\xEDa hacer algo con esto, pero necesito una herramienta."
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!4 &776624287
 Transform:
   m_ObjectHideFlags: 0
@@ -10478,7 +10534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases: []
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
 --- !u!65 &776624289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11410,6 +11465,30 @@ PrefabInstance:
       propertyPath: cursorItemIcon
       value: 
       objectReference: {fileID: 1047899739}
+    - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
+      propertyPath: slots.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
+      propertyPath: 'slots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 322575736}
+    - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
+      propertyPath: 'slots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1793349068}
+    - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
+      propertyPath: 'slots.Array.data[2]'
+      value: 
+      objectReference: {fileID: 453684951}
+    - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
+      propertyPath: 'slots.Array.data[3]'
+      value: 
+      objectReference: {fileID: 585264352}
+    - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
+      propertyPath: 'slots.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1883996591}
     - target: {fileID: 4984757213153100957, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
       propertyPath: m_Name
       value: InventoryManager
@@ -11568,7 +11647,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases: []
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &825664129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12164,17 +12242,6 @@ Transform:
   - {fileID: 1261665993}
   m_Father: {fileID: 1729296178}
   m_LocalEulerAnglesHint: {x: -6.519, y: -141.086, z: -94.859}
---- !u!114 &867811857 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8697025206151744140, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
-  m_PrefabInstance: {fileID: 499810474}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e607fbed73c7db4f986a7d9acfe272b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
 --- !u!1001 &872993857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13199,6 +13266,7 @@ GameObject:
   - component: {fileID: 935665171}
   - component: {fileID: 935665170}
   - component: {fileID: 935665173}
+  - component: {fileID: 935665174}
   m_Layer: 7
   m_Name: Pila1
   m_TagString: Interact
@@ -13293,12 +13361,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.024757717, y: 0.034823664, z: 0.02470545}
+  m_Size: {x: 0.15, y: 0.19, z: 0.02470545}
   m_Center: {x: -0.027401613, y: -0.03359063, z: -0.0016829764}
+--- !u!114 &935665174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935665169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  itemIcon: {fileID: 21300000, guid: ff7d47b54bcb1084da5e00129c7b207c, type: 3}
 --- !u!1 &940980926
 GameObject:
   m_ObjectHideFlags: 0
@@ -23904,6 +23985,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471690, guid: b1dddcd355c246b6b4f0139d24727cc3, type: 3}
   m_PrefabInstance: {fileID: 1752584010}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1754119279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1754119282}
+  - component: {fileID: 1754119281}
+  - component: {fileID: 1754119280}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1754119280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754119279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &1754119281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754119279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1754119282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754119279}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1755258667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24359,7 +24519,7 @@ GameObject:
   - component: {fileID: 1777768303}
   m_Layer: 7
   m_Name: ElectricalBox
-  m_TagString: Talk
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24398,7 +24558,6 @@ MonoBehaviour:
   - lines:
     - "Esta caja el\xE9ctrica debe servir para algo, pero le faltan piezas."
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &1777768302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24433,8 +24592,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElectriclBox
   batteryItem: {fileID: 21300000, guid: ff7d47b54bcb1084da5e00129c7b207c, type: 3}
-  batteriesRequired: 3
-  door: {fileID: 1973256573}
+  requiredBatteries: 3
+  dialogueUI: {fileID: 0}
+  needBatteryText: Falten piles.
+  doorToOpen: {fileID: 0}
 --- !u!1001 &1779733562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24807,6 +24968,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 468470, guid: 1d040883b4c941fa9ab5cfdcce009a7b, type: 3}
   m_PrefabInstance: {fileID: 1793193034}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1793349068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8827156052509168181, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &1822657499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25635,6 +25807,17 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1883996591 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5590906593458619809, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &1884718605
 GameObject:
   m_ObjectHideFlags: 0
@@ -26683,7 +26866,6 @@ MonoBehaviour:
   - lines:
     - "Faltan varias p\xE1ginas\u2026 arrancadas a prop\xF3sito, quiz\xE1."
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &1934337028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27479,11 +27661,6 @@ PrefabInstance:
 --- !u!4 &1973256572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae42be1da73ca424bad262fa85c1a602, type: 3}
-  m_PrefabInstance: {fileID: 1973256571}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1973256573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ae42be1da73ca424bad262fa85c1a602, type: 3}
   m_PrefabInstance: {fileID: 1973256571}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1980809253
@@ -28282,7 +28459,6 @@ MonoBehaviour:
   - lines:
     - "Est\xE1 cerrada. Necesito una llave para abrirla."
   dialogueUI: {fileID: 1824892032}
-  player: {fileID: 867811857}
 --- !u!65 &2028186383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32607,3 +32783,4 @@ SceneRoots:
   - {fileID: 263244618}
   - {fileID: 1927379449}
   - {fileID: 821542414}
+  - {fileID: 1754119282}

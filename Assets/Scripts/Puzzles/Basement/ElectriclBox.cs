@@ -1,32 +1,36 @@
 using UnityEngine;
 
-public class ElectriclBox : MonoBehaviour
+public class ElectriclBox : Interactable
 {
     [Header("Requirements")]
     [SerializeField] private Sprite batteryItem;
-    [SerializeField] private int batteriesRequired = 3;
+    [SerializeField] private int requiredBatteries = 3;
 
-    [Header("Door")]
-    [SerializeField] private GameObject door;
+    [Header("Dialogue")]
+    [SerializeField] private DialogueUI dialogueUI;
 
-    private int batteriesInserted = 0;
 
-    public void Interact()
+    [TextArea]
+    [SerializeField]
+    public string needBatteryText = "Falten piles.";
+
+    [SerializeField] private GameObject doorToOpen;
+
+    private int insertedBatteries = 0;
+
+    public override void Interact(PlayerController player)
     {
-        // Si el player té item a la mà
         if (InventoryManager.instance.HasItemInHand())
         {
             Sprite item = InventoryManager.instance.GetItemInHand();
 
             if (item == batteryItem)
             {
-                batteriesInserted++;
+                insertedBatteries++;
 
                 InventoryManager.instance.RemoveItemInHand();
 
-                Debug.Log("Battery inserted: " + batteriesInserted);
-
-                if (batteriesInserted >= batteriesRequired)
+                if (insertedBatteries >= requiredBatteries)
                 {
                     OpenDoor();
                 }
@@ -35,15 +39,15 @@ public class ElectriclBox : MonoBehaviour
             }
         }
 
-        // si no té bateria
-        Debug.Log("Fan falta piles.");
+        player.StopMovement();
+
+        dialogueUI.SetPlayer(player);
+        dialogueUI.ShowLine(needBatteryText);
     }
 
     void OpenDoor()
     {
-        Debug.Log("Power restored!");
-
-        if (door != null)
-            door.SetActive(false);
+        if (doorToOpen != null)
+            doorToOpen.SetActive(false);
     }
 }
