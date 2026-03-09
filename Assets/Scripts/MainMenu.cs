@@ -6,16 +6,20 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject panelAjustes;
     public string escenaJuego;
+    public GameObject panelSlots;
+    public SaveSystem saveSystem;
 
     public void NuevaPartida()
     {
-        SceneManager.LoadScene(1);
+        panelSlots.SetActive(true);
+        saveSystem.NuevaPartidaModo();
     }
+
 
     public void CargarPartida()
     {
-        Debug.Log("Cargar partida...");
-        // Aquí luego puedes cargar datos guardados
+        panelSlots.SetActive(true);
+        saveSystem.CargarPartidaModo();
     }
 
     public void AbrirAjustes()
