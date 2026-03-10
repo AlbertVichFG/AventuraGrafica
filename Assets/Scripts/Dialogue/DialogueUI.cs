@@ -12,8 +12,12 @@ public class DialogueUI : MonoBehaviour
     [Header("Typewriter Settings")]
     [SerializeField] private float letterSpeed = 0.03f;
 
+
+    string[] dialogueLines;
+    int currentLine;
+
     [SerializeField] 
-    private float movementUnlockDelay = 1f;
+    private float movementUnlockDelay = 0.2f;
 
     public bool IsOpen { get; private set; }
 
@@ -55,7 +59,16 @@ public class DialogueUI : MonoBehaviour
 
             if (canClose)
             {
-                Hide();
+                currentLine++;
+
+                if (dialogueLines != null && currentLine < dialogueLines.Length)
+                {
+                    ShowLine(dialogueLines[currentLine]);
+                }
+                else
+                {
+                    Hide();
+                }
             }
         }
     }
@@ -90,6 +103,13 @@ public class DialogueUI : MonoBehaviour
         yield return null;
         canClose = true;
     }
+    public void ShowDialogue(string[] lines)
+    {
+        dialogueLines = lines;
+        currentLine = 0;
+
+        ShowLine(dialogueLines[currentLine]);
+    } 
 
     private void FinishTypingInstant()
     {

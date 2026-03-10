@@ -8,7 +8,7 @@ public class TestItem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            InventoryManager.instance.AddItem(itemSprite);
+           // InventoryManager.instance.AddItem(itemSprite);
         }
     }
 }

@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
     public Image cursorItemIcon;
     public VirtualCursorController cursor;
 
-    private Sprite itemInHand;
+    private ItemData itemInHand;
     private InventorySlot originalSlot;
 
     void Awake()
@@ -33,7 +33,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItem(Sprite item)
+    public void AddItem(ItemData item)
     {
         foreach (InventorySlot slot in slots)
         {
@@ -53,13 +53,13 @@ public class InventoryManager : MonoBehaviour
             itemInHand = slot.currentItem;
             originalSlot = slot;
 
-            cursorItemIcon.sprite = itemInHand;
+            cursorItemIcon.sprite = itemInHand.icon;
             cursorItemIcon.enabled = true;
 
             slot.SetItem(null);
         }
 
-        // Deixar item en un altre slot
+        // Deixar item
         else if (itemInHand != null)
         {
             slot.SetItem(itemInHand);
@@ -102,7 +102,7 @@ public class InventoryManager : MonoBehaviour
         return itemInHand != null;
     }
 
-    public Sprite GetItemInHand()
+    public ItemData GetItemInHand()
     {
         return itemInHand;
     }

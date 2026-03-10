@@ -16,47 +16,73 @@ public class NPC : Interactable
     [Header("References")]
     [SerializeField]
     private DialogueUI dialogueUI;
+    [SerializeField]
+    private bool[] phaseCompleted;
 
+    [Header("Item Puzzle")]
+    [SerializeField] 
+    private ItemData requiredItem;
+    [SerializeField] 
+    private int requiredAmount;
+    [SerializeField]
+    private int deliveredItems = 0;
 
-    private PlayerController player; 
     private int[] phaseIndexes;
 
     void Awake()
     {
         phaseIndexes = new int[phases.Length];
+        phaseCompleted = new bool[phases.Length];
 
-        player = FindFirstObjectByType<PlayerController>();
+        //   player = FindFirstObjectByType<PlayerController>();
     }
 
-    public override void Interact(PlayerController p)
+    public override void Interact(PlayerController player)
     {
-        player = p;
+        // Si el player té item a la mà
+        if (InventoryManager.instance.HasItemInHand())
+        {
+            ItemData item = InventoryManager.instance.GetItemInHand();
 
-        int phase = GameState.Instance.CurrentPhase;
+            if (item == requiredItem)
+            {
+                deliveredItems++;
+
+                InventoryManager.instance.RemoveItemInHand();
+
+                player.StopMovement();
+                dialogueUI.SetPlayer(player);
+
+                dialogueUI.ShowLine("Gràcies! (" + deliveredItems + "/" + requiredAmount + ")");
+
+                if (deliveredItems >= requiredAmount)
+                {
+                    GameState.Instance.currentPuzzlePhase++;
+                }
+
+                return;
+            }
+        }
+
+        // DIÀLEG NORMAL
+        int phase = GameState.Instance.currentPuzzlePhase;
 
         if (phase < 0 || phase >= phases.Length)
             return;
 
         string[] lines = phases[phase].lines;
 
-        if (lines.Length == 0)
-            return;
-
-        int index = phaseIndexes[phase];
-
-        // bloquejar moviment
         player.StopMovement();
-
-        // configurar dialogue UI
         dialogueUI.SetPlayer(player);
 
-        // mostrar frase
-        dialogueUI.ShowLine(lines[index]);
-
-        // avançar index
-        phaseIndexes[phase]++;
-
-        if (phaseIndexes[phase] >= lines.Length)
-            phaseIndexes[phase] = lines.Length - 1;
+        if (!phaseCompleted[phase])
+        {
+            dialogueUI.ShowDialogue(lines);
+            phaseCompleted[phase] = true;
+        }
+        else
+        {
+            dialogueUI.ShowLine(lines[lines.Length - 1]);
+        }
     }
 }

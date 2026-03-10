@@ -5,28 +5,25 @@ using UnityEngine.EventSystems;
 public class InventorySlot : MonoBehaviour, IPointerClickHandler
 {
     public Image icon;
-    public Sprite currentItem;
+    public ItemData currentItem;
 
-    public void SetItem(Sprite itemSprite)
+    public void SetItem(ItemData item)
     {
-        currentItem = itemSprite;
+        currentItem = item;
 
-        if (itemSprite == null)
+        if (item == null)
         {
             icon.enabled = false;
         }
         else
         {
-            icon.sprite = itemSprite;
+            icon.sprite = item.icon;
             icon.enabled = true;
         }
     }
 
-
-        public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Slot clicked");
-
         InventoryManager.instance.ClickSlot(this);
     }
 

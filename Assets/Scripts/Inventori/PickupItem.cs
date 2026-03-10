@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PickupItem : Interactable
 {
-    [SerializeField] private Sprite itemIcon;
+
+    [SerializeField] private ItemData item;
 
     public override void Interact(PlayerController player)
     {
-        InventoryManager.instance.AddItem(itemIcon);
-
+        InventoryManager.instance.AddItem(item);
         Destroy(gameObject);
     }
 }

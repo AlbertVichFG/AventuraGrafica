@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleInput()
     {
-        if (movementLocked || InventoryManager.instance.HasItemInHand())
+        if (movementLocked)
             return;
 
         bool click =
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         if (!click)
             return;
 
-        InventoryManager.instance.CancelItemUse();
+      //  InventoryManager.instance.CancelItemUse();
 
         runOrder = (Time.time - lastClickTime <= doubleClickTime);
         lastClickTime = Time.time;
