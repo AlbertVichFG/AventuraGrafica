@@ -5,7 +5,7 @@ public class GameState : MonoBehaviour
     public static GameState Instance;
 
     [SerializeField] 
-    private int currentPuzzlePhase = 0;
+    public int currentPuzzlePhase = 0;
 
     void Awake()
     {

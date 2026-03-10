@@ -1,28 +1,21 @@
 using UnityEngine;
 
-public class ElectriclBox : Interactable
+public class ElectricalBox : Interactable
 {
-    [Header("Requirements")]
-    [SerializeField] private Sprite batteryItem;
+    [SerializeField] private ItemData batteryItem;
     [SerializeField] private int requiredBatteries = 3;
 
-    [Header("Dialogue")]
     [SerializeField] private DialogueUI dialogueUI;
-
-
-    [TextArea]
-    [SerializeField]
-    public string needBatteryText = "Falten piles.";
-
-    [SerializeField] private GameObject doorToOpen;
+    [SerializeField] private GameObject door;
 
     private int insertedBatteries = 0;
 
     public override void Interact(PlayerController player)
     {
+        // Si tenim item a la mà
         if (InventoryManager.instance.HasItemInHand())
         {
-            Sprite item = InventoryManager.instance.GetItemInHand();
+            ItemData item = InventoryManager.instance.GetItemInHand();
 
             if (item == batteryItem)
             {
@@ -30,9 +23,15 @@ public class ElectriclBox : Interactable
 
                 InventoryManager.instance.RemoveItemInHand();
 
+                // Si hem completat el puzzle
                 if (insertedBatteries >= requiredBatteries)
                 {
-                    OpenDoor();
+                    Destroy(door);
+
+                    dialogueUI.SetPlayer(player);
+                    dialogueUI.ShowLine("Sembla que s'ha obert algo.");
+
+                    return;
                 }
 
                 return;
@@ -40,14 +39,21 @@ public class ElectriclBox : Interactable
         }
 
         player.StopMovement();
-
         dialogueUI.SetPlayer(player);
-        dialogueUI.ShowLine(needBatteryText);
-    }
 
-    void OpenDoor()
-    {
-        if (doorToOpen != null)
-            doorToOpen.SetActive(false);
+        // Cap pila encara
+        if (insertedBatteries == 0)
+        {
+            dialogueUI.ShowLine("Esta caja eléctrica debe servir para algo, pero le faltan piezas.");
+            return;
+        }
+
+        // Falten piles
+        int remaining = requiredBatteries - insertedBatteries;
+
+        if (remaining == 1)
+            dialogueUI.ShowLine("Falta 1 pila.");
+        else
+            dialogueUI.ShowLine("Falten " + remaining + " piles.");
     }
 }
