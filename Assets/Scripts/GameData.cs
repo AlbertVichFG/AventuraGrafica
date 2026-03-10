@@ -15,6 +15,8 @@ public class GameData
 
     [SerializeField]
     private int saveScene;
+    [SerializeField]
+    private int sceneSave;
 
 
 
@@ -22,5 +24,11 @@ public class GameData
     {
         get { return saveScene; }
         set { saveScene = value; }
+    }
+
+    public int SceneSave
+    {
+        get { return sceneSave; } 
+        set { sceneSave = value; }
     }
 }
