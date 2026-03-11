@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 58397187}
   m_Layer: 0
   m_Name: Entrada (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 102178594}
   m_Layer: 0
   m_Name: Cocina
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4803,7 +4803,7 @@ GameObject:
   - component: {fileID: 327336515}
   m_Layer: 0
   m_Name: Pasillo2
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5652,7 +5652,7 @@ GameObject:
   - component: {fileID: 391287516}
   m_Layer: 0
   m_Name: Comedor (3)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6386,7 +6386,7 @@ GameObject:
   - component: {fileID: 424989458}
   m_Layer: 0
   m_Name: Entrada (2)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7955,7 +7955,7 @@ GameObject:
   - component: {fileID: 548570670}
   m_Layer: 0
   m_Name: "Almac\xE9n (1)"
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8364,7 +8364,7 @@ GameObject:
   - component: {fileID: 573579204}
   m_Layer: 0
   m_Name: Comedor (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11213,7 +11213,7 @@ GameObject:
   - component: {fileID: 736316170}
   m_Layer: 0
   m_Name: Patio
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11987,7 +11987,7 @@ GameObject:
   - component: {fileID: 825488549}
   m_Layer: 0
   m_Name: Comedor
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13008,7 +13008,7 @@ GameObject:
   - component: {fileID: 871447834}
   m_Layer: 0
   m_Name: Pasillo2 (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20225,7 +20225,7 @@ GameObject:
   - component: {fileID: 1393800216}
   m_Layer: 0
   m_Name: "Almac\xE9n"
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20851,7 +20851,7 @@ GameObject:
   - component: {fileID: 1456978337}
   m_Layer: 0
   m_Name: Patio (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21210,7 +21210,7 @@ GameObject:
   - component: {fileID: 1468372516}
   m_Layer: 0
   m_Name: "Ba\xF1o"
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22510,7 +22510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1578640531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23338,7 +23338,7 @@ GameObject:
   - component: {fileID: 1666018429}
   m_Layer: 0
   m_Name: Entrada
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23697,7 +23697,7 @@ GameObject:
   - component: {fileID: 1681446453}
   m_Layer: 0
   m_Name: Pasillo2 (3)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27557,7 +27557,7 @@ GameObject:
   - component: {fileID: 1985456476}
   m_Layer: 0
   m_Name: Comedor (2)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28193,7 +28193,7 @@ GameObject:
   - component: {fileID: 2036678511}
   m_Layer: 0
   m_Name: Cocina (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28330,7 +28330,7 @@ GameObject:
   - component: {fileID: 2036831007}
   m_Layer: 0
   m_Name: Pasillo2 (2)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

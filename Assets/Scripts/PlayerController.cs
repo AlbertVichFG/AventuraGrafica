@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask walkZoneLayer;
     [SerializeField] private LayerMask interactableLayer;
 
+
     private NavMeshAgent agent;
     private Camera mainCamera;
     private Animator animator;
@@ -189,5 +190,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsWalking", false);
             animator.SetBool("IsRuning", false);
         }
+    }
+
+    //camera
+
+    public void SetActiveCamera(Camera cam)
+    {
+        mainCamera = cam;
     }
 }
