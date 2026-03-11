@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 5588df163aa0aca4e91fe4dc67c73416
   - enabled: 1
+    path: Assets/Scenes/Lore.unity
+    guid: f4465e16ff7034413bdfd4c7d83b6b20
+  - enabled: 1
     path: Assets/Scenes/Basement.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
@@ -18,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Biblioteca.unity
     guid: 087e92a5a69525e4fb00694a40523864
   - enabled: 1
-    path: Assets/Scenes/ArreglarXD.unity
-    guid: 080d0c5be6f0ba54696a431533fa2ca1
+    path: "Assets/Scenes/Desva\u0301n.unity"
+    guid: 37ff40f0ab68e457b820144962a60c1a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
