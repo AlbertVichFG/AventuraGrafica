@@ -1,9 +1,9 @@
 ﻿<Solution>
   <Project Path="Unity.Timeline.csproj" />
   <Project Path="Unity.Timeline.Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Gentleland.SteampunkUI.DemoAndExample.csproj" />
   <Project Path="Gentleland.Utils.SteampunkUI.csproj" />
   <Project Path="DocCodeExamples.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
 </Solution>

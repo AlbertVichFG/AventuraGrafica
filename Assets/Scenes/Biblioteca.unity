@@ -5383,14 +5383,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
+    - Necesito algo para encender las velas de la ouija.
   - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - 'Antes debo entregar el libro a la mujer alta  para conseguir el mechero. '
   dialogueUI: {fileID: 1794485804}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &527135211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6438,14 +6438,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
+    - ...
   - lines:
-    - "Molt b\xE9"
-    - "Molt b\xE9"
+    - "Si quieres abrir esa puerta, la ouija te ayudar\xE1."
+    - "Pero sin mi mechero, no podr\xE1s. "
+    - "Tr\xE1eme el libro que me pertecene y te lo dar\xE9."
+  - lines:
+    - "Aqu\xED tienes tu mechero, tal y como acordamos."
+    - "Enciende las velas del tablero y lo ver\xE1s."
   dialogueUI: {fileID: 1794485804}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!4 &604209220
 Transform:
   m_ObjectHideFlags: 0
