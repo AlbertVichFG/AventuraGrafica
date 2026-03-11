@@ -1956,7 +1956,7 @@ GameObject:
   - component: {fileID: 248376801}
   m_Layer: 0
   m_Name: Cocina
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2155,7 +2155,7 @@ GameObject:
   - component: {fileID: 279038415}
   m_Layer: 0
   m_Name: Entrada (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5135,7 +5135,7 @@ GameObject:
   - component: {fileID: 541797939}
   m_Layer: 0
   m_Name: Pasillo2 (2)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7317,7 +7317,7 @@ GameObject:
   - component: {fileID: 722630155}
   m_Layer: 0
   m_Name: Comedor (3)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8361,7 +8361,7 @@ GameObject:
   - component: {fileID: 875346595}
   m_Layer: 0
   m_Name: Cocina (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10838,7 +10838,7 @@ GameObject:
   - component: {fileID: 1099534540}
   m_Layer: 0
   m_Name: Entrada
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11522,7 +11522,7 @@ GameObject:
   - component: {fileID: 1174658661}
   m_Layer: 0
   m_Name: Comedor (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12652,7 +12652,7 @@ GameObject:
   - component: {fileID: 1303932055}
   m_Layer: 0
   m_Name: Comedor (2)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13469,6 +13469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3889
@@ -14034,7 +14038,7 @@ GameObject:
   - component: {fileID: 1482816358}
   m_Layer: 0
   m_Name: Entrada (2)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14501,7 +14505,7 @@ GameObject:
   - component: {fileID: 1523323619}
   m_Layer: 0
   m_Name: Comedor
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15356,7 +15360,7 @@ GameObject:
   - component: {fileID: 1649841553}
   m_Layer: 0
   m_Name: Patio
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15707,7 +15711,7 @@ GameObject:
   - component: {fileID: 1691736369}
   m_Layer: 0
   m_Name: Pasillo2
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16110,7 +16114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1713959305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16123,7 +16127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccfe580a38ad4d48a45a81c5525b4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraManager
-  cameras: []
+  cameras:
+  - {fileID: 496392486}
+  - {fileID: 1691736371}
+  - {fileID: 1775700771}
+  - {fileID: 2007387019}
+  - {fileID: 541797941}
+  - {fileID: 1099534542}
+  - {fileID: 279038417}
+  - {fileID: 1482816360}
+  - {fileID: 248376803}
+  - {fileID: 875346597}
+  - {fileID: 1820627352}
 --- !u!4 &1713959306
 Transform:
   m_ObjectHideFlags: 0
@@ -16709,7 +16724,7 @@ GameObject:
   - component: {fileID: 1775700769}
   m_Layer: 0
   m_Name: Pasillo2 (3)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17126,7 +17141,7 @@ GameObject:
   - component: {fileID: 1820627350}
   m_Layer: 0
   m_Name: "Ba\xF1o"
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18658,7 +18673,7 @@ GameObject:
   - component: {fileID: 1974288343}
   m_Layer: 0
   m_Name: "Almac\xE9n"
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19434,7 +19449,7 @@ GameObject:
   - component: {fileID: 2007387017}
   m_Layer: 0
   m_Name: Pasillo2 (1)
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19656,7 +19671,7 @@ GameObject:
   - component: {fileID: 2037271516}
   m_Layer: 0
   m_Name: "Almac\xE9n (1)"
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20930,7 +20945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  itemIcon: {fileID: 21300000, guid: 56c1c55147ff85e488311d2abf8ab086, type: 3}
+  item: {fileID: 0}
 --- !u!1001 &1704704191001377069
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,8 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private VirtualCursorController cursor;
 
     [Header("Movement")]
-    [SerializeField] private float walkSpeed = 3.5f;
-    [SerializeField] private float runSpeed = 6f;
+    [SerializeField] 
+    private float walkSpeed = 3.5f;
+    [SerializeField] 
+    private float runSpeed = 6f;
     [SerializeField] private float doubleClickTime = 0.3f;
 
     [Header("Navigation")]
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [Header("Layers")]
     [SerializeField] private LayerMask walkZoneLayer;
     [SerializeField] private LayerMask interactableLayer;
+
 
     private NavMeshAgent agent;
     private Camera mainCamera;
@@ -187,5 +190,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsWalking", false);
             animator.SetBool("IsRuning", false);
         }
+    }
+
+    //camera
+
+    public void SetActiveCamera(Camera cam)
+    {
+        mainCamera = cam;
     }
 }
