@@ -681,7 +681,10 @@ MonoBehaviour:
   - lines:
     - "Podr\xEDa hacer algo con esto, pero necesito una herramienta."
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1 &67559466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1166,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
   m_PrefabInstance: {fileID: 78620158}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &80593668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80593671}
+  - component: {fileID: 80593670}
+  - component: {fileID: 80593669}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &80593669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80593668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &80593670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80593668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &80593671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80593668}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &93520408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1750,7 +1832,10 @@ MonoBehaviour:
     - "Geppetto tiene por toda la cosa una gran variedad de m\xE1quinas. No s\xE9
       para qu\xE9 servir\xE1n todas."
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &114485984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2392,7 +2477,10 @@ MonoBehaviour:
   - lines:
     - Puedo ver que hay algo en el fondo, pero no pienso meter la mano para averiguarlo.
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &171714751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3846,7 +3934,10 @@ MonoBehaviour:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry''s standard '
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &300919628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4083,7 +4174,10 @@ MonoBehaviour:
   - lines:
     - "Geppetto y su nieta peque\xF1a. Parece ser que en esta foto celebran su cumplea\xF1os."
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1 &309058500
 GameObject:
   m_ObjectHideFlags: 0
@@ -8892,7 +8986,10 @@ MonoBehaviour:
   - lines:
     - "Sigue bloqueada, deber\xEDa buscar el modo de quitar los tablones de madera.\r\n"
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &626860598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9340,7 +9437,10 @@ MonoBehaviour:
   - lines:
     - "Si abro el armario, se me caer\xE1 todo encima.\r\n\r\n"
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &649185328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11144,7 +11244,10 @@ MonoBehaviour:
       Lorem Ipsum has been the industry''s standard '
     - Alvaro
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1 &791133769
 GameObject:
   m_ObjectHideFlags: 0
@@ -18795,7 +18898,10 @@ MonoBehaviour:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry''s standard '
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &1322113610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19256,7 +19362,10 @@ MonoBehaviour:
   - lines:
     - "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &1378860559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27605,7 +27714,10 @@ MonoBehaviour:
     - "Molt b\xE9"
     - "Molt b\xE9"
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &2085703909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28016,7 +28128,10 @@ MonoBehaviour:
     - "Molt b\xE9"
     - "Molt b\xE9"
   dialogueUI: {fileID: 0}
-  player: {fileID: 0}
+  phaseCompleted: 
+  requiredItem: {fileID: 0}
+  requiredAmount: 0
+  deliveredItems: 0
 --- !u!1001 &2117616142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28748,7 +28863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  itemIcon: {fileID: 21300000, guid: 56c1c55147ff85e488311d2abf8ab086, type: 3}
+  item: {fileID: 0}
 --- !u!1001 &2561910356161111813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29308,3 +29423,4 @@ SceneRoots:
   - {fileID: 1962711512}
   - {fileID: 100515805}
   - {fileID: 1378860559}
+  - {fileID: 80593671}
