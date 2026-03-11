@@ -9,8 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private VirtualCursorController cursor;
 
     [Header("Movement")]
-    [SerializeField] private float walkSpeed = 3.5f;
-    [SerializeField] private float runSpeed = 6f;
+    [SerializeField] 
+    private float walkSpeed = 3.5f;
+    [SerializeField] 
+    private float runSpeed = 6f;
     [SerializeField] private float doubleClickTime = 0.3f;
 
     [Header("Navigation")]
