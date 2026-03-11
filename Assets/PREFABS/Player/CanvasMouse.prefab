@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3527558477158892646}
   - component: {fileID: 1620864205647349225}
   m_Layer: 8
-  m_Name: SlotItem1 (3)
+  m_Name: SlotItem4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 7002777724488898127}
   - component: {fileID: 5799297875457112313}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Img_slot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 6286253410745832751}
   - component: {fileID: 4897385328562524700}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Img_slot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 8682097949248797391}
   - component: {fileID: 1929308784528396478}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Img_slot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 4579983243952411002}
   - component: {fileID: 8409616297059313370}
   m_Layer: 8
-  m_Name: SlotItem1 (2)
+  m_Name: SlotItem3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 6667330836547749587}
   - component: {fileID: 5590906593458619809}
   m_Layer: 8
-  m_Name: SlotItem1 (4)
+  m_Name: SlotItem5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +668,7 @@ GameObject:
   m_Layer: 5
   m_Name: CanvasMouse
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 8702137573443301770}
   - component: {fileID: 1893781742448645827}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Img_slot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 4449169725777612420}
   - component: {fileID: 8055177892428400753}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Img_slot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 6782228802182158383}
   - component: {fileID: 8827156052509168181}
   m_Layer: 8
-  m_Name: SlotItem1 (1)
+  m_Name: SlotItem2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

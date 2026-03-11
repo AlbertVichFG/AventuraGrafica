@@ -1601,22 +1601,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 152137573225505267, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: SlotItem4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1636986428176314454, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: Img_slot3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1842583112126360392, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: Img_slot1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841318722451896114, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: Img_slot5
-      objectReference: {fileID: 0}
     - target: {fileID: 3842741763813133742, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1697,33 +1681,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4085339715186041583, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: SlotItem3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5870696977190779599, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: SlotItem5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034139351534952747, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6034139351534952747, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
       propertyPath: m_Name
       value: CanvasMouse
-      objectReference: {fileID: 0}
-    - target: {fileID: 6168756218350856121, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: Img_slot4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8254279884725441868, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: Img_slot2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8700088651414462493, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-      propertyPath: m_Name
-      value: SlotItem2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11334,10 +11294,6 @@ PrefabInstance:
       propertyPath: cursorItemIcon
       value: 
       objectReference: {fileID: 1047899739}
-    - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
-      propertyPath: slots.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4842198162276429573, guid: 903c9dff751f30248a4a0b37aa79ddb2, type: 3}
       propertyPath: 'slots.Array.data[0]'
       value: 
