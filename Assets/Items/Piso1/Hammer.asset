@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Hammer
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 25d89247d13f3994bbfe18e4ec2a9c4b, type: 3}
