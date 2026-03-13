@@ -387,7 +387,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  m_text: "Pero aquello cambi\xF3 su objetivo. Su motivaci\xF3n y creatividad se
+    convirtieron en exigencia y egocentrismo, y se obsesion\xF3 con la idea de crear
+    un prototipo vivo. Construy\xF3 muchos prototipos, demasiados, pero ninguno result\xF3
+    eficiente para su criterio."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1221,7 +1224,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  m_text: "Apenas sal\xEDa de su taller y dedicaba cada d\xEDa a crear el Pinocchio
+    perfecto. Abandon\xF3 otros proyectos y se centr\xF3 solo en ese sue\xF1o. Pero
+    justo cuando se dio por vencido con el \xFAltimo prototipo al que tantas horas
+    dedic\xF3, ocurri\xF3 algo distinto: hab\xEDa nacido el Pinocchio ideal."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1807,7 +1813,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  m_text: "Geppetto es un solitario anciano carpintero al que le gustan los t\xEDteres.
+    Al principio todo lo hac\xEDa por simple gusto, para hacer sonre\xEDr a los ni\xF1os,
+    en especial a su nieta peque\xF1a. Con el tiempo fue experimentando y aprendiendo
+    nuevas habilidades mientras practicaba."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1834,8 +1843,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 39.75
+  m_fontSizeBase: 39.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
