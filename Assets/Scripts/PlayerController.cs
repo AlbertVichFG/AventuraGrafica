@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask walkZoneLayer;
     [SerializeField] private LayerMask interactableLayer;
 
+    public bool ignoreNavMeshSnap = false;
+
 
     private NavMeshAgent agent;
     private Camera mainCamera;
@@ -58,6 +60,9 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate()
     {
+        if (ignoreNavMeshSnap)
+            return;
+
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 0.3f, NavMesh.AllAreas))
         {
             transform.position = hit.position;
@@ -120,6 +125,12 @@ public class PlayerController : MonoBehaviour
 
     void StartInteraction(Interactable interactable)
     {
+        if (TamboretPuzzle.playerOnStool)
+        {
+            interactable.Interact(this);
+            return;
+        }
+
         targetInteractable = interactable;
 
         targetPoint = interactable.transform.Find("InteractionPoint");

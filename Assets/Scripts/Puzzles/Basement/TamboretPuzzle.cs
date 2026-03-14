@@ -1,14 +1,11 @@
 using UnityEngine;
 
-public class TamboretPuzzle : MonoBehaviour
+public class TamboretPuzzle
 {
     public static TamboretPuzzle Instance;
 
     public bool stoolPlaced = false;
-    public bool playerOnStool = false;
+    public static bool playerOnStool = false;
 
-    void Awake()
-    {
-        Instance = this;
-    }
+
 }

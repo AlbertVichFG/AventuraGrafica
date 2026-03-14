@@ -9,6 +9,8 @@ public class TamboretSpot : Interactable
 
     public override void Interact(PlayerController player)
     {
+        Debug.Log("Intentant posar tamboret");
+
         if (!InventoryManager.instance.HasItemInHand())
             return;
 
