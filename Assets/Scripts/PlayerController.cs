@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -85,7 +86,14 @@ public class PlayerController : MonoBehaviour
 
     void TryMoveOrInteract()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            Debug.Log("CLICK SOBRE UI");
+            return;
+        }
+
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
+
 
         if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactableLayer))
         {
@@ -102,7 +110,7 @@ public class PlayerController : MonoBehaviour
         {
             if (InventoryManager.instance.HasItemInHand())
             {
-                InventoryManager.instance.ReturnItemToInventory();
+                InventoryManager.instance.CancelItemUse();
                 return;
             }
 

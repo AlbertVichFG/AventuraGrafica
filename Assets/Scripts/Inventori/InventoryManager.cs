@@ -1,11 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    public InventorySlot[] slots;
+    public List<InventorySlot> slots = new List<InventorySlot>();
     public Image cursorItemIcon;
     public VirtualCursorController cursor;
 
@@ -22,14 +24,31 @@ public class InventoryManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void Update()
     {
-        if (itemInHand != null)
+        if (itemInHand != null && cursorItemIcon != null && cursor != null)
         {
             cursorItemIcon.transform.position = cursor.GetCursorScreenPosition();
+        }
+    }
+
+    public void RegisterSlot(InventorySlot slot)
+    {
+        // eliminar referències destruïdes
+        slots.RemoveAll(s => s == null);
+
+        if (!slots.Contains(slot))
+        {
+            slots.Add(slot);
+
+            slots.Sort((a, b) =>
+                a.transform.GetSiblingIndex().CompareTo(b.transform.GetSiblingIndex()));
         }
     }
 
@@ -47,27 +66,43 @@ public class InventoryManager : MonoBehaviour
 
     public void ClickSlot(InventorySlot slot)
     {
-        // Agafar item
+        // AGAFAR ITEM
         if (itemInHand == null && slot.currentItem != null)
         {
             itemInHand = slot.currentItem;
             originalSlot = slot;
 
-            cursorItemIcon.sprite = itemInHand.icon;
-            cursorItemIcon.enabled = true;
+            if (cursorItemIcon != null)
+            {
+                cursorItemIcon.sprite = itemInHand.icon;
+                cursorItemIcon.enabled = true;
+            }
 
             slot.SetItem(null);
+            return;
         }
 
-        // Deixar item
-        else if (itemInHand != null)
+        // DEIXAR ITEM
+        if (itemInHand != null)
         {
-            slot.SetItem(itemInHand);
+            if (slot.currentItem == null)
+            {
+                slot.SetItem(itemInHand);
+            }
+            else
+            {
+                ItemData temp = slot.currentItem;
+                slot.SetItem(itemInHand);
+
+                if (originalSlot != null)
+                    originalSlot.SetItem(temp);
+            }
 
             itemInHand = null;
             originalSlot = null;
 
-            cursorItemIcon.enabled = false;
+            if (cursorItemIcon != null)
+                cursorItemIcon.enabled = false;
         }
     }
 
@@ -80,20 +115,8 @@ public class InventoryManager : MonoBehaviour
             itemInHand = null;
             originalSlot = null;
 
-            cursorItemIcon.enabled = false;
-        }
-    }
-
-    public void ReturnItemToInventory()
-    {
-        if (itemInHand != null && originalSlot != null)
-        {
-            originalSlot.SetItem(itemInHand);
-
-            itemInHand = null;
-            originalSlot = null;
-
-            cursorItemIcon.enabled = false;
+            if (cursorItemIcon != null)
+                cursorItemIcon.enabled = false;
         }
     }
 
@@ -110,6 +133,17 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItemInHand()
     {
         itemInHand = null;
-        cursorItemIcon.enabled = false;
+
+        if (cursorItemIcon != null)
+            cursorItemIcon.enabled = false;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // buidem slots antics
+        slots.Clear();
+
+        // busquem el cursor icon del nou canvas
+      //  cursorItemIcon = GameObject.Find("CursorItemIcon")?.GetComponent<Image>();
     }
 }

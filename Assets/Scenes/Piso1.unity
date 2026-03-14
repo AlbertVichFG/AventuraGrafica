@@ -677,6 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - "Podr\xEDa hacer algo con esto, pero necesito una herramienta."
@@ -685,6 +686,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1 &67559466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - "Geppetto tiene por toda la cosa una gran variedad de m\xE1quinas. No s\xE9
@@ -1821,6 +1830,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1001 &114485984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1899,6 +1915,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4690258914741224739, guid: 63a61d21d89057344b422c9eceff9cb9, type: 3}
   m_PrefabInstance: {fileID: 9063387014775046886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &122964344 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+  m_PrefabInstance: {fileID: 582223364}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &125461684
 PrefabInstance:
@@ -2530,6 +2551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - Puedo ver que hay algo en el fondo, pero no pienso meter la mano para averiguarlo.
@@ -2538,6 +2560,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1001 &171714751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4096,6 +4125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -4105,6 +4135,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1001 &300919628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4337,6 +4374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - "Geppetto y su nieta peque\xF1a. Parece ser que en esta foto celebran su cumplea\xF1os."
@@ -4345,6 +4383,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1 &309058500
 GameObject:
   m_ObjectHideFlags: 0
@@ -8714,11 +8759,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7199942
+      value: 1.1561667
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7199942
+      value: 0.43782845
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalScale.z
@@ -8726,15 +8771,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.976153
+      value: 8.9762
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.880362
+      value: -5.2342
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5971706
+      value: 1.0503
       objectReference: {fileID: 0}
     - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8774,6 +8819,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
   m_PrefabInstance: {fileID: 579883306}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &582223364
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1035156682}
+    m_Modifications:
+    - target: {fileID: 1159108543705142, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_Name
+      value: IntWall02a (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.426
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.561
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.278
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.12975411
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000014901163
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9915462
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -165.089
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8eb802985616d134da97830b682ac851, type: 3}
 --- !u!1001 &586253970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9456,6 +9558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - "Est\xE1 cerrada y bloqueada por tablones de madera. Necesito una llave y alguna
@@ -9470,6 +9573,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1001 &626860598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9924,6 +10034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - "Si abro el armario, se me caer\xE1 todo encima.\r\n\r\n"
@@ -9932,6 +10043,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1001 &649185328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11926,6 +12044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -11936,6 +12055,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1 &791133769
 GameObject:
   m_ObjectHideFlags: 0
@@ -12709,11 +12835,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdb1bd3898be4034e94ec360c687593c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.711413
+      value: 11.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdb1bd3898be4034e94ec360c687593c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.9083781
+      value: -4.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdb1bd3898be4034e94ec360c687593c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14778,7 +14904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951234725}
   m_Layer: 7
-  m_Name: Interaction
+  m_Name: InteractionPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15416,80 +15542,73 @@ Light:
   m_CorrespondingSourceObject: {fileID: 10852226, guid: c35b4f7b6db0440a8b9972af1d27adea, type: 3}
   m_PrefabInstance: {fileID: 974954296}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &999245095
-PrefabInstance:
+--- !u!1 &989680397
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1035156682}
-    m_Modifications:
-    - target: {fileID: 1601323363808860, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_Name
-      value: StoneFloor01 (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.976148
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.8803625
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.2084838
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.0000020563602
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071058
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.0000019893034
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071078
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
---- !u!4 &999245096 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4419766972878916, guid: 048827c76e2f2b04f852ae21e2dee617, type: 3}
-  m_PrefabInstance: {fileID: 999245095}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989680400}
+  - component: {fileID: 989680399}
+  - component: {fileID: 989680398}
+  m_Layer: 0
+  m_Name: BASEMENTSCENE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &989680398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989680397}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.000512, y: 3.2270744, z: 1.2932844}
+  m_Center: {x: 0.14771521, y: 1.1135374, z: -0.14664221}
+--- !u!114 &989680399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989680397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a1bb89eaf94b74f9252dd62debed45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerScene
+  sceneToLoad: Basement
+--- !u!4 &989680400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989680397}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.754, y: -0.19, z: -5.092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1003696921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15747,6 +15866,7 @@ Transform:
   - {fileID: 1625996044}
   - {fileID: 711058607}
   - {fileID: 1006130514}
+  - {fileID: 122964344}
   - {fileID: 643046385}
   - {fileID: 878979894}
   - {fileID: 1227346002}
@@ -15857,7 +15977,6 @@ Transform:
   - {fileID: 682547115}
   - {fileID: 801437550}
   - {fileID: 579883307}
-  - {fileID: 999245096}
   - {fileID: 1515407674}
   - {fileID: 2117616143}
   - {fileID: 1208609094}
@@ -19990,6 +20109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -19999,6 +20119,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1001 &1322113610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20441,6 +20568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
@@ -20449,6 +20577,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1 &1368418200
 GameObject:
   m_ObjectHideFlags: 0
@@ -28694,7 +28829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710784
+      value: 0.5538468
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalRotation.x
@@ -28706,11 +28841,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071058
+      value: 0.83261865
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -28718,7 +28853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 112.737
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29958,6 +30093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
+  affectsGameState: 0
   phases:
   - lines:
     - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -29971,6 +30107,13 @@ MonoBehaviour:
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
+  puzzleCompleted: 0
+  firstTalkDone: 0
+  rewardItem: {fileID: 0}
+  progressLine: 
+  wrongItemLine: 
+  puzzleCompletedLine: 
+  puzzleSolvedLine: 
 --- !u!1001 &2117616142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31335,3 +31478,4 @@ SceneRoots:
   - {fileID: 105762288}
   - {fileID: 966009144}
   - {fileID: 1294038782}
+  - {fileID: 989680400}
