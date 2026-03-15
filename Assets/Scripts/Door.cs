@@ -4,24 +4,29 @@ using UnityEngine.Events;
 public class Door : MonoBehaviour
 {
     [Header("Requisito")]
-    [Tooltip("El objeto físico de la escena que el jugador debe tener.")]
-    [SerializeField] private GameObject objetoRequerido;
-    [SerializeField] private bool consumirAlUsar = true;
+    [Tooltip("El objeto fï¿½sico de la escena que el jugador debe tener.")]
+    [SerializeField] 
+    private GameObject objetoRequerido;
+    [SerializeField] 
+    private bool consumirAlUsar = true;
 
-    [Header("Configuración de Tecla")]
-    [SerializeField] private KeyCode teclaInteraccion = KeyCode.E;
+    [Header("Configuraciï¿½n de Tecla")]
+    [SerializeField] 
+    private KeyCode teclaInteraccion = KeyCode.E;
 
     [Header("Eventos")]
     public UnityEvent alActivar;
     public UnityEvent alFallar;
 
-    [SerializeField] private bool jugadorEstaCerca = false;
+    [SerializeField] 
+    private bool jugadorEstaCerca = false;
 
-    [SerializeField] private GameObject bloqueo;
+    [SerializeField] 
+    private GameObject bloqueo;
 
     private void Update()
     {
-        // Solo comprobamos la tecla si el jugador está dentro del Trigger
+        // Solo comprobamos la tecla si el jugador estï¿½ dentro del Trigger
         if (jugadorEstaCerca && Input.GetKeyDown(teclaInteraccion))
         {
             EjecutarAccion();
@@ -40,7 +45,7 @@ public class Door : MonoBehaviour
             }
 
             alActivar.Invoke();
-            Debug.Log("Acción realizada con éxito.");
+            Debug.Log("Acciï¿½n realizada con ï¿½xito.");
         }
         else
         {
