@@ -21,8 +21,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float interactionDistance = 1.2f;
 
     [Header("Layers")]
-    [SerializeField] private LayerMask walkZoneLayer;
-    [SerializeField] private LayerMask interactableLayer;
+    [SerializeField] 
+    private LayerMask walkZoneLayer;
+    [SerializeField] 
+    private LayerMask interactableLayer;
+    [SerializeField] 
+    private LayerMask obstacleLayer;
 
     public bool ignoreNavMeshSnap = false;
 
@@ -91,35 +95,40 @@ public class PlayerController : MonoBehaviour
 
     void TryMoveOrInteract()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            Debug.Log("CLICK SOBRE UI");
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
             return;
-        }
 
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
 
+        RaycastHit[] hits = Physics.RaycastAll(ray, 100f);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactableLayer))
+        System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (var hit in hits)
         {
-            Interactable interactable = hit.collider.GetComponentInParent<Interactable>();
+            int layer = hit.collider.gameObject.layer;
 
+            // si és paret bloquejar
+            if (((1 << layer) & obstacleLayer) != 0)
+            {
+                Debug.Log("Bloquejat per paret: " + hit.collider.name);
+                return;
+            }
+
+            // interactables
+            Interactable interactable = hit.collider.GetComponentInParent<Interactable>();
             if (interactable != null)
             {
                 StartInteraction(interactable);
                 return;
             }
-        }
 
-        if (Physics.Raycast(ray, out hit, 100f, walkZoneLayer))
-        {
-            if (InventoryManager.instance.HasItemInHand())
+            // caminar
+            if (((1 << layer) & walkZoneLayer) != 0)
             {
-                InventoryManager.instance.CancelItemUse();
+                MoveToPoint(hit.point);
                 return;
             }
-
-            MoveToPoint(hit.point);
         }
     }
 
