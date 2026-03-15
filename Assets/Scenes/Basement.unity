@@ -1374,8 +1374,8 @@ Transform:
   m_GameObject: {fileID: 77262486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.276, y: -2.82, z: 0.07}
-  m_LocalScale: {x: 5.3588576, y: 1.6629, z: 6.5579133}
+  m_LocalPosition: {x: 0.276, y: -2.82, z: -0.9}
+  m_LocalScale: {x: 5.3588576, y: 1.6629, z: 4.814164}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 106675126}
@@ -4502,8 +4502,8 @@ Transform:
   m_GameObject: {fileID: 249880089}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.59, y: -2.87, z: 5.18}
-  m_LocalScale: {x: 5.154568, y: 2.9416702, z: 3.1204932}
+  m_LocalPosition: {x: 2.59, y: -2.87, z: 5.07}
+  m_LocalScale: {x: 5.154568, y: 2.9416702, z: 3.5086825}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 106675126}
@@ -6930,7 +6930,7 @@ Transform:
   m_GameObject: {fileID: 332841751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.84, y: -1.1066, z: 32.21}
+  m_LocalPosition: {x: 39.13, y: -1.1066, z: 30.02}
   m_LocalScale: {x: 0.4903149, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7694,11 +7694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorSystems
   requiredKey: {fileID: 11400000, guid: 82ba0a9b4d190774b9ad54a569e0df59, type: 2}
   dialogueUI: {fileID: 1824892032}
-<<<<<<< HEAD
   lockedLine: La puerta esta cerrada necessitas una llave.
-=======
-  lockedLine: 'La puerta esta '
->>>>>>> 473a362138eb40720042b7553555377b053a0b48
 --- !u!65 &385308610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19330,13 +19326,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002696448}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.92810875, z: -0.3723093, w: 0}
-  m_LocalPosition: {x: 0.4250598, y: 0.11817002, z: 0.6456804}
+  m_LocalRotation: {x: -0, y: 0.9772297, z: -0.21218416, w: 0}
+  m_LocalPosition: {x: 0.4250598, y: -0.16599989, z: 1.893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 106675126}
-  m_LocalEulerAnglesHint: {x: 43.716, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.501, y: 180, z: 0}
 --- !u!114 &1002696450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22464,8 +22460,8 @@ Transform:
   m_GameObject: {fileID: 1132790961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.53, y: -2.82, z: -0.14}
-  m_LocalScale: {x: 5.967942, y: 1.6629, z: 7.0102954}
+  m_LocalPosition: {x: 6.53, y: -2.82, z: -0.58}
+  m_LocalScale: {x: 5.967942, y: 1.6629, z: 5.8833904}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 106675126}
@@ -38505,7 +38501,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973256573}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 5.165, y: 6.105, z: 0.5}
