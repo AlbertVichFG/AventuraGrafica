@@ -29,7 +29,7 @@ public class ElectricalBox : Interactable
                     Destroy(door);
 
                     dialogueUI.SetPlayer(player);
-                    dialogueUI.ShowLine("Sembla que s'ha obert algo.");
+                    dialogueUI.ShowLine("Parece que se ha abierto algo.");
 
                     return;
                 }
@@ -54,6 +54,6 @@ public class ElectricalBox : Interactable
         if (remaining == 1)
             dialogueUI.ShowLine("Falta 1 pila.");
         else
-            dialogueUI.ShowLine("Falten " + remaining + " piles.");
+            dialogueUI.ShowLine("Faltan " + remaining + " pilas.");
     }
 }
