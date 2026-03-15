@@ -53,15 +53,18 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 8
   doubleClickTime: 0.4
-  movemntLockedOnDialogue: 0
   navMeshSampleRadius: 0.5
+  interactionDistance: 1.2
   walkZoneLayer:
     serializedVersion: 2
     m_Bits: 64
   interactableLayer:
     serializedVersion: 2
     m_Bits: 128
-  interactionDistance: 1.2
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ignoreNavMeshSnap: 0
 --- !u!195 &46810957475092978
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -143,9 +146,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.34
-  m_Height: 1.75
+  m_Height: 1.6910706
   m_Direction: 1
-  m_Center: {x: 0, y: 0.83, z: 0}
+  m_Center: {x: 0, y: 0.85946465, z: 0}
 --- !u!1001 &8836200781742310280
 PrefabInstance:
   m_ObjectHideFlags: 0
