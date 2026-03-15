@@ -959,7 +959,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 115093324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 682463640}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ContinuarButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &115093324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,7 +1227,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 150214632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 682463640}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: MainMenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &150214632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5456,7 +5480,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 720045534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 682463640}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: saveGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &720045534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12993,8 +13029,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -29}
-  m_SizeDelta: {x: 2173, y: 1225}
+  m_AnchoredPosition: {x: 0, y: -94}
+  m_SizeDelta: {x: 1800, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1520079556
 MonoBehaviour:
@@ -24627,13 +24663,13 @@ SceneRoots:
   - {fileID: 1016670659}
   - {fileID: 682463641}
   - {fileID: 1154732260}
+  - {fileID: 347152218}
   - {fileID: 1824567851}
   - {fileID: 1714339946}
   - {fileID: 1185296316}
   - {fileID: 1613903192}
   - {fileID: 1215372436}
   - {fileID: 432791760}
-  - {fileID: 347152218}
   - {fileID: 812847897}
   - {fileID: 931978473}
   - {fileID: 1597101323}
