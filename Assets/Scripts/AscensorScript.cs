@@ -8,7 +8,7 @@ public class AscensorScript : Interactable
 
     public override void Interact(PlayerController player)
     {
-        if (isOn = false) 
+        if (isOn == false) 
         {
             return;
         }
