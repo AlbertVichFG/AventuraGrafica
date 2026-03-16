@@ -14,7 +14,7 @@ public class DoorSystem : Interactable
     [SerializeField] private string lockedLine;
 
     [Header("Components")]
-    // [SerializeField] private Animator animator;
+    [SerializeField] private Animator animator;
 
     private NavMeshObstacle navMeshObstacle;
     private Collider doorCollider;

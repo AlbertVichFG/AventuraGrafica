@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -78,14 +81,24 @@ public class PlayerController : MonoBehaviour
         if (movementLocked)
             return;
 
-        bool click =
-            Mouse.current.leftButton.wasPressedThisFrame ||
-            (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
+        bool mouseClick = Mouse.current.leftButton.wasPressedThisFrame;
+        bool gamepadClick = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
 
-        if (!click)
+        if (!mouseClick && !gamepadClick)
             return;
 
-      //  InventoryManager.instance.CancelItemUse();
+        // SI EL CLICK ÉS DEL MANDO  provar UI manualment
+        if (gamepadClick)
+        {
+            if (ClickUI())
+                return;
+        }
+
+        // el ratolí utilitza el sistema normal de Unity UI
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        //  InventoryManager.instance.CancelItemUse();
 
         runOrder = (Time.time - lastClickTime <= doubleClickTime);
         lastClickTime = Time.time;
@@ -225,5 +238,23 @@ public class PlayerController : MonoBehaviour
     public void SetActiveCamera(Camera cam)
     {
         mainCamera = cam;
+    }
+
+
+    bool ClickUI()
+    {
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = cursor.GetCursorScreenPosition();
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        if (results.Count > 0)
+        {
+            ExecuteEvents.Execute(results[0].gameObject, pointerData, ExecuteEvents.pointerClickHandler);
+            return true;
+        }
+
+        return false;
     }
 }
