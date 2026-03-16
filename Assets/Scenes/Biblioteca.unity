@@ -21707,6 +21707,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 431308, guid: 0648a8654321442ba88d4834921d373a, type: 3}
   m_PrefabInstance: {fileID: 938802635}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &941951691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941951693}
+  - component: {fileID: 941951692}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &941951692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941951691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4607ee75368fe474fb19add0f70125a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  gameData:
+    objetos: []
+    doorUnlocked: 0
+    talkedToGuard: 0
+    saveScene: 0
+    sceneSave: 0
+  slot: 0
+  doorToGo: 0
+  comeFromLoadGame: 0
+  currentSlot: 0
+--- !u!4 &941951693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941951691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.3786, y: 1.04213, z: -4.81304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &944185467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25926,9 +25980,9 @@ GameObject:
   - component: {fileID: 1129380312}
   - component: {fileID: 1129380314}
   - component: {fileID: 1129380313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PISO1SCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47304,6 +47358,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 922873000}
   - {fileID: 158343710}
+  - {fileID: 1644038757}
+  - {fileID: 1434556322}
+  - {fileID: 941951693}
   - {fileID: 972467346}
   - {fileID: 449139727}
   - {fileID: 295705650}
@@ -47313,7 +47370,6 @@ SceneRoots:
   - {fileID: 1739330671}
   - {fileID: 2773843455897239838}
   - {fileID: 267473958}
-  - {fileID: 1434556322}
   - {fileID: 663788624}
   - {fileID: 1994274257}
   - {fileID: 1844308219}
@@ -47324,6 +47380,5 @@ SceneRoots:
   - {fileID: 934958573}
   - {fileID: 1376317498}
   - {fileID: 532955504}
-  - {fileID: 1644038757}
   - {fileID: 848966725}
   - {fileID: 721906556}
