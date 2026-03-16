@@ -4966,6 +4966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 82ba0a9b4d190774b9ad54a569e0df59, type: 2}
 --- !u!135 &256988156
 SphereCollider:
@@ -6876,6 +6877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 60187938d9c4e9946ad495956161d8a8, type: 2}
 --- !u!65 &317732481
 BoxCollider:
@@ -10127,7 +10129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17912,6 +17914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: edfe15aa818515148999d9309058cd09, type: 2}
 --- !u!1001 &908798690
 PrefabInstance:
@@ -27190,6 +27193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 60187938d9c4e9946ad495956161d8a8, type: 2}
 --- !u!65 &1348622511
 BoxCollider:
@@ -37331,6 +37335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: e5d7a54bb0b354543abc548b70cee27e, type: 2}
 --- !u!1001 &1934251336
 PrefabInstance:
@@ -43776,6 +43781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 60187938d9c4e9946ad495956161d8a8, type: 2}
 --- !u!1 &4951201781918038217
 GameObject:

@@ -11466,6 +11466,10 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 321116404}
+    - target: {fileID: 8697025206151744140, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+      propertyPath: sfxWalk
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b77bede4e4044246980a5f2a68e316d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30823,6 +30827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 99b7da7310212814e907c7f48297deb2, type: 2}
 --- !u!135 &1746602975
 SphereCollider:
@@ -32441,6 +32446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 04aad7a9b9f1b11428360494f478422c, type: 2}
 --- !u!135 &1843212710
 SphereCollider:
@@ -36321,6 +36327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 4d5ca175df8ce8b4fb3395a708fc09d3, type: 2}
 --- !u!135 &2063589991
 SphereCollider:
@@ -37618,6 +37625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: edfe15aa818515148999d9309058cd09, type: 2}
 --- !u!4 &1962147628541767112 stripped
 Transform:

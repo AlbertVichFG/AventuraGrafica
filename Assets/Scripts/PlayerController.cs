@@ -45,6 +45,9 @@ public class PlayerController : MonoBehaviour
     private Interactable targetInteractable;
     private Transform targetPoint;
 
+    [SerializeField]
+    private AudioClip sfxWalk;
+
     void Awake()
 {
     if (instance == null)
@@ -150,6 +153,7 @@ public class PlayerController : MonoBehaviour
             // caminar
             if (((1 << layer) & walkZoneLayer) != 0)
             {
+                
                 MoveToPoint(hit.point);
                 return;
             }
