@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-
+    private static PlayerController instance;
     [Header("References")]
     [SerializeField] private VirtualCursorController cursor;
 
@@ -45,14 +45,28 @@ public class PlayerController : MonoBehaviour
     private Interactable targetInteractable;
     private Transform targetPoint;
 
-    void Awake()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        mainCamera = Camera.main;
-        animator = GetComponentInChildren<Animator>();
+    [SerializeField]
+    private AudioClip sfxWalk;
 
-        agent.speed = walkSpeed;
+    void Awake()
+{
+    if (instance == null)
+    {
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+    else
+    {
+        Destroy(gameObject);
+        return;
+    }
+
+    agent = GetComponent<NavMeshAgent>();
+    mainCamera = Camera.main;
+    animator = GetComponentInChildren<Animator>();
+
+    agent.speed = walkSpeed;
+}
 
     void Update()
     {
@@ -87,14 +101,14 @@ public class PlayerController : MonoBehaviour
         if (!mouseClick && !gamepadClick)
             return;
 
-        // SI EL CLICK ÉS DEL MANDO  provar UI manualment
+        // SI EL CLICK ï¿½S DEL MANDO  provar UI manualment
         if (gamepadClick)
         {
             if (ClickUI())
                 return;
         }
 
-        // el ratolí utilitza el sistema normal de Unity UI
+        // el ratolï¿½ utilitza el sistema normal de Unity UI
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
@@ -121,7 +135,7 @@ public class PlayerController : MonoBehaviour
         {
             int layer = hit.collider.gameObject.layer;
 
-            // si és paret bloquejar
+            // si ï¿½s paret bloquejar
             if (((1 << layer) & obstacleLayer) != 0)
             {
                 Debug.Log("Bloquejat per paret: " + hit.collider.name);
@@ -139,6 +153,7 @@ public class PlayerController : MonoBehaviour
             // caminar
             if (((1 << layer) & walkZoneLayer) != 0)
             {
+                
                 MoveToPoint(hit.point);
                 return;
             }

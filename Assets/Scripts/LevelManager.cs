@@ -1,24 +1,31 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] 
-    private Transform[] spawnPoints;
+    [SerializeField] private Transform[] spawnPoints;
 
     void Start()
     {
-        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        if (GameManager.instance.comeFromLoadGame)
-        {
-            GameManager.instance.comeFromLoadGame = false;
-        }
-        else
-        {
-            int door = GameManager.instance.doorToGo;
+        int door = GameManager.instance.doorToGo;
 
-            player.position = spawnPoints[door].position;
-            player.rotation = spawnPoints[door].rotation;
-        }
+        Transform spawn = spawnPoints[door];
+
+        NavMeshAgent agent = player.GetComponent<NavMeshAgent>();
+        PlayerController controller = player.GetComponent<PlayerController>();
+
+        controller.ignoreNavMeshSnap = true;
+
+        agent.enabled = false;
+
+        player.transform.position = spawn.position;
+        player.transform.rotation = spawn.rotation;
+
+        agent.enabled = true;
+        agent.ResetPath();
+
+        controller.ignoreNavMeshSnap = false;
     }
-}
+}   

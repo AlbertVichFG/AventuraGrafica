@@ -1319,6 +1319,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
   m_PrefabInstance: {fileID: 96408270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &96492527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96492529}
+  - component: {fileID: 96492528}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &96492528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96492527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4607ee75368fe474fb19add0f70125a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  gameData:
+    objetos: []
+    doorUnlocked: 0
+    talkedToGuard: 0
+    saveScene: 0
+    sceneSave: 0
+  slot: 0
+  doorToGo: 0
+  comeFromLoadGame: 0
+  currentSlot: 0
+--- !u!4 &96492529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96492527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.36728, y: 1.38999, z: -22.22663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &100515799
 GameObject:
   m_ObjectHideFlags: 0
@@ -4481,6 +4535,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2468293
@@ -5002,7 +5060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &327336515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11408,6 +11466,10 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 321116404}
+    - target: {fileID: 8697025206151744140, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+      propertyPath: sfxWalk
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b77bede4e4044246980a5f2a68e316d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17752,9 +17814,9 @@ GameObject:
   - component: {fileID: 989680400}
   - component: {fileID: 989680399}
   - component: {fileID: 989680398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BASEMENTSCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18252,7 +18314,6 @@ Transform:
   - {fileID: 801437550}
   - {fileID: 579883307}
   - {fileID: 1515407674}
-  - {fileID: 2117616143}
   - {fileID: 1208609094}
   - {fileID: 1537905300}
   - {fileID: 936539046}
@@ -22424,6 +22485,10 @@ PrefabInstance:
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
@@ -27690,7 +27755,7 @@ Transform:
   m_GameObject: {fileID: 1568989324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.64, y: 0, z: -0.35}
+  m_LocalPosition: {x: -25.64, y: 0, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27928,7 +27993,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.04
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: fc4082fa0b6a94aeaa8c272a2f1c9c67, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1578640532
 Transform:
@@ -28378,6 +28443,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.246829
@@ -28555,9 +28624,9 @@ GameObject:
   - component: {fileID: 1621658533}
   - component: {fileID: 1621658535}
   - component: {fileID: 1621658534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DESVANSCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30684,9 +30753,9 @@ GameObject:
   - component: {fileID: 1745029030}
   - component: {fileID: 1745029029}
   - component: {fileID: 1745029028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BIBLIOSCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30758,6 +30827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 99b7da7310212814e907c7f48297deb2, type: 2}
 --- !u!135 &1746602975
 SphereCollider:
@@ -32376,6 +32446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 04aad7a9b9f1b11428360494f478422c, type: 2}
 --- !u!135 &1843212710
 SphereCollider:
@@ -36256,6 +36327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: 4d5ca175df8ce8b4fb3395a708fc09d3, type: 2}
 --- !u!135 &2063589991
 SphereCollider:
@@ -36774,80 +36846,6 @@ MonoBehaviour:
   wrongItemLine: 
   puzzleCompletedLine: 
   puzzleSolvedLine: 
---- !u!1001 &2117616142
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1035156682}
-    m_Modifications:
-    - target: {fileID: 101712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_Name
-      value: Treasure_Chest_Base_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.6575856
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10.603932
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.099067725
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.15077223
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.15077223
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.69084567
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.69084567
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 65.377
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
---- !u!4 &2117616143 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-  m_PrefabInstance: {fileID: 2117616142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2121207134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37627,6 +37625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: edfe15aa818515148999d9309058cd09, type: 2}
 --- !u!4 &1962147628541767112 stripped
 Transform:
@@ -38168,12 +38167,15 @@ SceneRoots:
   m_Roots:
   - {fileID: 185764249}
   - {fileID: 869832401}
+  - {fileID: 1189684765}
+  - {fileID: 1931737959}
   - {fileID: 605139614}
   - {fileID: 1125413286}
-  - {fileID: 1438320479}
-  - {fileID: 1189684765}
+  - {fileID: 2054670413}
+  - {fileID: 96492529}
+  - {fileID: 1378860559}
   - {fileID: 1467546593}
-  - {fileID: 1931737959}
+  - {fileID: 1438320479}
   - {fileID: 1035156682}
   - {fileID: 67559467}
   - {fileID: 1578640532}
@@ -38182,11 +38184,9 @@ SceneRoots:
   - {fileID: 1902716192}
   - {fileID: 1962711512}
   - {fileID: 100515805}
-  - {fileID: 1378860559}
   - {fileID: 451387087}
   - {fileID: 105762288}
   - {fileID: 966009144}
   - {fileID: 1294038782}
   - {fileID: 1122734479}
-  - {fileID: 2054670413}
   - {fileID: 1930818016}

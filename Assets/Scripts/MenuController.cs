@@ -1,12 +1,10 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject player;
+    [SerializeField] private GameObject player;
     [SerializeField] 
     private GameObject panelPause;
 
@@ -14,17 +12,16 @@ public class MenuController : MonoBehaviour
     {
         Time.timeScale = 1.0f;
     }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
     }
 
+    // Update is called once per frame
     void Update()
     {
-        bool keyboardPause = Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame;
-        bool gamepadPause = Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame;
-
-        if (keyboardPause || gamepadPause)
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown("joystick button 6"))
         {
             Pause();
         }
@@ -32,15 +29,10 @@ public class MenuController : MonoBehaviour
 
     public void Pause()
     {
-        if (panelPause.activeInHierarchy == false)
+        if(panelPause.activeInHierarchy == false)
         {
             panelPause.SetActive(true);
             Time.timeScale = 0;
-        }
-        else
-        {
-            panelPause.SetActive(false);
-            Time.timeScale = 1;
         }
     }
 
@@ -48,8 +40,6 @@ public class MenuController : MonoBehaviour
     {  
         panelPause.SetActive(false);
         Time.timeScale = 1;
-
-        Cursor.visible = false;
     }
     public void MainMenuButton()
     {
