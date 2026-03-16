@@ -3467,7 +3467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &187420589
 Camera:
   m_ObjectHideFlags: 0
@@ -3910,7 +3910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &201489996
 Camera:
   m_ObjectHideFlags: 0
@@ -4022,13 +4022,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201489995}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.09365227, y: 0.73335975, z: -0.103217095, w: -0.66540146}
-  m_LocalPosition: {x: 10.095, y: -1.21, z: 11.460001}
+  m_LocalRotation: {x: -0.0737081, y: 0.879311, z: -0.14477281, w: -0.44768313}
+  m_LocalPosition: {x: 8.71, y: -1.21, z: 13.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1472377747}
-  m_LocalEulerAnglesHint: {x: 16.023, y: 264.437, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.699, y: 233.96399, z: 0}
 --- !u!1001 &204625122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10304,7 +10304,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.08
+  m_VoxelSize: 0.10666666
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: a1919c5d0592c4ab2b5b0efab93362a7, type: 2}
   m_BuildHeightMesh: 0
@@ -13055,6 +13055,10 @@ PrefabInstance:
       propertyPath: cursorRect
       value: 
       objectReference: {fileID: 133967694}
+    - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
+      propertyPath: walkSprite
+      value: 
+      objectReference: {fileID: -4676717269735476019, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: cursorImage
       value: 
