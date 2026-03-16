@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int slot;
     public int doorToGo;
     public bool comeFromLoadGame;
+    public int currentSlot;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -41,22 +43,23 @@ public class GameManager : MonoBehaviour
         set { gameData = value;}
     }
 
-    public void SaveGame()
+    public void SaveGame(int slot)
     {
-        string data = JsonUtility.ToJson(gameData);
-        PlayerPrefs.SetString("data"+slot.ToString(), data);
-
-        //PlayerPrefs.SetString("nombre del guardado", "Valor");
-        //PlayerPrefs.SetInt("nombre del guardado", 1);
-        //PlayerPrefs.SetFloat("nombre del guardado", -1.2f);
+        string json = JsonUtility.ToJson(GetGameData);
+        PlayerPrefs.SetString("data" + slot.ToString(), json);
+        PlayerPrefs.Save();
     }
 
-    public void LoadGame()
+    public void LoadGame(int slot)
     {
-        if(PlayerPrefs.HasKey("data" + slot.ToString()) == true)
+        string key = "data" + slot.ToString();
+        if (PlayerPrefs.HasKey(key))
         {
-            string data = PlayerPrefs.GetString("data" + slot.ToString());
-            gameData = JsonUtility.FromJson<GameData>(data);
+            string json = PlayerPrefs.GetString(key);
+            GetGameData = JsonUtility.FromJson<GameData>(json);
         }
     }
+
+
+    
 }

@@ -1109,7 +1109,8 @@ MonoBehaviour:
     objetos: []
     doorUnlocked: 0
     talkedToGuard: 0
-    scene: 0
+    saveScene: 0
+    sceneSave: 0
   slot: 0
   doorToGo: 0
   comeFromLoadGame: 0

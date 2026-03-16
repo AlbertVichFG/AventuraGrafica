@@ -3433,6 +3433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd7781135117b441914e29b388d3eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  player: {fileID: 0}
   panelPause: {fileID: 1132643329}
 --- !u!4 &184340085
 Transform:
@@ -10171,8 +10172,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499810476}
   m_SourcePrefab: {fileID: 100100000, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+--- !u!1 &499810475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+  m_PrefabInstance: {fileID: 499810474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &499810476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499810475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762bb719e8c4d43838bfc6e344cb721b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLoader
 --- !u!1001 &501740372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33045,6 +33066,10 @@ PrefabInstance:
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_Name
       value: "PuertaAlmac\xE9n2 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_TagString

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject player;
     [SerializeField] 
     private GameObject panelPause;
 
@@ -47,7 +47,12 @@ public class MenuController : MonoBehaviour
     }
     public void saveGame()
     {
+        int slot = GameManager.instance.currentSlot;
         GameManager.instance.GetGameData.SceneSave = SceneManager.GetActiveScene().buildIndex;
-        GameManager.instance.SaveGame();
+        GameManager.instance.SaveGame(slot);
+        Debug.Log("Guardado automáticamente en slot " + slot);
+
+        panelPause.SetActive(false); // cierra panel de pausa
+        Time.timeScale = 1;
     }
 }

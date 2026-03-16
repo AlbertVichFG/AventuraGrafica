@@ -5,9 +5,11 @@ using UnityEngine;
 [Serializable]
 public class GameData
 {
+    
+    
+
 
     public List<Objeto> objetos = new List<Objeto>();
-
 
 
     public bool doorUnlocked;
