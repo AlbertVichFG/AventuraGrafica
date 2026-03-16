@@ -25980,9 +25980,9 @@ GameObject:
   - component: {fileID: 1129380312}
   - component: {fileID: 1129380314}
   - component: {fileID: 1129380313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PISO1SCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -17810,9 +17810,9 @@ GameObject:
   - component: {fileID: 989680400}
   - component: {fileID: 989680399}
   - component: {fileID: 989680398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BASEMENTSCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27751,7 +27751,7 @@ Transform:
   m_GameObject: {fileID: 1568989324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.64, y: 0, z: -0.35}
+  m_LocalPosition: {x: -25.64, y: 0, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28620,9 +28620,9 @@ GameObject:
   - component: {fileID: 1621658533}
   - component: {fileID: 1621658535}
   - component: {fileID: 1621658534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DESVANSCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30749,9 +30749,9 @@ GameObject:
   - component: {fileID: 1745029030}
   - component: {fileID: 1745029029}
   - component: {fileID: 1745029028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BIBLIOSCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
