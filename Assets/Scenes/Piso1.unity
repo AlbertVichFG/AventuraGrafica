@@ -4535,6 +4535,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2468293
@@ -18306,7 +18310,6 @@ Transform:
   - {fileID: 801437550}
   - {fileID: 579883307}
   - {fileID: 1515407674}
-  - {fileID: 2117616143}
   - {fileID: 1208609094}
   - {fileID: 1537905300}
   - {fileID: 936539046}
@@ -22478,6 +22481,10 @@ PrefabInstance:
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
@@ -27982,7 +27989,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 1
   m_VoxelSize: 0.04
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: fc4082fa0b6a94aeaa8c272a2f1c9c67, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1578640532
 Transform:
@@ -28431,6 +28438,10 @@ PrefabInstance:
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
@@ -36828,80 +36839,6 @@ MonoBehaviour:
   wrongItemLine: 
   puzzleCompletedLine: 
   puzzleSolvedLine: 
---- !u!1001 &2117616142
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1035156682}
-    m_Modifications:
-    - target: {fileID: 101712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_Name
-      value: Treasure_Chest_Base_02
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7199942
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.6575856
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -10.603932
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.099067725
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.15077223
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.15077223
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.69084567
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.69084567
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 65.377
-      objectReference: {fileID: 0}
-    - target: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
---- !u!4 &2117616143 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 401712, guid: f145d8a31a7a4126899cac55d3396d94, type: 3}
-  m_PrefabInstance: {fileID: 2117616142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2121207134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38228,6 +38165,7 @@ SceneRoots:
   - {fileID: 1125413286}
   - {fileID: 2054670413}
   - {fileID: 96492529}
+  - {fileID: 1378860559}
   - {fileID: 1467546593}
   - {fileID: 1438320479}
   - {fileID: 1035156682}
@@ -38238,7 +38176,6 @@ SceneRoots:
   - {fileID: 1902716192}
   - {fileID: 1962711512}
   - {fileID: 100515805}
-  - {fileID: 1378860559}
   - {fileID: 451387087}
   - {fileID: 105762288}
   - {fileID: 966009144}
