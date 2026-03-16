@@ -11747,8 +11747,8 @@ MonoBehaviour:
   objectToActivate: {fileID: 1757553072}
   objectToDesactive: {fileID: 36994836}
   dialogueUI: {fileID: 1794485804}
-  noItemLine: Necessito algo para encender estas luces
-  wrongItemLine: Eso no ayudara mucho, necessito otra cosa
+  noItemLine: Necessito algo para encender estas luces.
+  wrongItemLine: Eso no ayudara mucho, necessito otra cosa.
 --- !u!1001 &527135211
 PrefabInstance:
   m_ObjectHideFlags: 0
