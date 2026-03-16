@@ -1319,6 +1319,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
   m_PrefabInstance: {fileID: 96408270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &96492527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96492529}
+  - component: {fileID: 96492528}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &96492528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96492527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4607ee75368fe474fb19add0f70125a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  gameData:
+    objetos: []
+    doorUnlocked: 0
+    talkedToGuard: 0
+    saveScene: 0
+    sceneSave: 0
+  slot: 0
+  doorToGo: 0
+  comeFromLoadGame: 0
+  currentSlot: 0
+--- !u!4 &96492529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96492527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.36728, y: 1.38999, z: -22.22663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &100515799
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,7 +5056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &327336515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38168,12 +38222,14 @@ SceneRoots:
   m_Roots:
   - {fileID: 185764249}
   - {fileID: 869832401}
+  - {fileID: 1189684765}
+  - {fileID: 1931737959}
   - {fileID: 605139614}
   - {fileID: 1125413286}
-  - {fileID: 1438320479}
-  - {fileID: 1189684765}
+  - {fileID: 2054670413}
+  - {fileID: 96492529}
   - {fileID: 1467546593}
-  - {fileID: 1931737959}
+  - {fileID: 1438320479}
   - {fileID: 1035156682}
   - {fileID: 67559467}
   - {fileID: 1578640532}
@@ -38188,5 +38244,4 @@ SceneRoots:
   - {fileID: 966009144}
   - {fileID: 1294038782}
   - {fileID: 1122734479}
-  - {fileID: 2054670413}
   - {fileID: 1930818016}
