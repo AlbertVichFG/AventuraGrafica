@@ -11360,6 +11360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8021301
@@ -28203,6 +28207,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591932455}
   m_CullTransparentMesh: 1
+--- !u!1 &1602362493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1602362494}
+  m_Layer: 0
+  m_Name: SpawnPoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1602362494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602362493}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.87, y: 0, z: 3.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1930818016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1605722560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28536,7 +28571,7 @@ Transform:
   m_GameObject: {fileID: 1621658532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.954, y: -1.1066, z: -6.416}
+  m_LocalPosition: {x: 13.954, y: -1.1066, z: -5.44}
   m_LocalScale: {x: 0.4903149, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33528,6 +33563,7 @@ Transform:
   m_Children:
   - {fileID: 1192022817}
   - {fileID: 1568989325}
+  - {fileID: 1602362494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1931737959
@@ -36039,6 +36075,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1192022817}
   - {fileID: 1568989325}
+  - {fileID: 1602362494}
 --- !u!4 &2054670413
 Transform:
   m_ObjectHideFlags: 0
