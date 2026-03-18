@@ -12,16 +12,17 @@ public class LevelManager : MonoBehaviour
         int door = GameManager.instance.doorToGo;
 
         Transform spawn = spawnPoints[door];
-
+        Debug.LogError(door + " " + GameManager.instance.doorToGo);
+        Debug.LogError(spawnPoints[door].name);
         NavMeshAgent agent = player.GetComponent<NavMeshAgent>();
         PlayerController controller = player.GetComponent<PlayerController>();
 
         controller.ignoreNavMeshSnap = true;
 
         agent.enabled = false;
-
-        player.transform.position = spawn.position;
-        player.transform.rotation = spawn.rotation;
+        Debug.LogError(spawn.position);
+        player.transform.position = spawnPoints[GameManager.instance.doorToGo].position;//spawn.position;
+        player.transform.rotation = spawnPoints[GameManager.instance.doorToGo].rotation;//spawn.rotation;
 
         agent.enabled = true;
         agent.ResetPath();

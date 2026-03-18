@@ -19,7 +19,7 @@ public class PickupItem : Interactable
         Animator anim = player.GetComponentInChildren<Animator>();
 
         anim.SetTrigger("PickItem");
-        AudioManager.instance.PlaySFX(sfxItem, transform.position);
+        //AudioManager.instance.PlaySFX(sfxItem, transform.position);
 
         yield return null;
 
