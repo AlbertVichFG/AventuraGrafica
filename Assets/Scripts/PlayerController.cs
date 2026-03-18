@@ -101,14 +101,14 @@ public class PlayerController : MonoBehaviour
         if (!mouseClick && !gamepadClick)
             return;
 
-        // SI EL CLICK �S DEL MANDO  provar UI manualment
+        // SI EL CLICK ee DEL MANDO  provar UI manualment
         if (gamepadClick)
         {
             if (ClickUI())
                 return;
         }
 
-        // el ratol� utilitza el sistema normal de Unity UI
+        //mouse utilitza el sistema normal de Unity UI
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
         {
             int layer = hit.collider.gameObject.layer;
 
-            // si �s paret bloquejar
+            // si es paret bloquejar
             if (((1 << layer) & obstacleLayer) != 0)
             {
                 Debug.Log("Bloquejat per paret: " + hit.collider.name);

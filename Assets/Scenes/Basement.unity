@@ -43800,7 +43800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: 60187938d9c4e9946ad495956161d8a8, type: 2}
 --- !u!1 &4951201781918038217
 GameObject:
