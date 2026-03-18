@@ -17855,7 +17855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerScene
   sceneToLoad: Basement
-  door: 0
+  door: 1
 --- !u!4 &989680400
 Transform:
   m_ObjectHideFlags: 0
