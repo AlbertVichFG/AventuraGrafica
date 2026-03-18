@@ -7891,7 +7891,7 @@ GameObject:
   - component: {fileID: 385308611}
   m_Layer: 7
   m_Name: PuertaSCENE
-  m_TagString: ChangeZone
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7946,7 +7946,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 8.58, y: 0, z: -15.48}
@@ -43767,7 +43767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: 60187938d9c4e9946ad495956161d8a8, type: 2}
 --- !u!1 &4951201781918038217
 GameObject:

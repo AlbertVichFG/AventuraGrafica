@@ -18,16 +18,29 @@ public class PickupItem : Interactable
 
         Animator anim = player.GetComponentInChildren<Animator>();
 
-        anim.SetTrigger("PickItem");
-        AudioManager.instance.PlaySFX(sfxItem, transform.position);
+        if (anim != null)
+        {
+            anim.SetTrigger("PickItem");
 
-        yield return null;
+            yield return null;
 
-        float length = anim.GetCurrentAnimatorStateInfo(0).length;
+            float length = anim.GetCurrentAnimatorStateInfo(0).length;
+            yield return new WaitForSeconds(length);
+        }
+        else
+        {
+            Debug.LogWarning("Player Animator no trobat!");
+            yield return new WaitForSeconds(0.5f);
+        }
 
-        yield return new WaitForSeconds(length);
-
-        InventoryManager.instance.AddItem(item);
+        if (item != null)
+        {
+            InventoryManager.instance.AddItem(item);
+        }
+        else
+        {
+            Debug.LogError("ItemData no assignat al PickupItem!");
+        }
 
         player.UnlockMovement();
 
