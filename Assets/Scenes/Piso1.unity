@@ -4537,7 +4537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
@@ -7374,7 +7374,7 @@ MonoBehaviour:
   requiredKey: {fileID: 11400000, guid: 82ba0a9b4d190774b9ad54a569e0df59, type: 2}
   dialogueUI: {fileID: 100515801}
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
-  animator: {fileID: 0}
+  animator: {fileID: 1611169975}
 --- !u!1 &451387085
 GameObject:
   m_ObjectHideFlags: 0
@@ -19259,11 +19259,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BathtubPuzzle
   requiredItem: {fileID: 11400000, guid: 04aad7a9b9f1b11428360494f478422c, type: 2}
-  hammerAnimator: {fileID: 0}
+  hammerAnimator: {fileID: 9063387014775046887}
   bathtubCollider: {fileID: 0}
   dialogueUI: {fileID: 100515801}
   noItemLine: Tendria que quitar estas maderas
-  wrongItemLine: 
+  wrongItemLine: 'Esto no me sirve. '
 --- !u!1001 &1070949332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24203,7 +24203,7 @@ MonoBehaviour:
   requiredKey: {fileID: 11400000, guid: edfe15aa818515148999d9309058cd09, type: 2}
   dialogueUI: {fileID: 100515801}
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla."
-  animator: {fileID: 0}
+  animator: {fileID: 1243346501}
 --- !u!1 &1368418200
 GameObject:
   m_ObjectHideFlags: 0
@@ -38161,6 +38161,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1843212709}
   m_SourcePrefab: {fileID: 100100000, guid: 63a61d21d89057344b422c9eceff9cb9, type: 3}
+--- !u!95 &9063387014775046887 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1996675241052582255, guid: 63a61d21d89057344b422c9eceff9cb9, type: 3}
+  m_PrefabInstance: {fileID: 9063387014775046886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -5,16 +5,20 @@ using UnityEngine.AI;
 public class DoorSystem : Interactable
 {
     [Header("Key")]
-    [SerializeField] private ItemData requiredKey;
+    [SerializeField] 
+    private ItemData requiredKey;
 
     [Header("Dialogue")]
-    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] 
+    private DialogueUI dialogueUI;
 
     [TextArea]
-    [SerializeField] private string lockedLine;
+    [SerializeField] 
+    private string lockedLine;
 
     [Header("Components")]
-    [SerializeField] private Animator animator;
+    [SerializeField] 
+    private Animator animator;
 
     private NavMeshObstacle navMeshObstacle;
     private Collider doorCollider;
