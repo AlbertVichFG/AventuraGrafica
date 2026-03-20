@@ -550,13 +550,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fdcf302a4ccac574daebdf2900cb058e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 185773980}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fdcf302a4ccac574daebdf2900cb058e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 729548132}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fdcf302a4ccac574daebdf2900cb058e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 221554912}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fdcf302a4ccac574daebdf2900cb058e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 221554916}
   m_SourcePrefab: {fileID: 100100000, guid: fdcf302a4ccac574daebdf2900cb058e, type: 3}
 --- !u!4 &31092722 stripped
 Transform:
@@ -2222,27 +2222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AscensorScript
   sceneToLoad: GeppettoFinal
   isOn: 0
---- !u!65 &221554916
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221554909}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.0013876, y: 4.009121, z: 0.09051808}
-  m_Center: {x: -0.08935995, y: -0.015877368, z: 0.045267127}
 --- !u!1001 &229990068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6921,6 +6900,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4269697874028422, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
   m_PrefabInstance: {fileID: 722988905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &729548131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 729548132}
+  - component: {fileID: 729548133}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: WalkZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &729548132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729548131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 31092722}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &729548133
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729548131}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.8383634, y: 3.9888818, z: 0.121382}
+  m_Center: {x: -0.16686445, y: 0.06565822, z: -0.0179907}
 --- !u!1001 &735400814
 PrefabInstance:
   m_ObjectHideFlags: 0

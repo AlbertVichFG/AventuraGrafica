@@ -25,6 +25,9 @@ public class DoorSystem : Interactable
 
     private bool opened = false;
 
+    [SerializeField]
+    private GameObject triggerTalk;
+
     void Awake()
     {
         navMeshObstacle = GetComponentInChildren<NavMeshObstacle>(true);
@@ -69,10 +72,12 @@ public class DoorSystem : Interactable
 
         if (doorCollider != null)
             doorCollider.enabled = false;
-
-        /*
-        if (animator != null)
-            animator.SetTrigger("Open");
-        */
+        
+       if (animator != null)
+        {
+            animator.SetTrigger("PuertaAbierta"); 
+            triggerTalk.SetActive(false);
+        }
+       
     }
 }

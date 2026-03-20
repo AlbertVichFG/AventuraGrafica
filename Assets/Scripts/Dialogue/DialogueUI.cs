@@ -6,11 +6,14 @@ using UnityEngine.InputSystem;
 public class DialogueUI : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private GameObject panel;
-    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] 
+    private GameObject panel;
+    [SerializeField] 
+    private TMP_Text dialogueText;
 
     [Header("Typewriter Settings")]
-    [SerializeField] private float letterSpeed = 0.03f;
+    [SerializeField] 
+    private float letterSpeed = 0.03f;
 
 
     string[] dialogueLines;
