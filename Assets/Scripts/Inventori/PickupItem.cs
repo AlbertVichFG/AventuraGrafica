@@ -6,7 +6,8 @@ public class PickupItem : Interactable
     [SerializeField]
     private AudioClip sfxItem;
     
-    [SerializeField] private ItemData item;
+    [SerializeField] 
+    private ItemData item;
     public override void Interact(PlayerController player)
     {
         player.StartCoroutine(PickupSequence(player));
@@ -19,10 +20,9 @@ public class PickupItem : Interactable
         Animator anim = player.GetComponentInChildren<Animator>();
 
         anim.SetTrigger("PickItem");
-        //AudioManager.instance.PlaySFX(sfxItem, transform.position);
+        AudioManager.instance.PlaySFX(sfxItem, transform.position);
 
         yield return null;
-
         float length = anim.GetCurrentAnimatorStateInfo(0).length;
 
         yield return new WaitForSeconds(length);

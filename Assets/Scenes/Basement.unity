@@ -960,6 +960,7 @@ MonoBehaviour:
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   animator: {fileID: 94171085}
   triggerTalk: {fileID: 632284332}
+  sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}
 --- !u!65 &47873803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6845,7 +6846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: 60187938d9c4e9946ad495956161d8a8, type: 2}
 --- !u!65 &317732481
 BoxCollider:
@@ -7942,6 +7943,7 @@ MonoBehaviour:
   lockedLine: La puerta esta cerrada necessitas una llave.
   animator: {fileID: 0}
   triggerTalk: {fileID: 0}
+  sfxDoor: {fileID: 0}
 --- !u!65 &385308610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17914,7 +17916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: edfe15aa818515148999d9309058cd09, type: 2}
 --- !u!1001 &908798690
 PrefabInstance:
@@ -18299,6 +18301,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 467302, guid: 7084b5a21de241c98d3a4063be79c075, type: 3}
   m_PrefabInstance: {fileID: 920272318}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &921595909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 921595911}
+  - component: {fileID: 921595910}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &921595910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921595909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bcd82c7d11e4e32aba3a372296254f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  SFXPrefab: {fileID: 1593729805945258302, guid: 9b77d637eb58f624bad4c6449846bf25, type: 3}
+--- !u!4 &921595911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921595909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.04383, y: 0, z: 0.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &922369958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27241,7 +27288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: 60187938d9c4e9946ad495956161d8a8, type: 2}
 --- !u!65 &1348622511
 BoxCollider:
@@ -33619,6 +33666,7 @@ MonoBehaviour:
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   animator: {fileID: 1725750165}
   triggerTalk: {fileID: 1722340260}
+  sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}
 --- !u!1 &1716360856
 GameObject:
   m_ObjectHideFlags: 0
@@ -37692,7 +37740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: e5d7a54bb0b354543abc548b70cee27e, type: 2}
 --- !u!1001 &1934251336
 PrefabInstance:
@@ -40397,6 +40445,7 @@ MonoBehaviour:
   lockedLine: Necesitas una llave.
   animator: {fileID: 94171085}
   triggerTalk: {fileID: 0}
+  sfxDoor: {fileID: 0}
 --- !u!1 &2049808785
 GameObject:
   m_ObjectHideFlags: 0
@@ -45864,3 +45913,4 @@ SceneRoots:
   - {fileID: 539576817}
   - {fileID: 1023303229}
   - {fileID: 1900001795}
+  - {fileID: 921595911}

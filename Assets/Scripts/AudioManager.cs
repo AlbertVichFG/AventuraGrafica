@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
         ambientSource = gameObject.AddComponent<AudioSource>();
 
         musicVolume = 0.6f;
-        sfxVolume = 1f;
+        sfxVolume = 0.3f;
     }
     public void PlayMusic(AudioClip _music)
     {

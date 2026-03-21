@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private AudioClip sfxWalk;
+    private float lastStepTime;
+    private float stepCooldown = 0.5f;
 
     void Awake()
     {
@@ -251,6 +253,14 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetBool("IsWalking", true);
                 animator.SetBool("IsRuning", false);
+            }
+            if (Time.time - lastStepTime > 0.5f)
+            {
+                if (AudioManager.instance != null && sfxWalk != null)
+                {
+                    AudioManager.instance.PlaySFX(sfxWalk, transform.position);
+                    lastStepTime = Time.time;
+                }
             }
         }
         else

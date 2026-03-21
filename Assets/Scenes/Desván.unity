@@ -9956,8 +9956,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1139385203}
   - {fileID: 1593373479}
+  - {fileID: 1139385203}
   - {fileID: 1676398363}
   - {fileID: 31092722}
   - {fileID: 1358290159}
@@ -14643,7 +14643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: d753c183693499e4581faca222f7aa7a, type: 2}
 --- !u!95 &1434706729
 Animator:
@@ -16619,7 +16619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: d753c183693499e4581faca222f7aa7a, type: 2}
 --- !u!1001 &1594916524
 PrefabInstance:
@@ -17526,7 +17526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: d753c183693499e4581faca222f7aa7a, type: 2}
 --- !u!1001 &1676619077
 PrefabInstance:
@@ -18282,6 +18282,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &1819291790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819291792}
+  - component: {fileID: 1819291791}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1819291791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819291790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bcd82c7d11e4e32aba3a372296254f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  SFXPrefab: {fileID: 1593729805945258302, guid: 9b77d637eb58f624bad4c6449846bf25, type: 3}
+--- !u!4 &1819291792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819291790}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.04383, y: 0, z: 0.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1821856402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29268,3 +29313,4 @@ SceneRoots:
   - {fileID: 1782992986}
   - {fileID: 19292000}
   - {fileID: 646000646}
+  - {fileID: 1819291792}

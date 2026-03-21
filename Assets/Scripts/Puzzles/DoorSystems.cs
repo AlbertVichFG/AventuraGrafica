@@ -27,6 +27,9 @@ public class DoorSystem : Interactable
     [SerializeField]
     private GameObject triggerTalk;
 
+    [SerializeField]
+    private AudioClip sfxDoor;
+
     void Awake()
     {
         navMeshObstacle = GetComponentInChildren<NavMeshObstacle>(true);
@@ -79,6 +82,7 @@ public class DoorSystem : Interactable
         if (animator != null)
         {
             animator.SetTrigger("PuertaAbierta"); 
+            AudioManager.instance.PlaySFX(sfxDoor, transform.position);
             triggerTalk.SetActive(false);
         }
     }

@@ -7385,6 +7385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorBiblio
   doorAnimator: {fileID: 311568100}
+  sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}
 --- !u!114 &349802500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11833,23 +11834,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1994274257}
     m_Modifications:
     - target: {fileID: 496256877056673147, guid: a8da45a9ed0e18447955e5b9a19eeb03, type: 3}
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 82ba0a9b4d190774b9ad54a569e0df59, type: 2}
+    - target: {fileID: 496256877056673147, guid: a8da45a9ed0e18447955e5b9a19eeb03, type: 3}
+      propertyPath: sfxItem
+      value: 
+      objectReference: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
     - target: {fileID: 716038758881865597, guid: a8da45a9ed0e18447955e5b9a19eeb03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.753
+      value: 0.07861328
       objectReference: {fileID: 0}
     - target: {fileID: 716038758881865597, guid: a8da45a9ed0e18447955e5b9a19eeb03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.644
+      value: -0.009230018
       objectReference: {fileID: 0}
     - target: {fileID: 716038758881865597, guid: a8da45a9ed0e18447955e5b9a19eeb03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.646
+      value: 0.2904501
       objectReference: {fileID: 0}
     - target: {fileID: 716038758881865597, guid: a8da45a9ed0e18447955e5b9a19eeb03, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25453,6 +25458,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1113467251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1113467253}
+  - component: {fileID: 1113467252}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1113467252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113467251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bcd82c7d11e4e32aba3a372296254f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  SFXPrefab: {fileID: 1593729805945258302, guid: 9b77d637eb58f624bad4c6449846bf25, type: 3}
+--- !u!4 &1113467253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113467251}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.04383, y: 0, z: 0.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1115870848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43409,6 +43459,7 @@ Transform:
   - {fileID: 6207763203375387089}
   - {fileID: 1995567290}
   - {fileID: 477018901}
+  - {fileID: 532955505}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1994334638
@@ -43597,7 +43648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  sfxItem: {fileID: 0}
+  sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
   item: {fileID: 11400000, guid: ab4d225ae55ddb3439b6bf83905e7746, type: 2}
 --- !u!1001 &1996491243
 PrefabInstance:
@@ -47384,6 +47435,6 @@ SceneRoots:
   - {fileID: 818147373}
   - {fileID: 934958573}
   - {fileID: 1376317498}
-  - {fileID: 532955504}
   - {fileID: 848966725}
   - {fileID: 721906556}
+  - {fileID: 1113467253}
