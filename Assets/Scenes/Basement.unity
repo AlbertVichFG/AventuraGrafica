@@ -33578,7 +33578,7 @@ GameObject:
   - component: {fileID: 1713931434}
   m_Layer: 7
   m_Name: "PuertaAlmac\xE9n (1)"
-  m_TagString: Talk
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

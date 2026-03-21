@@ -10222,6 +10222,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -178
       objectReference: {fileID: 0}
+    - target: {fileID: 8948458560918524465, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18806,15 +18810,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.316637
+      value: -17.272
       objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.900493
+      value: 14.96
       objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.817389
+      value: 16.867
       objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43593,6 +43597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
   item: {fileID: 11400000, guid: ab4d225ae55ddb3439b6bf83905e7746, type: 2}
 --- !u!1001 &1996491243
 PrefabInstance:
