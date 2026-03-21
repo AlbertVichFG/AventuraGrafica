@@ -12,8 +12,6 @@ public class Palancas : Interactable
     private GameObject npcMujer;
     [SerializeField] 
     private GameObject puerta;
-    [SerializeField] 
-    private AscensorScript ascensor;
 
     public override void Interact(PlayerController player)
     {
@@ -21,10 +19,6 @@ public class Palancas : Interactable
         {
             PuertaSecreta();
         }
-        else
-        {
-            ActivarAscensor();
-        }     
     }
 
     void PuertaSecreta()
@@ -34,10 +28,5 @@ public class Palancas : Interactable
 
         npcMujer.SetActive(true);
         puerta.SetActive(true);
-    }
-
-    void ActivarAscensor()
-    {
-        ascensor.isOn = true;
     }
 }

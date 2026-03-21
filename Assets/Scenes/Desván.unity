@@ -2221,7 +2221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AscensorScript
   sceneToLoad: GeppettoFinal
-  isOn: 0
+  isOn: 1
 --- !u!1001 &229990068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13368,7 +13368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1312082606683252, guid: 9d27423df749cb04da4c5e052aef40bc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4515546100433492, guid: 9d27423df749cb04da4c5e052aef40bc, type: 3}
       propertyPath: m_LocalScale.x
@@ -14068,8 +14068,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AfterTalk
   requiredPhase: 1
   leverAnimator: {fileID: 1829914308}
-  objectToActivate: {fileID: 1358290157}
-  triggerToActivate: {fileID: 1672066049}
+  objectToActivate: {fileID: 0}
+  triggerToActivate: {fileID: 0}
   pared: {fileID: 1286110393}
 --- !u!1 &1369749803
 GameObject:
