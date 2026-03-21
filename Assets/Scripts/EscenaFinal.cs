@@ -11,6 +11,8 @@ public class EscenaFinal : MonoBehaviour
     [SerializeField] 
     private Animator anim;
     [SerializeField] 
+    private Animator animPlayer;
+    [SerializeField] 
     private string escenaFinal;
 
     void OnTriggerEnter(Collider other)
@@ -19,11 +21,13 @@ public class EscenaFinal : MonoBehaviour
         {
             player.StopMovement(); 
             player.enabled = false;
-            anim.SetTrigger("Final");
+            //anim.SetBool("IsRunning", false);
+            //animPlayer.SetBool("IsWalking", false);
+            animPlayer.SetTrigger("Final");
             StartCoroutine(FinalCoroutine());
         }
     }
-
+    
     IEnumerator FinalCoroutine()
     {
         yield return new WaitForSeconds(6f);
