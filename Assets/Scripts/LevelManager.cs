@@ -3,12 +3,12 @@ using UnityEngine.AI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] 
+    private Transform[] spawnPoints;
 
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-
         int door = GameManager.instance.doorToGo;
 
         Transform spawn = spawnPoints[door];
@@ -26,7 +26,6 @@ public class LevelManager : MonoBehaviour
 
         agent.enabled = true;
         agent.ResetPath();
-
         controller.ignoreNavMeshSnap = false;
     }
 }   

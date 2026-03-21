@@ -20,29 +20,35 @@ public class BridgBuilder : Interactable
     public override void Interact(PlayerController player)
     {
         if (!InventoryManager.instance.HasItemInHand())
+        {
             return;
-
+        }
+            
         ItemData item = InventoryManager.instance.GetItemInHand();
 
         if (item != woodItem)
+        {
             return;
-
+        }
+            
         if (placedWood >= bridgeParts.Length)
+        {
             return;
+        }
 
         // consumir item
         InventoryManager.instance.RemoveItemInHand();
-
         // activar part del pont
         bridgeParts[placedWood].SetActive(true);
-
         placedWood++;
 
         // si pont complet
         if (placedWood >= bridgeParts.Length)
         {
             if (obstacle != null)
+            {
                 obstacle.enabled = false;
+            }
         }
     }
 }

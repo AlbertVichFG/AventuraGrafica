@@ -5,12 +5,7 @@ using UnityEngine;
 [Serializable]
 public class GameData
 {
-    
-    
-
-
     public List<Objeto> objetos = new List<Objeto>();
-
 
     public bool doorUnlocked;
     public bool talkedToGuard;
@@ -19,9 +14,7 @@ public class GameData
     private int saveScene;
     [SerializeField]
     private int sceneSave;
-
-
-
+    
     public int SaveScene
     {
         get { return saveScene; }

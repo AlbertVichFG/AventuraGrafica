@@ -20,7 +20,6 @@ public class SettingsManager : MonoBehaviour
         for (int i = 0; i < resoluciones.Length; i++)
         {
             string opcion = resoluciones[i].width + " x " + resoluciones[i].height;
-
             resolucionDropdown.options.Add(new TMP_Dropdown.OptionData(opcion));
 
             if (resoluciones[i].width == Screen.currentResolution.width &&

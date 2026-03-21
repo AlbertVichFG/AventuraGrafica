@@ -22,24 +22,39 @@ public class AfterTalk : Interactable
 
     public override void Interact(PlayerController player)
     {
-        if (used) return;
-        if (GameState.Instance.currentPuzzlePhase < requiredPhase) return;
+        if (used) 
+        {
+            return;
+        }
+
+        if (GameState.Instance.currentPuzzlePhase < requiredPhase) 
+        {
+            return;
+        }
 
         used = true;
 
         // Animación palanca
         if (leverAnimator != null)
+        {
             leverAnimator.SetTrigger("On");
-
+        }
+            
         // Activar objetos
         if (objectToActivate != null)
+        {
             objectToActivate.SetActive(true);
+        }  
 
         if (triggerToActivate != null)
+        {
             triggerToActivate.SetActive(true);
-
+        }
+            
         // Desactivar pared u objeto
         if (pared != null)
+        {
             pared.SetActive(false);
+        }         
     }
 }

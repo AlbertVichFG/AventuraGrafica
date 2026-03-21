@@ -5,6 +5,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     private AudioSource musicSource;
     private AudioSource ambientSource;
+    
     [SerializeField]
     private GameObject SFXPrefab;
     private float musicVolume;

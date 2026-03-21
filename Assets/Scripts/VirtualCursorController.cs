@@ -10,47 +10,51 @@ public class VirtualCursorController : MonoBehaviour
     private enum CursorType { Walk, Talk, Interact, ChangeZone }
 
     [Header("UI")]
-    [SerializeField] private RectTransform cursorRect;
-    [SerializeField] private Image cursorImage;
-    [SerializeField] private Canvas canvas;
+    [SerializeField] 
+    private RectTransform cursorRect;
+    [SerializeField] 
+    private Image cursorImage;
+    [SerializeField] 
+    private Canvas canvas;
 
     [Header("Cursor Sprites")]
-    [SerializeField] private Sprite walkSprite;
-    [SerializeField] private Sprite talkSprite;
-    [SerializeField] private Sprite interactSprite;
-    [SerializeField] private Sprite changeZoneSprite;
+    [SerializeField] 
+    private Sprite walkSprite;
+    [SerializeField] 
+    private Sprite talkSprite;
+    [SerializeField] 
+    private Sprite interactSprite;
+    [SerializeField] 
+    private Sprite changeZoneSprite;
 
     [Header("Gamepad")]
-    [SerializeField] private float gamepadSpeed = 800f;
-    [SerializeField] private float stickDeadZone = 0.15f;
+    [SerializeField] 
+    private float gamepadSpeed = 800f;
+    [SerializeField] 
+    private float stickDeadZone = 0.15f;
 
     [Header("Raycast")]
-    [SerializeField] private LayerMask interactableLayer;
-    [SerializeField] private LayerMask walkZoneLayer;
+    [SerializeField] 
+    private LayerMask interactableLayer;
+    [SerializeField] 
+    private LayerMask walkZoneLayer;
 
     InputMode currentMode = InputMode.Mouse;
-
     Vector2 cursorPosition;
-
     private Camera mainCamera;
-
     private Mouse virtualMouse;
 
     void Start()
     {
         mainCamera = Camera.main;
-
         cursorPosition = new Vector2(Screen.width / 2f, Screen.height / 2f);
-
         UpdateCursorVisual();
-
         Debug.Log("VirtualCursorController started");
 
         if (virtualMouse == null)
         {
             virtualMouse = (Mouse)InputSystem.AddDevice("VirtualMouse");
             InputSystem.EnableDevice(virtualMouse);
-
             Debug.Log("Virtual mouse created: " + virtualMouse);
         }
 
@@ -60,17 +64,11 @@ public class VirtualCursorController : MonoBehaviour
     void Update()
     {
         DetectInputMode();
-
         UpdateCursorPosition();
-
         UpdateCursorVisual();
-
         UpdateCursorType();
-
         UpdateVirtualMouse();
-
         SendGamepadClick();
-
         DebugUIRaycast();
     }
 
@@ -98,7 +96,6 @@ public class VirtualCursorController : MonoBehaviour
         if (currentMode == InputMode.Gamepad && Gamepad.current != null)
         {
             Vector2 stick = Gamepad.current.leftStick.ReadValue();
-
             cursorPosition += stick * gamepadSpeed * Time.unscaledDeltaTime;
         }
         else if (currentMode == InputMode.Mouse && Mouse.current != null)
@@ -112,7 +109,8 @@ public class VirtualCursorController : MonoBehaviour
 
     void UpdateCursorVisual()
     {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+        RectTransformUtility.ScreenPointToLocalPointInRectangle
+        (
             canvas.transform as RectTransform,
             cursorPosition,
             canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main,
@@ -124,28 +122,31 @@ public class VirtualCursorController : MonoBehaviour
 
     void UpdateVirtualMouse()
     {
-        if (virtualMouse == null) return;
+        if (virtualMouse == null) 
+        {
+            return;
+        }
 
         virtualMouse.WarpCursorPosition(cursorPosition);
-
         InputState.Change(virtualMouse.position, cursorPosition);
     }
 
     void SendGamepadClick()
     {
-        if (virtualMouse == null || Gamepad.current == null) return;
+        if (virtualMouse == null || Gamepad.current == null) 
+        {
+            return;
+        }
 
         if (Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             Debug.Log("GAMEPAD CLICK DOWN");
-
             InputState.Change(virtualMouse.leftButton, 1);
         }
 
         if (Gamepad.current.buttonSouth.wasReleasedThisFrame)
         {
             Debug.Log("GAMEPAD CLICK UP");
-
             InputState.Change(virtualMouse.leftButton, 0);
         }
     }
@@ -175,7 +176,9 @@ public class VirtualCursorController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100f, walkZoneLayer))
         {
             SetCursor(CursorType.Walk);
-            return;
+            {
+                return;
+            }
         }
 
         SetCursor(CursorType.Walk);
@@ -206,11 +209,8 @@ public class VirtualCursorController : MonoBehaviour
     void DebugUIRaycast()
     {
         PointerEventData pointerData = new PointerEventData(EventSystem.current);
-
         pointerData.position = cursorPosition;
-
         var results = new System.Collections.Generic.List<RaycastResult>();
-
         EventSystem.current.RaycastAll(pointerData, results);
 
         if (results.Count > 0)

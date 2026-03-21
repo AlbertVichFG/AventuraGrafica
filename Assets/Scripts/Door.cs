@@ -26,7 +26,7 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        // Solo comprobamos la tecla si el jugador est� dentro del Trigger
+        // El jugador est� dentro del Trigger
         if (jugadorEstaCerca && Input.GetKeyDown(teclaInteraccion))
         {
             EjecutarAccion();
@@ -35,7 +35,7 @@ public class Door : MonoBehaviour
 
     private void EjecutarAccion()
     {
-        // Usamos el Singleton de tu inventario para buscar el objeto exacto
+        // Usamos el Singleton del inventario para buscar el objeto exacto
         if (Inventory.Instance.TieneObjeto(objetoRequerido))
         {
             if (consumirAlUsar)

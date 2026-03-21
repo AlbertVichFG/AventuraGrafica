@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instance;
     [SerializeField]
     private GameData gameData;
@@ -26,7 +25,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 
     // Update is called once per frame
     void Update()
@@ -60,7 +58,4 @@ public class GameManager : MonoBehaviour
             GetGameData = JsonUtility.FromJson<GameData>(json);
         }
     }
-
-
-    
 }

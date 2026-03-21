@@ -959,6 +959,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 1824892032}
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   animator: {fileID: 94171085}
+  triggerTalk: {fileID: 632284332}
 --- !u!65 &47873803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7940,6 +7941,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 1824892032}
   lockedLine: La puerta esta cerrada necessitas una llave.
   animator: {fileID: 0}
+  triggerTalk: {fileID: 0}
 --- !u!65 &385308610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33616,6 +33618,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 1824892032}
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   animator: {fileID: 1725750165}
+  triggerTalk: {fileID: 1722340260}
 --- !u!1 &1716360856
 GameObject:
   m_ObjectHideFlags: 0
@@ -40393,6 +40396,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 1824892032}
   lockedLine: Necesitas una llave.
   animator: {fileID: 94171085}
+  triggerTalk: {fileID: 0}
 --- !u!1 &2049808785
 GameObject:
   m_ObjectHideFlags: 0

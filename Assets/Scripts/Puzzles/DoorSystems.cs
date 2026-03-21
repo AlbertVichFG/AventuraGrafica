@@ -22,7 +22,6 @@ public class DoorSystem : Interactable
 
     private NavMeshObstacle navMeshObstacle;
     private Collider doorCollider;
-
     private bool opened = false;
 
     [SerializeField]
@@ -36,11 +35,13 @@ public class DoorSystem : Interactable
 
     public override void Interact(PlayerController player)
     {
-  //      player.StopMovement();
+        //player.StopMovement();
         dialogueUI.SetPlayer(player);
 
         if (opened)
+        {
             return;
+        }
 
         if (InventoryManager.instance.HasItemInHand())
         {
@@ -57,7 +58,9 @@ public class DoorSystem : Interactable
 
         // Porta tancada
         if (!string.IsNullOrEmpty(lockedLine))
+        {
             dialogueUI.ShowLine(lockedLine);
+        }
     }
 
     void OpenDoor()
@@ -73,11 +76,10 @@ public class DoorSystem : Interactable
         if (doorCollider != null)
             doorCollider.enabled = false;
         
-       if (animator != null)
+        if (animator != null)
         {
             animator.SetTrigger("PuertaAbierta"); 
             triggerTalk.SetActive(false);
         }
-       
     }
 }

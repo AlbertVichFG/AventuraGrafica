@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    [SerializeField] 
+    private GameObject player;
     [SerializeField] 
     private GameObject panelPause;
 
@@ -15,7 +16,7 @@ public class MenuController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -41,10 +42,12 @@ public class MenuController : MonoBehaviour
         panelPause.SetActive(false);
         Time.timeScale = 1;
     }
+
     public void MainMenuButton()
     {
         SceneManager.LoadScene(0);
     }
+    
     public void saveGame()
     {
         int slot = GameManager.instance.currentSlot;

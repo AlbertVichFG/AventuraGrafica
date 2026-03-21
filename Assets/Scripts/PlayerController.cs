@@ -10,18 +10,22 @@ public class PlayerController : MonoBehaviour
 {
     private static PlayerController instance;
     [Header("References")]
-    [SerializeField] private VirtualCursorController cursor;
+    [SerializeField] 
+    private VirtualCursorController cursor;
 
     [Header("Movement")]
     [SerializeField] 
     private float walkSpeed = 3.5f;
     [SerializeField] 
     private float runSpeed = 6f;
-    [SerializeField] private float doubleClickTime = 0.3f;
+    [SerializeField] 
+    private float doubleClickTime = 0.3f;
 
     [Header("Navigation")]
-    [SerializeField] private float navMeshSampleRadius = 1f;
-    [SerializeField] private float interactionDistance = 1.2f;
+    [SerializeField] 
+    private float navMeshSampleRadius = 1f;
+    [SerializeField] 
+    private float interactionDistance = 1.2f;
 
     [Header("Layers")]
     [SerializeField] 
@@ -32,7 +36,6 @@ public class PlayerController : MonoBehaviour
     private LayerMask obstacleLayer;
 
     public bool ignoreNavMeshSnap = false;
-
 
     private NavMeshAgent agent;
     private Camera mainCamera;
@@ -49,24 +52,24 @@ public class PlayerController : MonoBehaviour
     private AudioClip sfxWalk;
 
     void Awake()
-{
-    if (instance == null)
     {
-        instance = this;
-        //DontDestroyOnLoad(gameObject);
-    }
-    else
-    {
-        Destroy(gameObject);
-        return;
-    }
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    agent = GetComponent<NavMeshAgent>();
-    mainCamera = Camera.main;
-    animator = GetComponentInChildren<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        mainCamera = Camera.main;
+        animator = GetComponentInChildren<Animator>();
 
-    agent.speed = walkSpeed;
-}
+        agent.speed = walkSpeed;
+    }
 
     void Update()
     {
@@ -82,8 +85,10 @@ public class PlayerController : MonoBehaviour
     void LateUpdate()
     {
         if (ignoreNavMeshSnap)
+        {
             return;
-
+        }
+            
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 0.3f, NavMesh.AllAreas))
         {
             transform.position = hit.position;
@@ -93,26 +98,33 @@ public class PlayerController : MonoBehaviour
     void HandleInput()
     {
         if (movementLocked)
+        {
             return;
+        }
 
         bool mouseClick = Mouse.current.leftButton.wasPressedThisFrame;
         bool gamepadClick = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
 
         if (!mouseClick && !gamepadClick)
+        {
             return;
+        }
 
         // SI EL CLICK ee DEL MANDO  provar UI manualment
         if (gamepadClick)
         {
             if (ClickUI())
+            {
                 return;
+            }
         }
-
         //mouse utilitza el sistema normal de Unity UI
         if (EventSystem.current.IsPointerOverGameObject())
+        {
             return;
-
-        //  InventoryManager.instance.CancelItemUse();
+        }
+            
+        //InventoryManager.instance.CancelItemUse();
 
         runOrder = (Time.time - lastClickTime <= doubleClickTime);
         lastClickTime = Time.time;
@@ -123,12 +135,12 @@ public class PlayerController : MonoBehaviour
     void TryMoveOrInteract()
     {
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
             return;
-
+        }
+            
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
-
         RaycastHit[] hits = Physics.RaycastAll(ray, 100f);
-
         System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
 
         foreach (var hit in hits)
@@ -169,11 +181,12 @@ public class PlayerController : MonoBehaviour
         }
 
         targetInteractable = interactable;
-
         targetPoint = interactable.transform.Find("InteractionPoint");
 
         if (targetPoint == null)
+        {
             targetPoint = interactable.transform;
+        }
 
         agent.ResetPath();
         agent.speed = runOrder ? runSpeed : walkSpeed;
@@ -183,16 +196,15 @@ public class PlayerController : MonoBehaviour
     void CheckInteractionArrival()
     {
         if (agent.pathPending)
+        {
             return;
+        }
 
         if (!agent.hasPath || agent.remainingDistance <= interactionDistance)
         {
             agent.ResetPath();
-
             transform.LookAt(targetInteractable.transform);
-
             targetInteractable.Interact(this);
-
             targetInteractable = null;
             targetPoint = null;
         }
@@ -249,12 +261,10 @@ public class PlayerController : MonoBehaviour
     }
 
     //camera
-
     public void SetActiveCamera(Camera cam)
     {
         mainCamera = cam;
     }
-
 
     bool ClickUI()
     {

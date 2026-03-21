@@ -3,11 +3,14 @@ using UnityEngine.UI;
 
 public class Objeto : MonoBehaviour
 {
-    [SerializeField] private Image logoInventario;
-    [SerializeField] private Image bordelogo;
-    [SerializeField] private string descripcion;
-
-    [SerializeField] private bool inRange;
+    [SerializeField] 
+    private Image logoInventario;
+    [SerializeField] 
+    private Image bordelogo;
+    [SerializeField] 
+    private string descripcion;
+    [SerializeField] 
+    private bool inRange;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,8 +26,6 @@ public class Objeto : MonoBehaviour
         {
             Inventory.Instance.AddObjeto(gameObject);
         }
-
-
     }
 
     private void OnTriggerEnter(Collider other)

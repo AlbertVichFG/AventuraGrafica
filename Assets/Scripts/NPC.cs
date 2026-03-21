@@ -9,37 +9,51 @@ public class NPC : Interactable
         public string[] lines;
     }
 
-    [SerializeField] private bool affectsGameState = false;
+    [SerializeField] 
+    private bool affectsGameState = false;
 
     [Header("Dialogue per Phase")]
-    [SerializeField] private DialoguePhase[] phases;
+    [SerializeField] 
+    private DialoguePhase[] phases;
 
     [Header("References")]
-    [SerializeField] private DialogueUI dialogueUI;
-    [SerializeField] private bool[] phaseCompleted;
+    [SerializeField] 
+    private DialogueUI dialogueUI;
+    [SerializeField] 
+    private bool[] phaseCompleted;
 
     [Header("Item Puzzle")]
-    [SerializeField] private ItemData requiredItem;
-    [SerializeField] private int requiredAmount = 1;
-    [SerializeField] private int deliveredItems = 0;
-    [SerializeField] private bool puzzleCompleted = false;
-    [SerializeField] private bool firstTalkDone = false;
+    [SerializeField] 
+    private ItemData requiredItem;
+    [SerializeField] 
+    private int requiredAmount = 1;
+    [SerializeField] 
+    private int deliveredItems = 0;
+    [SerializeField] 
+    private bool puzzleCompleted = false;
+    [SerializeField] 
+    private bool firstTalkDone = false;
 
     [Header("Reward")]
-    [SerializeField] private ItemData rewardItem;
+    [SerializeField] 
+    private ItemData rewardItem;
 
     [Header("Dialogue Lines")]
     [TextArea(2, 3)]
-    [SerializeField] private string progressLine;
+    [SerializeField] 
+    private string progressLine;
 
     [TextArea(2, 3)]
-    [SerializeField] private string wrongItemLine;
+    [SerializeField] 
+    private string wrongItemLine;
 
     [TextArea(2, 3)]
-    [SerializeField] private string puzzleCompletedLine;
+    [SerializeField] 
+    private string puzzleCompletedLine;
 
     [TextArea(2, 3)]
-    [SerializeField] private string puzzleSolvedLine;
+    [SerializeField] 
+    private string puzzleSolvedLine;
 
     private int[] phaseIndexes;
 
@@ -55,7 +69,6 @@ public class NPC : Interactable
         dialogueUI.SetPlayer(player);
 
         // ITEM INTERACTION
-
         if (InventoryManager.instance.HasItemInHand())
         {
             ItemData item = InventoryManager.instance.GetItemInHand();
@@ -71,9 +84,7 @@ public class NPC : Interactable
             if (item == requiredItem)
             {
                 deliveredItems++;
-
                 InventoryManager.instance.RemoveItemInHand();
-
                 dialogueUI.ShowLine(progressLine + " (" + deliveredItems + "/" + requiredAmount + ")");
 
                 if (deliveredItems >= requiredAmount)
@@ -92,7 +103,6 @@ public class NPC : Interactable
 
                     dialogueUI.ShowLine(puzzleSolvedLine);
                 }
-
                 return;
             }
             else
@@ -103,7 +113,6 @@ public class NPC : Interactable
         }
 
         // FIRST TALK TRIGGER
-
         if (affectsGameState && !firstTalkDone && GameState.Instance.currentPuzzlePhase == 0)
         {
             firstTalkDone = true;
@@ -111,12 +120,13 @@ public class NPC : Interactable
         }
 
         // NORMAL DIALOGUE
-
         int phase = GameState.Instance.currentPuzzlePhase;
 
         if (phase < 0 || phase >= phases.Length)
+        {
             return;
-
+        }
+        
         string[] lines = phases[phase].lines;
 
         if (!phaseCompleted[phase])

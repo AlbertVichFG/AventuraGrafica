@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class GameState : MonoBehaviour
 {
     public static GameState Instance;
-
     public HashSet<string> openedDoors = new HashSet<string>();
 
     [SerializeField] 

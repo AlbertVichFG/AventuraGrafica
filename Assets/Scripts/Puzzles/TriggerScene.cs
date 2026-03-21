@@ -3,8 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class TriggerScene : MonoBehaviour
 {
-    [SerializeField] private string sceneToLoad;
-    [SerializeField] private int door;
+    [SerializeField] 
+    private string sceneToLoad;
+    [SerializeField] 
+    private int door;
 
     private void OnTriggerEnter(Collider other)
     {

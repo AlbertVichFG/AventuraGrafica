@@ -5,29 +5,34 @@ using System.Collections;
 public class BathtubPuzzle : Interactable
 {
     [Header("Item correcte")]
-    [SerializeField] private ItemData requiredItem;
+    [SerializeField] 
+    private ItemData requiredItem;
 
-    [Header("Animació martell")]
-    [SerializeField] private Animator hammerAnimator;
+    [Header("Animaciï¿½ martell")]
+    [SerializeField] 
+    private Animator hammerAnimator;
 
     [Header("Collider banyera")]
-    [SerializeField] private Collider bathtubCollider;
+    [SerializeField] 
+    private Collider bathtubCollider;
 
     [Header("Dialogue")]
-    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] 
+    private DialogueUI dialogueUI;
 
     [TextArea]
-    [SerializeField] private string noItemLine;
+    [SerializeField] 
+    private string noItemLine;
 
     [TextArea]
-    [SerializeField] private string wrongItemLine;
+    [SerializeField] 
+    private string wrongItemLine;
 
     private bool solved = false;
 
     public override void Interact(PlayerController player)
     {
-        Debug.Log("BATHTUB INTERACT");
-
+        Debug.Log("BATHTUB INTERACTUAR");
         dialogueUI.SetPlayer(player);
 
         if (solved)
@@ -44,11 +49,8 @@ public class BathtubPuzzle : Interactable
         }
 
         ItemData item = InventoryManager.instance.GetItemInHand();
-
-        Debug.Log("Item a la mà: " + item.name);
+        Debug.Log("Item a la mï¿½: " + item.name);
         Debug.Log("Item requerit: " + requiredItem.name);
-
-
 
         Debug.Log("ITEM CORRECTE resolent puzzle");
 
@@ -58,12 +60,9 @@ public class BathtubPuzzle : Interactable
     IEnumerator SolvePuzzle()
     {
         solved = true;
-
         Debug.Log("Eliminant item inventari");
-
         InventoryManager.instance.RemoveItemInHand();
-
-        Debug.Log("Animació martell");
+        Debug.Log("Animaciï¿½ martell");
 
         if (hammerAnimator != null)
         {

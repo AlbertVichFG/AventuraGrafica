@@ -10,13 +10,11 @@ public class MainMenu : MonoBehaviour
     private bool newGame;
     private int selectedSlot; // este será el slot en el que estamos jugando
     
-
     public void StartButton(bool _newGame)
     {       
         panelSlots.SetActive(true);
         newGame = _newGame;
     }
-
    
     public void SlotButton(int _slot)
     {
@@ -29,7 +27,6 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.DeleteKey("data" + _slot.ToString());
             SceneManager.LoadScene(1);   
             GameManager.instance.comeFromLoadGame = false;
-    
         }
         else
         {
@@ -48,11 +45,9 @@ public class MainMenu : MonoBehaviour
                 // SceneManager.LoadScene(escenaJuego);
             }
         }
-        
         // Cierra el panel de selección de slots
         panelSlots.SetActive(false);
     }
-
 
     public void AbrirAjustes()
     {
@@ -67,7 +62,6 @@ public class MainMenu : MonoBehaviour
     public void SalirJuego()
     {
         Debug.Log("Salir del juego");
-
         Application.Quit();
     }
     public void borrarPartidas()

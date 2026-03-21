@@ -7375,6 +7375,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 100515801}
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   animator: {fileID: 1611169975}
+  triggerTalk: {fileID: 0}
 --- !u!1 &451387085
 GameObject:
   m_ObjectHideFlags: 0
@@ -10711,6 +10712,7 @@ MonoBehaviour:
   lockedLine: "Est\xE1 bloqueada por tablones de madera. Necesito alguna herramienta
     para abrirla."
   animator: {fileID: 0}
+  triggerTalk: {fileID: 0}
 --- !u!1001 &626860598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24064,6 +24066,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 100515801}
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla."
   animator: {fileID: 1243346501}
+  triggerTalk: {fileID: 511628562}
 --- !u!1 &1368418200
 GameObject:
   m_ObjectHideFlags: 0
