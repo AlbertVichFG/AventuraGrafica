@@ -4,15 +4,23 @@ using UnityEngine.AI;
 
 public class Glue : Interactable
 {
-    [SerializeField] private ItemData glueItem;
-    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] 
+    private ItemData glueItem;
+    [SerializeField] 
+    private DialogueUI dialogueUI;
 
     [Header("Jump Points")]
-    [SerializeField] private Transform jumpY;
-    [SerializeField] private Transform jumpX;
+    [SerializeField] 
+    private Transform jumpY;
+    [SerializeField] 
+    private Transform jumpX;
 
     [TextArea]
-    [SerializeField] private string needSomethingLine;
+    [SerializeField] 
+    private string needSomethingLine;
+
+    [SerializeField]
+    private AudioClip sfxItem;
 
     public override void Interact(PlayerController player)
     {
@@ -30,7 +38,6 @@ public class Glue : Interactable
     IEnumerator PickupSequence(PlayerController player)
     {
         player.StopMovement();
-
         Animator anim = player.GetComponentInChildren<Animator>();
         NavMeshAgent agent = player.GetComponent<NavMeshAgent>();
 
@@ -42,21 +49,17 @@ public class Glue : Interactable
         player.transform.rotation = Quaternion.LookRotation(dir);
 
         anim.SetTrigger("PickItem");
+        AudioManager.instance.PlaySFX(sfxItem, transform.position);
 
-        // esperar que entri a l'animació
+        // esperar que entri a l'animaciï¿½
         yield return null;
-
         float length = anim.GetCurrentAnimatorStateInfo(0).length;
 
         // esperar que acabi
         yield return new WaitForSeconds(length);
-
         InventoryManager.instance.AddItem(glueItem);
-
         yield return JumpDown(player);
-
         agent.updateRotation = true;
-
 
         Destroy(gameObject);
     }
@@ -80,13 +83,9 @@ public class Glue : Interactable
         }
 
         player.transform.position = jumpX.position;
-
         agent.enabled = true;
-
         TamboretPuzzle.playerOnStool = false;
-
         player.ignoreNavMeshSnap = false;
-
         player.UnlockMovement();
     }
 }
