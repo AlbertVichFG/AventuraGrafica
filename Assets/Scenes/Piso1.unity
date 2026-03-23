@@ -1966,17 +1966,11 @@ MonoBehaviour:
     - "Geppetto tiene por toda la cosa una gran variedad de m\xE1quinas. No s\xE9
       para qu\xE9 servir\xE1n todas."
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1001 &114485984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4501,17 +4495,11 @@ MonoBehaviour:
   - lines:
     - "Geppetto y su nieta peque\xF1a. Parece ser que en esta foto celebran su cumplea\xF1os."
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &308241296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11455,10 +11443,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8021301
@@ -11503,10 +11487,6 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 321116404}
-    - target: {fileID: 8697025206151744140, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
-      propertyPath: sfxWalk
-      value: 
-      objectReference: {fileID: 8300000, guid: 4b77bede4e4044246980a5f2a68e316d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14102,17 +14082,11 @@ MonoBehaviour:
       Lorem Ipsum has been the industry''s standard '
     - Alvaro
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1 &791133769
 GameObject:
   m_ObjectHideFlags: 0
@@ -15847,6 +15821,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 483152, guid: 11974f92aea44b97a97ff84cc6182945, type: 3}
   m_PrefabInstance: {fileID: 871502164}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &873038264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873038266}
+  - component: {fileID: 873038265}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &873038265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873038264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bcd82c7d11e4e32aba3a372296254f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  SFXPrefab: {fileID: 1593729805945258302, guid: 9b77d637eb58f624bad4c6449846bf25, type: 3}
+--- !u!4 &873038266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873038264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.04383, y: 0, z: 0.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &878979893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16928,7 +16947,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938866012}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &938866014
 Camera:
   m_ObjectHideFlags: 0
@@ -36796,17 +36815,11 @@ MonoBehaviour:
     - "Molt b\xE9"
     - "Molt b\xE9"
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1001 &2121207134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38156,4 +38169,5 @@ SceneRoots:
   - {fileID: 1122734479}
   - {fileID: 1930818016}
   - {fileID: 79026226}
+  - {fileID: 873038266}
   - {fileID: 617638418}
