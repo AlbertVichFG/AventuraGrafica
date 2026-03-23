@@ -230,9 +230,13 @@ public class PlayerController : MonoBehaviour
     public void StopMovement()
     {
         movementLocked = true;
-        agent.ResetPath();
-        agent.isStopped = true;
 
+        targetInteractable = null;   // 👈 cancelar interacción
+        targetPoint = null;          // 👈 cancelar objetivo
+
+        agent.ResetPath();
+        agent.velocity = Vector3.zero;
+        agent.isStopped = true;
     }
 
     public void UnlockMovement()

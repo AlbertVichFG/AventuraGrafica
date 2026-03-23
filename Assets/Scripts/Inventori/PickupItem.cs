@@ -15,30 +15,26 @@ public class PickupItem : Interactable
         player.StartCoroutine(PickupSequence(player));
     }
 
-    IEnumerator PickupSequence(PlayerController player)
+IEnumerator PickupSequence(PlayerController player)
+{
+    player.StopMovement();
+
+    Animator anim = player.GetComponentInChildren<Animator>();
+    anim.SetTrigger("PickItem");
+
+    if (AudioManager.instance != null && sfxItem != null)
     {
-        player.StopMovement();
-
-        Animator anim = player.GetComponentInChildren<Animator>();
-
-        anim.SetTrigger("PickItem");
-
-        if (AudioManager.instance != null && sfxItem != null)
-        {
-            AudioManager.instance.PlaySFX(sfxItem, transform.position);
-        }
-
-        yield return null;
-        float length = anim.GetCurrentAnimatorStateInfo(0).length;
-
-        yield return new WaitForSeconds(length);
-
-        InventoryManager.instance.AddItem(item);
-
-        player.UnlockMovement();
-
-        Destroy(gameObject);
+        AudioManager.instance.PlaySFX(sfxItem, transform.position);
     }
+
+    yield return new WaitForSeconds(4f); 
+
+    InventoryManager.instance.AddItem(item);
+
+    player.UnlockMovement();
+
+    Destroy(gameObject);
+}
 
     public void FinishPickup()
     {
@@ -49,4 +45,6 @@ public class PickupItem : Interactable
 
         Destroy(gameObject);
     }
+
+    
 }
