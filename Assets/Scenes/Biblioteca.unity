@@ -13653,6 +13653,9 @@ MonoBehaviour:
   affectsGameState: 0
   phases:
   - lines:
+    - ...
+    - ...
+  - lines:
     - He perdido mi libro, ayudame a encontrarlo.
     - "Te dar\xE9 algo a cambio que te ser\xE1 muy \xFAtil. "
   - lines:
