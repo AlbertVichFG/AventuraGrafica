@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tabla
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Tabla
-  icon: {fileID: 21300000, guid: 64d6d309d7dfdbf40bb2c282e2e635ed, type: 3}
+  icon: {fileID: 21300000, guid: 52fd37d14bec9834c9043d87548eefd6, type: 3}
