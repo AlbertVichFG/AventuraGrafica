@@ -1966,17 +1966,11 @@ MonoBehaviour:
     - "Geppetto tiene por toda la cosa una gran variedad de m\xE1quinas. No s\xE9
       para qu\xE9 servir\xE1n todas."
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1001 &114485984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4501,17 +4495,11 @@ MonoBehaviour:
   - lines:
     - "Geppetto y su nieta peque\xF1a. Parece ser que en esta foto celebran su cumplea\xF1os."
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &308241296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14102,17 +14090,11 @@ MonoBehaviour:
       Lorem Ipsum has been the industry''s standard '
     - Alvaro
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1 &791133769
 GameObject:
   m_ObjectHideFlags: 0
@@ -27783,7 +27765,7 @@ Transform:
   m_GameObject: {fileID: 1568989324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.64, y: 0, z: -0.66}
+  m_LocalPosition: {x: -25.64, y: 0, z: -0.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36796,17 +36778,11 @@ MonoBehaviour:
     - "Molt b\xE9"
     - "Molt b\xE9"
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1001 &2121207134
 PrefabInstance:
   m_ObjectHideFlags: 0
