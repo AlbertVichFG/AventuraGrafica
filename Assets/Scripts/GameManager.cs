@@ -1,35 +1,24 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
+    [SerializeField]
     private GameData gameData;
 
-    public GameData GetGameData
-    {
-        get { return gameData; }
-        set { gameData = value; }
-    }
-
+    public int slot;
     public int doorToGo;
     public bool comeFromLoadGame;
-    public int currentSlot = -1;
+    public int currentSlot;
 
-    private float sessionTime = 0f;
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;
-
-            if (gameData == null)
-                gameData = new GameData();
         }
         else
         {
@@ -37,112 +26,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void OnDestroy() => SceneManager.sceneLoaded -= OnSceneLoaded;
-
+    // Update is called once per frame
     void Update()
     {
-        if (gameData != null && currentSlot >= 0)
-            sessionTime += Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.B))
+        //Para test
+        if(Input.GetKeyDown(KeyCode.B))
         {
-            SaveSystem.Delete(0);
-            SaveSystem.Delete(1);
-            SaveSystem.Delete(2);
-            Debug.Log("[GameManager] Todos los slots borrados.");
+            PlayerPrefs.DeleteAll();
         }
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    public GameData GetGameData
     {
-        if (scene.name == "MainMenu") return;
-
-        if (comeFromLoadGame && gameData != null)
-        {
-            PlayerController player = FindFirstObjectByType<PlayerController>();
-            if (player != null)
-                player.LoadFromSaveData(gameData);
-
-            if (InventoryManager.instance != null)
-                StartCoroutine(LoadInventoryNextFrame());
-
-            comeFromLoadGame = false;
-        }
+        get { return gameData; }
+        set { gameData = value;}
     }
 
-    private IEnumerator LoadInventoryNextFrame()
+    public void SaveGame(int slot)
     {
-        yield return null;
-        InventoryManager.instance.LoadFromSaveData(gameData);
-    }
-
-    public void NewGame(int slot)
-    {
-        currentSlot = slot;
-        sessionTime = 0f;
-        gameData = new GameData();
-        comeFromLoadGame = false;
-        SceneManager.LoadScene(gameData.SaveScene);
-    }
-
-    public void SaveGame()
-    {
-        if (currentSlot < 0 || gameData == null)
-        {
-            Debug.LogWarning("[GameManager] No hay slot activo.");
-            return;
-        }
-
-        PlayerController player = FindFirstObjectByType<PlayerController>();
-        if (player != null)
-            player.PopulateSaveData(gameData);
-
-        if (InventoryManager.instance != null)
-            InventoryManager.instance.PopulateSaveData(gameData);
-
-        gameData.SaveScene = SceneManager.GetActiveScene().buildIndex;
-        gameData.sceneName = SceneManager.GetActiveScene().name;
-        gameData.totalPlayTime += sessionTime;
-        sessionTime = 0f;
-
-        SaveSystem.Save(gameData, currentSlot);
+        string json = JsonUtility.ToJson(GetGameData);
+        PlayerPrefs.SetString("data" + slot.ToString(), json);
+        PlayerPrefs.Save();
     }
 
     public void LoadGame(int slot)
     {
-        GameData data = SaveSystem.Load(slot);
-        if (data == null)
+        string key = "data" + slot.ToString();
+        if (PlayerPrefs.HasKey(key))
         {
-            Debug.LogWarning("[GameManager] Ranura vacía.");
-            return;
+            string json = PlayerPrefs.GetString(key);
+            GetGameData = JsonUtility.FromJson<GameData>(json);
         }
-
-        currentSlot = slot;
-        sessionTime = 0f;
-        gameData = data;
-        comeFromLoadGame = true;
-
-        SceneManager.LoadScene(gameData.SaveScene);
-    }
-
-    public void DeleteSlot(int slot) => SaveSystem.Delete(slot);
-
-    public void RegisterPickedUpItem(string key)
-    {
-        if (gameData != null && !gameData.pickedUpItems.Contains(key))
-            gameData.pickedUpItems.Add(key);
-    }
-
-    public bool IsItemPickedUp(string key)
-    {
-        return gameData != null && gameData.pickedUpItems.Contains(key);
-    }
-
-    public static string FormatPlayTime(float seconds)
-    {
-        int h = (int)(seconds / 3600);
-        int m = (int)(seconds % 3600 / 60);
-        int s = (int)(seconds % 60);
-        return h > 0 ? $"{h}h {m:D2}m {s:D2}s" : $"{m}m {s:D2}s";
     }
 }
