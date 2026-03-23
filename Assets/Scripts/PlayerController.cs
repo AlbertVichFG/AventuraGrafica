@@ -300,4 +300,16 @@ public class PlayerController : MonoBehaviour
     {
         UnlockMovement();
     }
+
+    public void PopulateSaveData(GameData data)
+    {
+        data.posX = transform.position.x;
+        data.posY = transform.position.y;
+        data.posZ = transform.position.z;
+    }
+
+    public void LoadFromSaveData(GameData data)
+    {
+        transform.position = new Vector3(data.posX, data.posY, data.posZ);
+    }
 }

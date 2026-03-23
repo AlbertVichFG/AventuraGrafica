@@ -1475,13 +1475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4607ee75368fe474fb19add0f70125a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameData:
-    objetos: []
-    doorUnlocked: 0
-    talkedToGuard: 0
-    saveScene: 0
-    sceneSave: 0
-  slot: 0
   doorToGo: 0
   comeFromLoadGame: 0
   currentSlot: 0
@@ -1966,17 +1959,11 @@ MonoBehaviour:
     - "Geppetto tiene por toda la cosa una gran variedad de m\xE1quinas. No s\xE9
       para qu\xE9 servir\xE1n todas."
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1001 &114485984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2754,7 +2741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2487774408664d4c89d7e2bcd83bdf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BathtubPuzzle
-  requiredItem: {fileID: 11400000, guid: 4d5ca175df8ce8b4fb3395a708fc09d3, type: 2}
+  requiredItem: {fileID: 11400000, guid: d326cd5f00341314a900e22433f51c78, type: 2}
   hammerAnimator: {fileID: 656286399}
   bathtubCollider: {fileID: 166458238}
   dialogueUI: {fileID: 100515801}
@@ -4501,17 +4488,11 @@ MonoBehaviour:
   - lines:
     - "Geppetto y su nieta peque\xF1a. Parece ser que en esta foto celebran su cumplea\xF1os."
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &308241296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10864,7 +10845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21161213c50a37b48b4950c9f97ac652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorSystem
-  requiredKey: {fileID: 11400000, guid: 04aad7a9b9f1b11428360494f478422c, type: 2}
+  requiredKey: {fileID: 11400000, guid: b8666ee25d17e6246bd3c748823a6d73, type: 2}
   dialogueUI: {fileID: 100515801}
   lockedLine: "Est\xE1 bloqueada por tablones de madera. Necesito alguna herramienta
     para abrirla."
@@ -14102,17 +14083,11 @@ MonoBehaviour:
       Lorem Ipsum has been the industry''s standard '
     - Alvaro
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1 &791133769
 GameObject:
   m_ObjectHideFlags: 0
@@ -26315,7 +26290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd7781135117b441914e29b388d3eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuController
-  player: {fileID: 0}
   panelPause: {fileID: 1694133309}
 --- !u!4 &1467546593
 Transform:
@@ -26552,7 +26526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2487774408664d4c89d7e2bcd83bdf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BathtubPuzzle
-  requiredItem: {fileID: 11400000, guid: 99b7da7310212814e907c7f48297deb2, type: 2}
+  requiredItem: {fileID: 11400000, guid: ff33cced6673db34a977985c98bbacde, type: 2}
   hammerAnimator: {fileID: 1962147628541767117}
   bathtubCollider: {fileID: 1480226790}
   dialogueUI: {fileID: 100515801}
@@ -30789,7 +30763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
   sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
-  item: {fileID: 11400000, guid: 99b7da7310212814e907c7f48297deb2, type: 2}
+  item: {fileID: 11400000, guid: ff33cced6673db34a977985c98bbacde, type: 2}
 --- !u!135 &1746602975
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32408,7 +32382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
   sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
-  item: {fileID: 11400000, guid: 04aad7a9b9f1b11428360494f478422c, type: 2}
+  item: {fileID: 11400000, guid: b8666ee25d17e6246bd3c748823a6d73, type: 2}
 --- !u!135 &1843212710
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34233,58 +34207,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4269697874028422, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
   m_PrefabInstance: {fileID: 1962467242}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1962711510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1962711512}
-  - component: {fileID: 1962711511}
-  m_Layer: 0
-  m_Name: InventoryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1962711511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962711510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6a22a2a831dc2343b3d8dd86e548369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cursorItemIcon: {fileID: 0}
-  cursor: {fileID: 321116404}
---- !u!4 &1962711512
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962711510}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.82079, y: -0.33797, z: -18.49008}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1975213954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36027,7 +35949,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1467546592}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: saveGame
+        m_MethodName: SaveGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36289,7 +36211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupItem
   sfxItem: {fileID: 8300000, guid: 688092391c262de439e55bb816936361, type: 3}
-  item: {fileID: 11400000, guid: 4d5ca175df8ce8b4fb3395a708fc09d3, type: 2}
+  item: {fileID: 11400000, guid: d326cd5f00341314a900e22433f51c78, type: 2}
 --- !u!135 &2063589991
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -36796,17 +36718,11 @@ MonoBehaviour:
     - "Molt b\xE9"
     - "Molt b\xE9"
   dialogueUI: {fileID: 100515801}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!1001 &2121207134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38147,7 +38063,6 @@ SceneRoots:
   - {fileID: 655665199}
   - {fileID: 1161041478}
   - {fileID: 1902716192}
-  - {fileID: 1962711512}
   - {fileID: 100515805}
   - {fileID: 451387087}
   - {fileID: 105762288}
