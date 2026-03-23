@@ -7447,7 +7447,7 @@ Transform:
   m_GameObject: {fileID: 780682130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.48, y: 81.025, z: 12.446}
+  m_LocalPosition: {x: 5.48, y: 81.025, z: 12.656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16832,7 +16832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.94
+      value: -3.626
       objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19629,7 +19629,7 @@ GameObject:
   - component: {fileID: 1906291439}
   m_Layer: 0
   m_Name: PISO1SCENE
-  m_TagString: Untagged
+  m_TagString: ChangeZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
