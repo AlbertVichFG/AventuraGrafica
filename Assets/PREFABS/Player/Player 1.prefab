@@ -65,6 +65,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   ignoreNavMeshSnap: 0
+  sfxWalk: {fileID: 8300000, guid: 4b77bede4e4044246980a5f2a68e316d, type: 3}
 --- !u!195 &46810957475092978
 NavMeshAgent:
   m_ObjectHideFlags: 0
