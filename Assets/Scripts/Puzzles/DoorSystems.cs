@@ -77,12 +77,14 @@ public class DoorSystem : Interactable
         }
 
         if (doorCollider != null)
+        {
             doorCollider.enabled = false;
+        }
         
         if (animator != null)
         {
             animator.SetTrigger("PuertaAbierta"); 
-          //  AudioManager.instance.PlaySFX(sfxDoor, transform.position);
+            AudioManager.instance.PlaySFX(sfxDoor, transform.position);
             triggerTalk.SetActive(false);
         }
     }
