@@ -82,7 +82,7 @@ public class DoorSystem : Interactable
         if (animator != null)
         {
             animator.SetTrigger("PuertaAbierta"); 
-            AudioManager.instance.PlaySFX(sfxDoor, transform.position);
+          //  AudioManager.instance.PlaySFX(sfxDoor, transform.position);
             triggerTalk.SetActive(false);
         }
     }

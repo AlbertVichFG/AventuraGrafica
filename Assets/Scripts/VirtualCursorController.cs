@@ -49,13 +49,13 @@ public class VirtualCursorController : MonoBehaviour
         mainCamera = Camera.main;
         cursorPosition = new Vector2(Screen.width / 2f, Screen.height / 2f);
         UpdateCursorVisual();
-        Debug.Log("VirtualCursorController started");
+      //  Debug.Log("VirtualCursorController started");
 
         if (virtualMouse == null)
         {
             virtualMouse = (Mouse)InputSystem.AddDevice("VirtualMouse");
             InputSystem.EnableDevice(virtualMouse);
-            Debug.Log("Virtual mouse created: " + virtualMouse);
+         //   Debug.Log("Virtual mouse created: " + virtualMouse);
         }
 
         Cursor.visible = false;
@@ -215,7 +215,7 @@ public class VirtualCursorController : MonoBehaviour
 
         if (results.Count > 0)
         {
-            Debug.Log("UI HIT: " + results[0].gameObject.name);
+           // Debug.Log("UI HIT: " + results[0].gameObject.name);
         }
     }
 

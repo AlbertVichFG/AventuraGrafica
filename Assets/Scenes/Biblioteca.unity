@@ -9819,6 +9819,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439985221}
   m_CullTransparentMesh: 1
+--- !u!1 &442106363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442106366}
+  - component: {fileID: 442106365}
+  - component: {fileID: 442106364}
+  m_Layer: 0
+  m_Name: PhaseTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &442106364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442106363}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.07, y: 1.86, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &442106365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442106363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45cc45c44dcc5fe4c95bbdf2f14ecbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhaseTrigger
+  phaseToSet: 0
+  disableAfterTrigger: 1
+--- !u!4 &442106366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442106363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.29, y: 0.3, z: -2.46}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &445904387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13591,17 +13659,11 @@ MonoBehaviour:
     - "Aqu\xED tienes un mechero, tal y como acordamos."
     - Busca las velas y enciendelas.
   dialogueUI: {fileID: 1794485804}
-  phaseCompleted: 
   requiredItem: {fileID: 11400000, guid: ab4d225ae55ddb3439b6bf83905e7746, type: 2}
   requiredAmount: 1
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 11400000, guid: c092feabd0b53e046918a1b46a0df7d4, type: 2}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!4 &604209220
 Transform:
   m_ObjectHideFlags: 0
@@ -32167,7 +32229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8475a76f855cb914b9f8fd90d87bd24a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameState
-  currentPuzzlePhase: 0
+  currentPuzzlePhase: 2
 --- !u!4 &1434556322
 Transform:
   m_ObjectHideFlags: 0
@@ -35393,6 +35455,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 431308, guid: 0648a8654321442ba88d4834921d373a, type: 3}
   m_PrefabInstance: {fileID: 1623640031}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1626538204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626538207}
+  - component: {fileID: 1626538206}
+  - component: {fileID: 1626538205}
+  m_Layer: 0
+  m_Name: PhaseTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1626538205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626538204}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.07, y: 1.86, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1626538206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626538204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45cc45c44dcc5fe4c95bbdf2f14ecbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhaseTrigger
+  phaseToSet: 1
+  disableAfterTrigger: 1
+--- !u!4 &1626538207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626538204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.841, y: 0.3, z: 10.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1628634564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47438,3 +47568,5 @@ SceneRoots:
   - {fileID: 848966725}
   - {fileID: 721906556}
   - {fileID: 1113467253}
+  - {fileID: 442106366}
+  - {fileID: 1626538207}

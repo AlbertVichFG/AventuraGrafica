@@ -148,11 +148,11 @@ public class PlayerController : MonoBehaviour
         foreach (var hit in hits)
         {
             int layer = hit.collider.gameObject.layer;
-            Debug.Log(hit.transform.name);
+           // Debug.Log(hit.transform.name);
             // si es paret bloquejar
             if (((1 << layer) & obstacleLayer) != 0)
             {
-                Debug.Log("Bloquejat per paret: " + hit.collider.name);
+              //  Debug.Log("Bloquejat per paret: " + hit.collider.name);
                 return;
             }
 
@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
             // caminar
             if (((1 << layer) & walkZoneLayer) != 0)
             {
-                Debug.Log("Entro caminar");
+              //  Debug.Log("Entro caminar");
                 MoveToPoint(hit.point);
                 return;
             }
@@ -231,11 +231,14 @@ public class PlayerController : MonoBehaviour
     {
         movementLocked = true;
         agent.ResetPath();
+        agent.isStopped = true;
+
     }
 
     public void UnlockMovement()
     {
         movementLocked = false;
+        agent.isStopped = false;
     }
 
     void HandleAnimations()
@@ -291,5 +294,10 @@ public class PlayerController : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void FinishPickup()
+    {
+        UnlockMovement();
     }
 }

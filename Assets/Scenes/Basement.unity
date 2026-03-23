@@ -688,18 +688,16 @@ MonoBehaviour:
   phases:
   - lines:
     - Un manual sencillo. Puede que lo usara como referencia para crearnos.
+  - lines:
+    - Un manual sencillo. Puede que lo usara como referencia para crearnos.
+  - lines:
+    - Un manual sencillo. Puede que lo usara como referencia para crearnos.
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &35200166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2768,18 +2766,16 @@ MonoBehaviour:
   phases:
   - lines:
     - "Creo que llevaba demasiado tiempo all\xED."
+  - lines:
+    - "Creo que llevaba demasiado tiempo all\xED."
+  - lines:
+    - "Creo que llevaba demasiado tiempo all\xED."
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &136507678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5662,7 +5658,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279389628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
@@ -5672,17 +5668,11 @@ MonoBehaviour:
   - lines:
     - Necesito algo para pasar al otro lado.
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &279389631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6300,18 +6290,16 @@ MonoBehaviour:
   phases:
   - lines:
     - "\u201CCreo que por fin logr\xE9 crear el prototipo ideal.\""
+  - lines:
+    - "\u201CCreo que por fin logr\xE9 crear el prototipo ideal.\""
+  - lines:
+    - "\u201CCreo que por fin logr\xE9 crear el prototipo ideal.\""
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &308857918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7643,7 +7631,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 539576817}
-  - {fileID: 1323379816}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &377153958
@@ -12314,7 +12301,7 @@ GameObject:
   - component: {fileID: 632284334}
   m_Layer: 7
   m_Name: TalkTrigger
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15195,17 +15182,11 @@ MonoBehaviour:
       que ten cuidado y piensa en lo que haces.\r\n"
     - "Yo me quedar\xE9 aqu\xED un buen rato, ten mucha suerte. \r\n"
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 00
   requiredItem: {fileID: 11400000, guid: 13d747238fac7604f881882321c42380, type: 2}
   requiredAmount: 1
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 11400000, guid: 82ba0a9b4d190774b9ad54a569e0df59, type: 2}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!4 &776624287
 Transform:
   m_ObjectHideFlags: 0
@@ -15874,6 +15855,133 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdb1bd3898be4034e94ec360c687593c, type: 3}
   m_PrefabInstance: {fileID: 805101629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &811475413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811475418}
+  - component: {fileID: 811475417}
+  - component: {fileID: 811475416}
+  - component: {fileID: 811475415}
+  - component: {fileID: 811475414}
+  m_Layer: 7
+  m_Name: DELETE_KEYTEST (1)
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &811475414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811475413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
+  item: {fileID: 11400000, guid: edfe15aa818515148999d9309058cd09, type: 2}
+--- !u!135 &811475415
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811475413}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &811475416
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811475413}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &811475417
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811475413}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &811475418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811475413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.95, y: 0.068, z: 2.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &814879886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16596,17 +16704,11 @@ MonoBehaviour:
   affectsGameState: 0
   phases: []
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &825664129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17134,7 +17236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 434562, guid: 8f91923b9a9c4dd2a622b3b1c3231268, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.49175
+      value: -2.91
       objectReference: {fileID: 0}
     - target: {fileID: 434562, guid: 8f91923b9a9c4dd2a622b3b1c3231268, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26739,74 +26841,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
   m_PrefabInstance: {fileID: 1317356463}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1323379815
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1323379816}
-  - component: {fileID: 1323379818}
-  - component: {fileID: 1323379817}
-  m_Layer: 0
-  m_Name: TriggerPhase (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1323379816
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323379815}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.68033147, z: -0, w: 0.73290455}
-  m_LocalPosition: {x: 4.67, y: -3.1818302, z: -16.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 366284724}
-  m_LocalEulerAnglesHint: {x: 0, y: -85.739, z: 0}
---- !u!114 &1323379817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323379815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45cc45c44dcc5fe4c95bbdf2f14ecbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PhaseTrigger
-  phaseToSet: 2
-  disableAfterTrigger: 1
---- !u!65 &1323379818
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323379815}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9.7038355, y: 1, z: 1}
-  m_Center: {x: 0.7150712, y: 0, z: 0}
 --- !u!1 &1328546366
 GameObject:
   m_ObjectHideFlags: 0
@@ -27288,7 +27322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464848, guid: 1fba721680014217bdaceed4f6fe154d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7341046
+      value: -2.937
       objectReference: {fileID: 0}
     - target: {fileID: 464848, guid: 1fba721680014217bdaceed4f6fe154d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33418,6 +33452,74 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1704782371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1704782374}
+  - component: {fileID: 1704782373}
+  - component: {fileID: 1704782372}
+  m_Layer: 0
+  m_Name: DisableTalkTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1704782372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704782371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d44373bff3b4643814cfd6f4011342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableNPCTriggers
+  npcsToDisable:
+  - {fileID: 776624286}
+--- !u!65 &1704782373
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704782371}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.5454426}
+  m_Center: {x: 0, y: 0, z: -0.2727213}
+--- !u!4 &1704782374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704782371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.182, y: 0.535, z: 20.646}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1705438634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33804,7 +33906,7 @@ GameObject:
   - component: {fileID: 1722340262}
   m_Layer: 7
   m_Name: TalkTrigger
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33859,11 +33961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_TagString
-      value: Talk
+      value: Interact
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
@@ -37958,18 +38060,16 @@ MonoBehaviour:
   phases:
   - lines:
     - "Faltan varias p\xE1ginas\u2026 arrancadas a prop\xF3sito, quiz\xE1."
+  - lines:
+    - "Faltan varias p\xE1ginas\u2026 arrancadas a prop\xF3sito, quiz\xE1."
+  - lines:
+    - "Faltan varias p\xE1ginas\u2026 arrancadas a prop\xF3sito, quiz\xE1."
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &1934337028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39417,17 +39517,11 @@ MonoBehaviour:
       Te prometo que te ser\xE9 \xFAtil y te ayudar\xE9 si lo necesitas. "
     - "Encuntra la forma de entrar aqui! Te espero aqu\xED, justo donde estoy sentado. "
   dialogueUI: {fileID: 1824892032}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!65 &1973256576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45997,6 +46091,7 @@ SceneRoots:
   - {fileID: 821542414}
   - {fileID: 1519999494}
   - {fileID: 256988159}
+  - {fileID: 811475418}
   - {fileID: 1716360857}
   - {fileID: 1575134854}
   - {fileID: 1978194800}
@@ -46007,3 +46102,4 @@ SceneRoots:
   - {fileID: 1023303229}
   - {fileID: 1900001795}
   - {fileID: 366284724}
+  - {fileID: 1704782374}

@@ -9,89 +9,65 @@ public class NPC : Interactable
         public string[] lines;
     }
 
-    [SerializeField] 
+    [SerializeField]
     private bool affectsGameState = false;
 
     [Header("Dialogue per Phase")]
-    [SerializeField] 
+    [SerializeField]
     private DialoguePhase[] phases;
 
     [Header("References")]
-    [SerializeField] 
+    [SerializeField]
     private DialogueUI dialogueUI;
-    [SerializeField] 
+
     private bool[] phaseCompleted;
 
     [Header("Item Puzzle")]
-    [SerializeField] 
+    [SerializeField]
     private ItemData requiredItem;
-    [SerializeField] 
+
+    [SerializeField]
     private int requiredAmount = 1;
-    [SerializeField] 
+
+    [SerializeField]
     private int deliveredItems = 0;
-    [SerializeField] 
+
+    [SerializeField]
     private bool puzzleCompleted = false;
-    [SerializeField] 
-    private bool firstTalkDone = false;
 
     [Header("Reward")]
-    [SerializeField] 
+    [SerializeField]
     private ItemData rewardItem;
-
-    [Header("Dialogue Lines")]
-    [TextArea(2, 3)]
-    [SerializeField] 
-    private string progressLine;
-
-    [TextArea(2, 3)]
-    [SerializeField] 
-    private string wrongItemLine;
-
-    [TextArea(2, 3)]
-    [SerializeField] 
-    private string puzzleCompletedLine;
-
-    [TextArea(2, 3)]
-    [SerializeField] 
-    private string puzzleSolvedLine;
-
-    private int[] phaseIndexes;
 
     void Awake()
     {
-        phaseIndexes = new int[phases.Length];
         phaseCompleted = new bool[phases.Length];
     }
 
     public override void Interact(PlayerController player)
     {
+        if (dialogueUI == null || phases.Length == 0)
+            return;
+
         player.StopMovement();
         dialogueUI.SetPlayer(player);
 
         // ITEM INTERACTION
-        if (InventoryManager.instance.HasItemInHand())
+        if (InventoryManager.instance != null && InventoryManager.instance.HasItemInHand())
         {
             ItemData item = InventoryManager.instance.GetItemInHand();
 
-            // PUZZLE JA COMPLETAT
-            if (puzzleCompleted)
-            {
-                dialogueUI.ShowLine(puzzleCompletedLine);
-                return;
-            }
-
             // ITEM CORRECTE
-            if (item == requiredItem)
+            if (item == requiredItem && !puzzleCompleted)
             {
                 deliveredItems++;
                 InventoryManager.instance.RemoveItemInHand();
-                dialogueUI.ShowLine(progressLine + " (" + deliveredItems + "/" + requiredAmount + ")");
 
                 if (deliveredItems >= requiredAmount)
                 {
                     puzzleCompleted = true;
 
-                    if (affectsGameState)
+                    if (affectsGameState && GameState.Instance != null)
                     {
                         GameState.Instance.currentPuzzlePhase++;
                     }
@@ -100,34 +76,39 @@ public class NPC : Interactable
                     {
                         InventoryManager.instance.AddItem(rewardItem);
                     }
-
-                    dialogueUI.ShowLine(puzzleSolvedLine);
                 }
+
                 return;
             }
             else
             {
-                dialogueUI.ShowLine(wrongItemLine);
                 return;
             }
         }
 
-        // FIRST TALK TRIGGER
-        if (affectsGameState && !firstTalkDone && GameState.Instance.currentPuzzlePhase == 0)
-        {
-            firstTalkDone = true;
-            GameState.Instance.currentPuzzlePhase = 1;
-        }
-
         // NORMAL DIALOGUE
-        int phase = GameState.Instance.currentPuzzlePhase;
+        int phase = 0;
 
-        if (phase < 0 || phase >= phases.Length)
+        if (GameState.Instance != null)
         {
-            return;
+            phase = GameState.Instance.currentPuzzlePhase;
         }
-        
+
+        // Evitar index out of range
+        if (phase >= phases.Length)
+        {
+            phase = phases.Length - 1;
+        }
+
+        if (phase < 0)
+        {
+            phase = 0;
+        }
+
         string[] lines = phases[phase].lines;
+
+        if (lines == null || lines.Length == 0)
+            return;
 
         if (!phaseCompleted[phase])
         {

@@ -15,6 +15,8 @@ public class Glue : Interactable
     [SerializeField] 
     private Transform jumpX;
 
+    private int phaseDialogue = 2;
+
     [TextArea]
     [SerializeField] 
     private string needSomethingLine;
@@ -51,7 +53,7 @@ public class Glue : Interactable
         anim.SetTrigger("PickItem");
         AudioManager.instance.PlaySFX(sfxItem, transform.position);
 
-        // esperar que entri a l'animaci�
+        // esperar que entri a l'animacp
         yield return null;
         float length = anim.GetCurrentAnimatorStateInfo(0).length;
 
@@ -59,6 +61,7 @@ public class Glue : Interactable
         yield return new WaitForSeconds(length);
         InventoryManager.instance.AddItem(glueItem);
         yield return JumpDown(player);
+        GameState.Instance.currentPuzzlePhase = phaseDialogue;
         agent.updateRotation = true;
 
         Destroy(gameObject);

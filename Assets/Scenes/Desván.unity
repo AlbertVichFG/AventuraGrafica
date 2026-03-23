@@ -8786,8 +8786,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.50100696, y: 0.4465932, z: 0.5056673}
+  m_Center: {x: 0.058842488, y: 0.22962944, z: -0.017668024}
 --- !u!1001 &901274421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16727,17 +16727,11 @@ MonoBehaviour:
     - "Busca el ascensor de esta planta y bajar\xE1s directamente a su sala."
     - Ten mucho cuidado, ese hombre no es bueno.
   dialogueUI: {fileID: 967571110}
-  phaseCompleted: 
   requiredItem: {fileID: 0}
   requiredAmount: 0
   deliveredItems: 0
   puzzleCompleted: 0
-  firstTalkDone: 0
   rewardItem: {fileID: 0}
-  progressLine: 
-  wrongItemLine: 
-  puzzleCompletedLine: 
-  puzzleSolvedLine: 
 --- !u!4 &1597101323
 Transform:
   m_ObjectHideFlags: 0
@@ -16775,8 +16769,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.9057846, z: 0.38865417}
-  m_Center: {x: -1.2434498e-14, y: 0.5974083, z: -0.3056729}
+  m_Size: {x: 1, y: 0.9057846, z: 0.35134166}
+  m_Center: {x: 1.5987212e-14, y: 0.5974083, z: -0.32432917}
 --- !u!1 &1599921536
 GameObject:
   m_ObjectHideFlags: 0
