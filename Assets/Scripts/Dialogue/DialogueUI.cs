@@ -138,6 +138,9 @@ public class DialogueUI : MonoBehaviour
         yield return new WaitForSeconds(movementUnlockDelay);
 
         if (player != null)
+        {
             player.UnlockMovement();
+            player = null;
+        }
     }
 }
