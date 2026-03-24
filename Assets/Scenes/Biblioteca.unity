@@ -13705,7 +13705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &604209219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13718,7 +13718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b79bda406dd5646a1a3c09c531d7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  affectsGameState: 0
+  affectsGameState: 1
   phases:
   - lines:
     - He perdido mi libro, ayudame a encontrarlo.
@@ -39301,7 +39301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1753219371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47603,7 +47603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774117002142143309, guid: 2743c3820171cde4d8ade13b72985acc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2774117002142143309, guid: 2743c3820171cde4d8ade13b72985acc, type: 3}
       propertyPath: m_TagString
