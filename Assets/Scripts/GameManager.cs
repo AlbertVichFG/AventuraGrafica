@@ -105,6 +105,10 @@ public class GameManager : MonoBehaviour
         gameData.totalPlayTime += sessionTime;
         sessionTime = 0f;
 
+        SceneInfo sceneInfo = FindFirstObjectByType<SceneInfo>();
+        if (sceneInfo != null)
+            gameData.sceneName = sceneInfo.nombreNivel;
+
         SaveSystem.Save(gameData, currentSlot);
     }
 
