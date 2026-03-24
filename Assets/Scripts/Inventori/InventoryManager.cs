@@ -171,7 +171,7 @@ public class InventoryManager : MonoBehaviour
             if (found != null)
                 AddItem(found);
             else
-                Debug.LogWarning($"[InventoryManager] No se encontró el item: {itemName}");
+                Debug.LogWarning($"[InventoryManager] No se encontrï¿½ el item: {itemName}");
         }
     }
 

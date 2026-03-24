@@ -52,6 +52,7 @@ public class PickupItem : Interactable
 
             yield return new WaitForSeconds(0.5f);
         }
+        yield return new WaitForSeconds(4f);
 
         if (GameManager.instance != null)
             GameManager.instance.RegisterPickedUpItem(GetItemKey());
