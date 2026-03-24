@@ -1037,7 +1037,7 @@ PrefabInstance:
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: walkSprite
       value: 
-      objectReference: {fileID: -4676717269735476019, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
+      objectReference: {fileID: 21300000, guid: f562c077eabf0450fb6830d8da7d26e7, type: 3}
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: cursorImage
       value: 
