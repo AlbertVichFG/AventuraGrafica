@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ public class InventoryManager : MonoBehaviour
 
     private ItemData itemInHand;
     private InventorySlot originalSlot;
+    private List<ItemData> currentItems = new List<ItemData>();
 
     void Awake()
     {
@@ -33,20 +35,16 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         if (itemInHand != null && cursorItemIcon != null && cursor != null)
-        {
             cursorItemIcon.transform.position = cursor.GetCursorScreenPosition();
-        }
     }
 
     public void RegisterSlot(InventorySlot slot)
     {
-        // eliminar referències destruïdes
         slots.RemoveAll(s => s == null);
 
         if (!slots.Contains(slot))
         {
             slots.Add(slot);
-
             slots.Sort((a, b) =>
                 a.transform.GetSiblingIndex().CompareTo(b.transform.GetSiblingIndex()));
         }
@@ -54,6 +52,8 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(ItemData item)
     {
+        currentItems.Add(item);
+
         foreach (InventorySlot slot in slots)
         {
             if (slot.currentItem == null)
@@ -64,9 +64,22 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void RemoveItem(ItemData item)
+    {
+        currentItems.Remove(item);
+
+        foreach (InventorySlot slot in slots)
+        {
+            if (slot.currentItem == item)
+            {
+                slot.SetItem(null);
+                return;
+            }
+        }
+    }
+
     public void ClickSlot(InventorySlot slot)
     {
-        // AGAFAR ITEM
         if (itemInHand == null && slot.currentItem != null)
         {
             itemInHand = slot.currentItem;
@@ -82,7 +95,6 @@ public class InventoryManager : MonoBehaviour
             return;
         }
 
-        // DEIXAR ITEM
         if (itemInHand != null)
         {
             if (slot.currentItem == null)
@@ -111,7 +123,6 @@ public class InventoryManager : MonoBehaviour
         if (itemInHand != null && originalSlot != null)
         {
             originalSlot.SetItem(itemInHand);
-
             itemInHand = null;
             originalSlot = null;
 
@@ -120,30 +131,84 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public bool HasItemInHand()
-    {
-        return itemInHand != null;
-    }
-
-    public ItemData GetItemInHand()
-    {
-        return itemInHand;
-    }
+    public bool HasItemInHand() => itemInHand != null;
+    public ItemData GetItemInHand() => itemInHand;
 
     public void RemoveItemInHand()
     {
-        itemInHand = null;
+        if (itemInHand != null)
+        {
+            currentItems.Remove(itemInHand);
+            itemInHand = null;
+        }
 
         if (cursorItemIcon != null)
             cursorItemIcon.enabled = false;
     }
 
+    public void PopulateSaveData(GameData data)
+    {
+        data.inventoryItems.Clear();
+        foreach (ItemData item in currentItems)
+        {
+            if (item != null)
+                data.inventoryItems.Add(item.itemName);
+        }
+    }
+
+    public void LoadFromSaveData(GameData data)
+    {
+        currentItems.Clear();
+
+        foreach (InventorySlot slot in slots)
+            if (slot != null) slot.SetItem(null);
+
+        ItemData[] allItems = Resources.LoadAll<ItemData>("Items");
+
+        foreach (string itemName in data.inventoryItems)
+        {
+            ItemData found = System.Array.Find(allItems, i => i.itemName == itemName);
+            if (found != null)
+                AddItem(found);
+            else
+                Debug.LogWarning($"[InventoryManager] No se encontró el item: {itemName}");
+        }
+    }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // buidem slots antics
+        if (scene.name == "MainMenu") return;
+
         slots.Clear();
 
-        // busquem el cursor icon del nou canvas
-      //  cursorItemIcon = GameObject.Find("CursorItemIcon")?.GetComponent<Image>();
+        InventoryCursorIcon icon = FindFirstObjectByType<InventoryCursorIcon>();
+        if (icon != null)
+            cursorItemIcon = icon.GetComponent<Image>();
+
+        VirtualCursorController cur = FindFirstObjectByType<VirtualCursorController>();
+        if (cur != null)
+            cursor = cur;
+
+        StartCoroutine(RestoreItemsNextFrame());
+    }
+
+    private IEnumerator RestoreItemsNextFrame()
+    {
+        yield return new WaitUntil(() => slots.Count > 0);
+
+        foreach (InventorySlot slot in slots)
+            if (slot != null) slot.SetItem(null);
+
+        foreach (ItemData item in currentItems)
+        {
+            foreach (InventorySlot slot in slots)
+            {
+                if (slot.currentItem == null)
+                {
+                    slot.SetItem(item);
+                    break;
+                }
+            }
+        }
     }
 }

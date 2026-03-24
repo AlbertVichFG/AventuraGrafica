@@ -5,34 +5,33 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-
 public class PlayerController : MonoBehaviour
 {
     private static PlayerController instance;
     [Header("References")]
-    [SerializeField] 
+    [SerializeField]
     private VirtualCursorController cursor;
 
     [Header("Movement")]
-    [SerializeField] 
+    [SerializeField]
     private float walkSpeed = 3.5f;
-    [SerializeField] 
+    [SerializeField]
     private float runSpeed = 6f;
-    [SerializeField] 
+    [SerializeField]
     private float doubleClickTime = 0.3f;
 
     [Header("Navigation")]
-    [SerializeField] 
+    [SerializeField]
     private float navMeshSampleRadius = 1f;
-    [SerializeField] 
+    [SerializeField]
     private float interactionDistance = 1.2f;
 
     [Header("Layers")]
-    [SerializeField] 
+    [SerializeField]
     private LayerMask walkZoneLayer;
-    [SerializeField] 
+    [SerializeField]
     private LayerMask interactableLayer;
-    [SerializeField] 
+    [SerializeField]
     private LayerMask obstacleLayer;
 
     public bool ignoreNavMeshSnap = false;
@@ -58,7 +57,6 @@ public class PlayerController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -76,9 +74,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (targetInteractable != null)
-        {
             CheckInteractionArrival();
-        }
 
         HandleInput();
         HandleAnimations();
@@ -86,47 +82,27 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate()
     {
-        if (ignoreNavMeshSnap)
-        {
-            return;
-        }
-            
+        if (ignoreNavMeshSnap) return;
+
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 0.3f, NavMesh.AllAreas))
-        {
             transform.position = hit.position;
-        }
     }
 
     void HandleInput()
     {
-        if (movementLocked)
-        {
-            return;
-        }
+        if (movementLocked) return;
 
         bool mouseClick = Mouse.current.leftButton.wasPressedThisFrame;
         bool gamepadClick = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
 
-        if (!mouseClick && !gamepadClick)
-        {
-            return;
-        }
+        if (!mouseClick && !gamepadClick) return;
 
-        // SI EL CLICK ee DEL MANDO  provar UI manualment
         if (gamepadClick)
         {
-            if (ClickUI())
-            {
-                return;
-            }
+            if (ClickUI()) return;
         }
-        //mouse utilitza el sistema normal de Unity UI
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-            
-        //InventoryManager.instance.CancelItemUse();
+
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         runOrder = (Time.time - lastClickTime <= doubleClickTime);
         lastClickTime = Time.time;
@@ -136,11 +112,8 @@ public class PlayerController : MonoBehaviour
 
     void TryMoveOrInteract()
     {
-        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-            
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
+
         Ray ray = mainCamera.ScreenPointToRay(cursor.GetCursorScreenPosition());
         RaycastHit[] hits = Physics.RaycastAll(ray, 100f);
         System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
@@ -148,15 +121,9 @@ public class PlayerController : MonoBehaviour
         foreach (var hit in hits)
         {
             int layer = hit.collider.gameObject.layer;
-           // Debug.Log(hit.transform.name);
-            // si es paret bloquejar
-            if (((1 << layer) & obstacleLayer) != 0)
-            {
-              //  Debug.Log("Bloquejat per paret: " + hit.collider.name);
-                return;
-            }
 
-            // interactables
+            if (((1 << layer) & obstacleLayer) != 0) return;
+
             Interactable interactable = hit.collider.GetComponentInParent<Interactable>();
             if (interactable != null)
             {
@@ -164,10 +131,8 @@ public class PlayerController : MonoBehaviour
                 return;
             }
 
-            // caminar
             if (((1 << layer) & walkZoneLayer) != 0)
             {
-              //  Debug.Log("Entro caminar");
                 MoveToPoint(hit.point);
                 return;
             }
@@ -186,9 +151,7 @@ public class PlayerController : MonoBehaviour
         targetPoint = interactable.transform.Find("InteractionPoint");
 
         if (targetPoint == null)
-        {
             targetPoint = interactable.transform;
-        }
 
         agent.ResetPath();
         agent.speed = runOrder ? runSpeed : walkSpeed;
@@ -197,10 +160,7 @@ public class PlayerController : MonoBehaviour
 
     void CheckInteractionArrival()
     {
-        if (agent.pathPending)
-        {
-            return;
-        }
+        if (agent.pathPending) return;
 
         if (!agent.hasPath || agent.remainingDistance <= interactionDistance)
         {
@@ -230,10 +190,8 @@ public class PlayerController : MonoBehaviour
     public void StopMovement()
     {
         movementLocked = true;
-
-        targetInteractable = null;   // 👈 cancelar interacción
-        targetPoint = null;          // 👈 cancelar objetivo
-
+        targetInteractable = null;
+        targetPoint = null;
         agent.ResetPath();
         agent.velocity = Vector3.zero;
         agent.isStopped = true;
@@ -261,6 +219,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("IsWalking", true);
                 animator.SetBool("IsRuning", false);
             }
+
             if (Time.time - lastStepTime > 0.5f)
             {
                 if (AudioManager.instance != null && sfxWalk != null)
@@ -277,7 +236,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //camera
     public void SetActiveCamera(Camera cam)
     {
         mainCamera = cam;
@@ -303,5 +261,17 @@ public class PlayerController : MonoBehaviour
     public void FinishPickup()
     {
         UnlockMovement();
+    }
+
+    public void PopulateSaveData(GameData data)
+    {
+        data.posX = transform.position.x;
+        data.posY = transform.position.y;
+        data.posZ = transform.position.z;
+    }
+
+    public void LoadFromSaveData(GameData data)
+    {
+        transform.position = new Vector3(data.posX, data.posY, data.posZ);
     }
 }

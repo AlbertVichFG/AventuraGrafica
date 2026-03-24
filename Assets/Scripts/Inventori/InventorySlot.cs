@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class InventorySlot : MonoBehaviour, IPointerClickHandler
 {
@@ -9,7 +10,10 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        InventoryManager.instance.RegisterSlot(this);
+        if (SceneManager.GetActiveScene().name == "MainMenu") return;
+
+        if (InventoryManager.instance != null)
+            InventoryManager.instance.RegisterSlot(this);
     }
 
     public void SetItem(ItemData item)

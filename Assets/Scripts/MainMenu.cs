@@ -1,75 +1,110 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject panelAjustes;
-    public string escenaJuego;
     public GameObject panelSlots;
+    public GameObject panelConfirm;
+    public TextMeshProUGUI confirmText;
+    public SaveSlotUI[] slots;
+
     private bool newGame;
-    private int selectedSlot; // este serÃ¡ el slot en el que estamos jugando
-    
+    private System.Action pendingAction;
+
     public void StartButton(bool _newGame)
-    {       
-        panelSlots.SetActive(true);
+    {
         newGame = _newGame;
+        panelSlots.SetActive(true);
+        RefreshSlots();
     }
-   
+
     public void SlotButton(int _slot)
     {
-        // Guarda el slot seleccionado en GameManager para usarlo luego al guardar
         GameManager.instance.currentSlot = _slot;
 
         if (newGame)
         {
-            // Nueva partida: limpia datos previos del slot y empieza la escena de juego
-            PlayerPrefs.DeleteKey("data" + _slot.ToString());
-            SceneManager.LoadScene(1);   
-            GameManager.instance.comeFromLoadGame = false;
+            if (SaveSystem.SlotExists(_slot))
+            {
+                RequestConfirm(
+                    $"¿Sobreescribir la Ranura {_slot + 1}?\nSe perderán todos los datos.",
+                    () =>
+                    {
+                        SaveSystem.Delete(_slot);
+                        GameManager.instance.NewGame(_slot);
+                        panelSlots.SetActive(false);
+                    }
+                );
+            }
+            else
+            {
+                GameManager.instance.NewGame(_slot);
+                panelSlots.SetActive(false);
+            }
         }
         else
         {
-            // Cargar partida
-            string key = "data" + _slot.ToString();
-            if (PlayerPrefs.HasKey(key))
+            if (SaveSystem.SlotExists(_slot))
             {
-                GameManager.instance.LoadGame(_slot);   // Carga datos del slot seleccionado
-                GameManager.instance.comeFromLoadGame = true;
-                SceneManager.LoadScene(GameManager.instance.GetGameData.SceneSave);
+                GameManager.instance.LoadGame(_slot);
+                panelSlots.SetActive(false);
             }
             else
             {
                 Debug.LogWarning("No hay partida guardada en el slot " + _slot);
-                // Opcional: puedes iniciar nueva partida si quieres
-                // SceneManager.LoadScene(escenaJuego);
             }
         }
-        // Cierra el panel de selecciÃ³n de slots
-        panelSlots.SetActive(false);
     }
 
-    public void AbrirAjustes()
+    public void DeleteSlotButton(int _slot)
     {
-        panelAjustes.SetActive(true);
+        RequestConfirm(
+            $"¿Borrar la Ranura {_slot + 1}?\nEsta acción no se puede deshacer.",
+            () =>
+            {
+                SaveSystem.Delete(_slot);
+                RefreshSlots();
+            }
+        );
     }
 
-    public void CerrarAjustes()
+    private void RefreshSlots()
     {
-        panelAjustes.SetActive(false);
+        foreach (var s in slots) s.Refresh();
+    }
+
+    private void RequestConfirm(string message, System.Action onConfirm)
+    {
+        confirmText.text = message;
+        pendingAction = onConfirm;
+        panelConfirm.SetActive(true);
+    }
+
+    public void OnConfirmYes()
+    {
+        pendingAction?.Invoke();
+        panelConfirm.SetActive(false);
+    }
+
+    public void OnConfirmNo() => panelConfirm.SetActive(false);
+
+    public void AbrirAjustes() => panelAjustes.SetActive(true);
+    public void CerrarAjustes() => panelAjustes.SetActive(false);
+    public void cerrarSlots() => panelSlots.SetActive(false);
+
+    public void borrarPartidas()
+    {
+        SaveSystem.Delete(0);
+        SaveSystem.Delete(1);
+        SaveSystem.Delete(2);
+        RefreshSlots();
     }
 
     public void SalirJuego()
     {
         Debug.Log("Salir del juego");
         Application.Quit();
-    }
-    public void borrarPartidas()
-    {
-        PlayerPrefs.DeleteAll();
-    }
-    public void cerrarSlots()
-    {
-        panelSlots.SetActive(false);
     }
 }
