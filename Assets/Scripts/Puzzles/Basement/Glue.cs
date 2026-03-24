@@ -15,7 +15,7 @@ public class Glue : Interactable
     [SerializeField] 
     private Transform jumpX;
 
-    private int phaseDialogue = 2;
+
 
     [TextArea]
     [SerializeField] 
@@ -61,7 +61,6 @@ public class Glue : Interactable
         yield return new WaitForSeconds(length);
         InventoryManager.instance.AddItem(glueItem);
         yield return JumpDown(player);
-        GameState.Instance.currentPuzzlePhase = phaseDialogue;
         agent.updateRotation = true;
 
         Destroy(gameObject);
@@ -86,9 +85,18 @@ public class Glue : Interactable
         }
 
         player.transform.position = jumpX.position;
+
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(player.transform.position, out hit, 1f, NavMesh.AllAreas))
+        {
+            player.transform.position = hit.position;
+        }
+
         agent.enabled = true;
+
         TamboretPuzzle.playerOnStool = false;
         player.ignoreNavMeshSnap = false;
+
         player.UnlockMovement();
     }
 }

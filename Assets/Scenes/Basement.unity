@@ -626,6 +626,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 427120, guid: 6b5fd7cab1f845b289850db8ab502261, type: 3}
   m_PrefabInstance: {fileID: 27958580}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &34992086 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8827156052509168181, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &35200163
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +914,6 @@ GameObject:
   m_Component:
   - component: {fileID: 47873800}
   - component: {fileID: 47873802}
-  - component: {fileID: 47873803}
   m_Layer: 7
   m_Name: "PuertaAlmac\xE9n"
   m_TagString: Talk
@@ -948,27 +958,6 @@ MonoBehaviour:
   animator: {fileID: 94171085}
   triggerTalk: {fileID: 632284332}
   sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}
---- !u!65 &47873803
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47873799}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &52119595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1354,7 +1343,7 @@ GameObject:
   - component: {fileID: 77262487}
   - component: {fileID: 77262489}
   - component: {fileID: 77262488}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1496,7 +1485,7 @@ GameObject:
   - component: {fileID: 81551405}
   - component: {fileID: 81551404}
   - component: {fileID: 81551403}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1633,7 +1622,7 @@ GameObject:
   - component: {fileID: 85355985}
   - component: {fileID: 85355984}
   - component: {fileID: 85355983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2129,7 +2118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 106675126}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sala1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3333,7 +3322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183744702}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SalaEscalera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3414,7 +3403,7 @@ GameObject:
   - component: {fileID: 187420589}
   - component: {fileID: 187420591}
   - component: {fileID: 187420590}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3550,7 +3539,7 @@ GameObject:
   - component: {fileID: 192364270}
   - component: {fileID: 192364272}
   - component: {fileID: 192364271}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3617,7 +3606,7 @@ GameObject:
   - component: {fileID: 195010176}
   - component: {fileID: 195010178}
   - component: {fileID: 195010177}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3857,7 +3846,7 @@ GameObject:
   - component: {fileID: 201489996}
   - component: {fileID: 201489998}
   - component: {fileID: 201489997}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4647,7 +4636,7 @@ GameObject:
   - component: {fileID: 249880090}
   - component: {fileID: 249880092}
   - component: {fileID: 249880091}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5829,7 +5818,7 @@ GameObject:
   - component: {fileID: 283411997}
   - component: {fileID: 283411996}
   - component: {fileID: 283411995}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5965,7 +5954,7 @@ GameObject:
   - component: {fileID: 292817985}
   - component: {fileID: 292817987}
   - component: {fileID: 292817986}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6033,7 +6022,7 @@ GameObject:
   - component: {fileID: 297630854}
   - component: {fileID: 297630853}
   - component: {fileID: 297630852}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6443,7 +6432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 310215085}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SegundaSala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6646,7 +6635,7 @@ GameObject:
   - component: {fileID: 317616271}
   - component: {fileID: 317616273}
   - component: {fileID: 317616272}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7068,7 +7057,7 @@ GameObject:
   - component: {fileID: 327881596}
   - component: {fileID: 327881598}
   - component: {fileID: 327881597}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7367,7 +7356,7 @@ GameObject:
   - component: {fileID: 347668143}
   - component: {fileID: 347668145}
   - component: {fileID: 347668144}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7596,7 +7585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 366284724}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggersPhase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8190,7 +8179,7 @@ GameObject:
   - component: {fileID: 392315319}
   - component: {fileID: 392315321}
   - component: {fileID: 392315320}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8672,7 +8661,7 @@ GameObject:
   - component: {fileID: 415140419}
   - component: {fileID: 415140418}
   - component: {fileID: 415140417}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9549,6 +9538,14 @@ PrefabInstance:
       value: IntWall02door (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -9810,7 +9807,7 @@ GameObject:
   - component: {fileID: 480176615}
   - component: {fileID: 480176617}
   - component: {fileID: 480176616}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10154,7 +10151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.66
+      value: 7.92
       objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10162,7 +10159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.29
+      value: 7.72
       objectReference: {fileID: 0}
     - target: {fileID: 7970858491818050667, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10796,7 +10793,7 @@ GameObject:
   - component: {fileID: 539576817}
   - component: {fileID: 539576819}
   - component: {fileID: 539576818}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerPhase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11912,7 +11909,7 @@ GameObject:
   - component: {fileID: 615071341}
   - component: {fileID: 615071343}
   - component: {fileID: 615071342}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12385,7 +12382,7 @@ GameObject:
   - component: {fileID: 632962901}
   - component: {fileID: 632962903}
   - component: {fileID: 632962902}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12677,7 +12674,7 @@ GameObject:
   - component: {fileID: 655778564}
   - component: {fileID: 655778566}
   - component: {fileID: 655778565}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13116,10 +13113,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1651024649481013214, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 1651024649481013214, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: m_Name
       value: VirtualController
       objectReference: {fileID: 0}
@@ -13171,10 +13164,6 @@ PrefabInstance:
       propertyPath: cursorRect
       value: 
       objectReference: {fileID: 133967694}
-    - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
-      propertyPath: walkSprite
-      value: 
-      objectReference: {fileID: -4676717269735476019, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: cursorImage
       value: 
@@ -14116,6 +14105,10 @@ PrefabInstance:
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_Name
       value: IntWall02door (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15195,8 +15188,6 @@ MonoBehaviour:
       exactamente lo que te hace falta.  "
     - Encuentra mi pegamento porfavor.
   - lines:
-    - "A\xFAn no lo has encontrado? Busca bien, debe estar cerca."
-  - lines:
     - "\xA1Al fin recuper\xE9 lo que m\xE1s quer\xEDa! Y todo gracias a ti ni\xF1o.\r\n"
     - "Y como te promet\xED, aqu\xED tienes la llave.\r\n"
     - "Pero antes de que te vayas, debo avisarte sobre algo, ya que no podr\xE9 venir
@@ -16103,7 +16094,7 @@ GameObject:
   - component: {fileID: 815585941}
   - component: {fileID: 815585940}
   - component: {fileID: 815585939}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17299,7 +17290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 880896089}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SalaPrototipos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17495,7 +17486,7 @@ GameObject:
   - component: {fileID: 894839916}
   - component: {fileID: 894839918}
   - component: {fileID: 894839917}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18060,7 +18051,7 @@ GameObject:
   - component: {fileID: 914544054}
   - component: {fileID: 914544056}
   - component: {fileID: 914544055}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18452,7 +18443,7 @@ GameObject:
   - component: {fileID: 929160997}
   - component: {fileID: 929160996}
   - component: {fileID: 929160995}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19084,7 +19075,7 @@ GameObject:
   - component: {fileID: 964153766}
   - component: {fileID: 964153768}
   - component: {fileID: 964153767}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19892,7 +19883,7 @@ GameObject:
   - component: {fileID: 1002696452}
   - component: {fileID: 1002696451}
   - component: {fileID: 1002696450}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -20272,7 +20263,7 @@ GameObject:
   - component: {fileID: 1016571631}
   - component: {fileID: 1016571633}
   - component: {fileID: 1016571632}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20479,7 +20470,7 @@ GameObject:
   - component: {fileID: 1021567312}
   - component: {fileID: 1021567314}
   - component: {fileID: 1021567313}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20983,7 +20974,7 @@ GameObject:
   - component: {fileID: 1040363559}
   - component: {fileID: 1040363558}
   - component: {fileID: 1040363557}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21408,7 +21399,7 @@ GameObject:
   - component: {fileID: 1057071953}
   - component: {fileID: 1057071955}
   - component: {fileID: 1057071954}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21476,10 +21467,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair01 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1467964783057150, guid: e68a619303cb1e44ea3dde236af3366e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4862071993560892, guid: e68a619303cb1e44ea3dde236af3366e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.55201006
@@ -21542,7 +21529,7 @@ GameObject:
   - component: {fileID: 1059312131}
   - component: {fileID: 1059312130}
   - component: {fileID: 1059312129}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21678,7 +21665,7 @@ GameObject:
   - component: {fileID: 1062308951}
   - component: {fileID: 1062308953}
   - component: {fileID: 1062308952}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22777,7 +22764,7 @@ GameObject:
   - component: {fileID: 1130612993}
   - component: {fileID: 1130612992}
   - component: {fileID: 1130612991}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22991,7 +22978,7 @@ GameObject:
   - component: {fileID: 1132790962}
   - component: {fileID: 1132790964}
   - component: {fileID: 1132790963}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23150,7 +23137,7 @@ GameObject:
   - component: {fileID: 1138100234}
   - component: {fileID: 1138100236}
   - component: {fileID: 1138100235}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23287,7 +23274,7 @@ GameObject:
   - component: {fileID: 1144147431}
   - component: {fileID: 1144147430}
   - component: {fileID: 1144147429}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24174,7 +24161,7 @@ GameObject:
   - component: {fileID: 1194989764}
   - component: {fileID: 1194989766}
   - component: {fileID: 1194989765}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24665,7 +24652,7 @@ GameObject:
   - component: {fileID: 1219434374}
   - component: {fileID: 1219434376}
   - component: {fileID: 1219434375}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25471,6 +25458,10 @@ PrefabInstance:
       value: IntWall02door (8)
       objectReference: {fileID: 0}
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -25743,7 +25734,7 @@ GameObject:
   - component: {fileID: 1277250821}
   - component: {fileID: 1277250823}
   - component: {fileID: 1277250822}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25810,7 +25801,7 @@ GameObject:
   - component: {fileID: 1284311732}
   - component: {fileID: 1284311734}
   - component: {fileID: 1284311733}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27062,7 +27053,7 @@ GameObject:
   - component: {fileID: 1345117967}
   - component: {fileID: 1345117969}
   - component: {fileID: 1345117968}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27717,7 +27708,7 @@ GameObject:
   - component: {fileID: 1392385917}
   - component: {fileID: 1392385919}
   - component: {fileID: 1392385918}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28606,7 +28597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447826790}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SalaReja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29057,7 +29048,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472377747}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pasillo1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29182,7 +29173,7 @@ GameObject:
   - component: {fileID: 1480666970}
   - component: {fileID: 1480666972}
   - component: {fileID: 1480666971}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29250,7 +29241,7 @@ GameObject:
   - component: {fileID: 1481538088}
   - component: {fileID: 1481538090}
   - component: {fileID: 1481538089}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29654,6 +29645,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
   m_PrefabInstance: {fileID: 1503256847}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1508749343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4030133836249882727, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1519999491
 GameObject:
   m_ObjectHideFlags: 0
@@ -29745,7 +29747,7 @@ GameObject:
   - component: {fileID: 1528301456}
   - component: {fileID: 1528301458}
   - component: {fileID: 1528301457}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30149,7 +30151,7 @@ GameObject:
   - component: {fileID: 1543850965}
   - component: {fileID: 1543850967}
   - component: {fileID: 1543850966}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30718,7 +30720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575134854}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Triggers y Cams
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30757,6 +30759,10 @@ PrefabInstance:
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_Name
       value: IntWall02door (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30848,7 +30854,7 @@ GameObject:
   - component: {fileID: 1595158770}
   - component: {fileID: 1595158772}
   - component: {fileID: 1595158771}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31441,7 +31447,7 @@ GameObject:
   - component: {fileID: 1625415328}
   - component: {fileID: 1625415330}
   - component: {fileID: 1625415329}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31975,7 +31981,7 @@ GameObject:
   - component: {fileID: 1670162684}
   - component: {fileID: 1670162683}
   - component: {fileID: 1670162682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32264,7 +32270,7 @@ GameObject:
   - component: {fileID: 1674447187}
   - component: {fileID: 1674447189}
   - component: {fileID: 1674447188}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34337,7 +34343,7 @@ GameObject:
   - component: {fileID: 1743455192}
   - component: {fileID: 1743455191}
   - component: {fileID: 1743455190}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35385,7 +35391,7 @@ GameObject:
   - component: {fileID: 1786616575}
   - component: {fileID: 1786616577}
   - component: {fileID: 1786616576}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35736,6 +35742,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1713931433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803510533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1743466167448312930, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &1822657499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35925,7 +35942,7 @@ GameObject:
   - component: {fileID: 1834403116}
   - component: {fileID: 1834403118}
   - component: {fileID: 1834403117}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36186,7 +36203,7 @@ GameObject:
   - component: {fileID: 1845392233}
   - component: {fileID: 1845392235}
   - component: {fileID: 1845392234}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36475,7 +36492,7 @@ GameObject:
   - component: {fileID: 1856796715}
   - component: {fileID: 1856796714}
   - component: {fileID: 1856796713}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37444,7 +37461,7 @@ GameObject:
   - component: {fileID: 1902612405}
   - component: {fileID: 1902612407}
   - component: {fileID: 1902612406}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37988,7 +38005,7 @@ GameObject:
   - component: {fileID: 1945204950}
   - component: {fileID: 1945204949}
   - component: {fileID: 1945204948}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38284,7 +38301,7 @@ GameObject:
   - component: {fileID: 1948316433}
   - component: {fileID: 1948316435}
   - component: {fileID: 1948316434}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38549,7 +38566,7 @@ GameObject:
   - component: {fileID: 1964220876}
   - component: {fileID: 1964220878}
   - component: {fileID: 1964220877}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38617,7 +38634,7 @@ GameObject:
   - component: {fileID: 1965735233}
   - component: {fileID: 1965735235}
   - component: {fileID: 1965735234}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39769,7 +39786,7 @@ GameObject:
   - component: {fileID: 2001758548}
   - component: {fileID: 2001758550}
   - component: {fileID: 2001758549}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39891,6 +39908,133 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 427188, guid: ec9920e44a9241b0bed559c0b9d90d5c, type: 3}
   m_PrefabInstance: {fileID: 2007942795}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2008648261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008648266}
+  - component: {fileID: 2008648265}
+  - component: {fileID: 2008648264}
+  - component: {fileID: 2008648263}
+  - component: {fileID: 2008648262}
+  m_Layer: 7
+  m_Name: DELETE_KEYTEST (2)
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2008648262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008648261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a5cf14a5259d446adf829e8c915705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
+  sfxItem: {fileID: 0}
+  item: {fileID: 11400000, guid: 13d747238fac7604f881882321c42380, type: 2}
+--- !u!135 &2008648263
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008648261}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2008648264
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008648261}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2008648265
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008648261}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2008648266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008648261}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.62, y: 0.068, z: 20.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2010671507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40518,6 +40662,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 776624287}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &2057308646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057308648}
+  - component: {fileID: 2057308647}
+  m_Layer: 0
+  m_Name: DELETEInventor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2057308647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057308646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a22a2a831dc2343b3d8dd86e548369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  slots:
+  - {fileID: 1803510533}
+  - {fileID: 34992086}
+  - {fileID: 2135429635}
+  cursorItemIcon: {fileID: 1508749343}
+  cursor: {fileID: 2053322429}
+--- !u!4 &2057308648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057308646}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.73029, y: 3.76183, z: 17.34042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2058220148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40599,6 +40793,14 @@ PrefabInstance:
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_Name
       value: IntWall02door
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1055592322618338, guid: f65c931a0924a5f43ae30ab14e39282d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -41306,7 +41508,7 @@ GameObject:
   - component: {fileID: 2106219849}
   - component: {fileID: 2106219851}
   - component: {fileID: 2106219850}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41594,7 +41796,7 @@ GameObject:
   - component: {fileID: 2110661693}
   m_Layer: 10
   m_Name: Pared
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41711,7 +41913,7 @@ GameObject:
   - component: {fileID: 2121296534}
   - component: {fileID: 2121296536}
   - component: {fileID: 2121296535}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41810,7 +42012,7 @@ GameObject:
   - component: {fileID: 2125342896}
   - component: {fileID: 2125342898}
   - component: {fileID: 2125342897}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCam (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42108,6 +42310,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 415566, guid: d8f3e38cbedc47d88632b646b8e53412, type: 3}
   m_PrefabInstance: {fileID: 2134506136}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135429635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8409616297059313370, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &2135585232
 GameObject:
   m_ObjectHideFlags: 0
@@ -45891,6 +46104,7 @@ SceneRoots:
   - {fileID: 1519999494}
   - {fileID: 256988159}
   - {fileID: 811475418}
+  - {fileID: 2008648266}
   - {fileID: 1716360857}
   - {fileID: 1575134854}
   - {fileID: 1978194800}
@@ -45904,3 +46118,4 @@ SceneRoots:
   - {fileID: 366284724}
   - {fileID: 1704782374}
   - {fileID: 473306828}
+  - {fileID: 2057308648}

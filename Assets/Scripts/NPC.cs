@@ -49,6 +49,9 @@ public class NPC : Interactable
         if (dialogueUI == null || phases.Length == 0)
             return;
 
+        if (dialogueUI.IsOpen)
+            return;
+
         player.StopMovement();
         dialogueUI.SetPlayer(player);
 
@@ -57,7 +60,6 @@ public class NPC : Interactable
         {
             ItemData item = InventoryManager.instance.GetItemInHand();
 
-            // ITEM CORRECTE
             if (item == requiredItem && !puzzleCompleted)
             {
                 deliveredItems++;
@@ -78,10 +80,11 @@ public class NPC : Interactable
                     }
                 }
 
-                return;
+                // continuar per mostrar el nou diàleg
             }
             else
             {
+                player.UnlockMovement();
                 return;
             }
         }
@@ -94,7 +97,7 @@ public class NPC : Interactable
             phase = GameState.Instance.currentPuzzlePhase;
         }
 
-        // Evitar index out of range
+        // evitar index errors
         if (phase >= phases.Length)
         {
             phase = phases.Length - 1;
@@ -108,7 +111,10 @@ public class NPC : Interactable
         string[] lines = phases[phase].lines;
 
         if (lines == null || lines.Length == 0)
+        {
+            player.UnlockMovement();
             return;
+        }
 
         if (!phaseCompleted[phase])
         {

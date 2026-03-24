@@ -9,6 +9,7 @@ TagManager:
   - Talk
   - Interact
   - ChangeZone
+  - Wall
   layers:
   - Default
   - TransparentFX

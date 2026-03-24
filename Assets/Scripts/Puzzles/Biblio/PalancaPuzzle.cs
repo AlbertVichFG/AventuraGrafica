@@ -12,6 +12,10 @@ public class PalancaPuzzle : Interactable
     [SerializeField] 
     private GameObject npcToActivate;
 
+    [Header("Book")]
+    [SerializeField]
+    private GameObject bookToActivate;
+
     [Header("Opcions")]
     [SerializeField] 
     private bool disableAfterUse = true;
@@ -28,6 +32,10 @@ public class PalancaPuzzle : Interactable
         // animació palanca
         if (leverAnimator != null)
             leverAnimator.SetTrigger("On");
+
+        // activar llibre
+        if (bookToActivate != null)
+            bookToActivate.SetActive(true);
 
         // animació porta
         if (doorAnimator != null)

@@ -192,15 +192,23 @@ public class PlayerController : MonoBehaviour
         movementLocked = true;
         targetInteractable = null;
         targetPoint = null;
-        agent.ResetPath();
-        agent.velocity = Vector3.zero;
-        agent.isStopped = true;
+
+        if (agent != null && agent.isOnNavMesh)
+        {
+            agent.ResetPath();
+            agent.velocity = Vector3.zero;
+            agent.isStopped = true;
+        }
     }
 
     public void UnlockMovement()
     {
         movementLocked = false;
-        agent.isStopped = false;
+
+        if (agent != null && agent.isOnNavMesh)
+        {
+            agent.isStopped = false;
+        }
     }
 
     void HandleAnimations()

@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: VirtualController
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -47,7 +47,8 @@ MonoBehaviour:
   cursorRect: {fileID: 0}
   cursorImage: {fileID: 0}
   canvas: {fileID: 0}
-  walkSprite: {fileID: 3201187216959622192, guid: 2a074b3b141f32f4e8abeb83cb9e231f, type: 3}
+  defaultSprite: {fileID: -4676717269735476019, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
+  walkSprite: {fileID: -6979345463012375436, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
   talkSprite: {fileID: 4279732321544639050, guid: a15945b5646387a4c8b90129c87a53dc, type: 3}
   interactSprite: {fileID: -3250116738703845074, guid: 252d1f9f9eb6dfe46873735361f596d6, type: 3}
   changeZoneSprite: {fileID: -2328997052170742779, guid: e0018e123761e344bb79ca44447aa41e, type: 3}

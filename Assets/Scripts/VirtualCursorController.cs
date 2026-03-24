@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class VirtualCursorController : MonoBehaviour
 {
     private enum InputMode { Mouse, Gamepad }
-    private enum CursorType { Walk, Talk, Interact, ChangeZone }
+    private enum CursorType {Default, Walk, Talk, Interact, ChangeZone }
 
     [Header("UI")]
     [SerializeField] 
@@ -18,6 +18,8 @@ public class VirtualCursorController : MonoBehaviour
     private Canvas canvas;
 
     [Header("Cursor Sprites")]
+    [SerializeField]
+    private Sprite defaultSprite;
     [SerializeField] 
     private Sprite walkSprite;
     [SerializeField] 
@@ -26,6 +28,7 @@ public class VirtualCursorController : MonoBehaviour
     private Sprite interactSprite;
     [SerializeField] 
     private Sprite changeZoneSprite;
+ 
 
     [Header("Gamepad")]
     [SerializeField] 
@@ -155,39 +158,56 @@ public class VirtualCursorController : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(cursorPosition);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactableLayer))
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
-            switch (hit.collider.tag)
+         //   Debug.Log(hit.collider.name);
+            GameObject obj = hit.collider.gameObject;
+
+            // INTERACTABLES
+            if (((1 << obj.layer) & interactableLayer) != 0)
             {
-                case "Talk":
-                    SetCursor(CursorType.Talk);
-                    return;
+                switch (obj.tag)
+                {
+                    case "Talk":
+                        SetCursor(CursorType.Talk);
+                        return;
 
-                case "Interact":
-                    SetCursor(CursorType.Interact);
-                    return;
+                    case "Interact":
+                        SetCursor(CursorType.Interact);
+                        return;
 
-                case "ChangeZone":
-                    SetCursor(CursorType.ChangeZone);
-                    return;
+                    case "ChangeZone":
+                        SetCursor(CursorType.ChangeZone);
+                        return;
+                }
             }
-        }
 
-        if (Physics.Raycast(ray, out hit, 100f, walkZoneLayer))
-        {
-            SetCursor(CursorType.Walk);
+            // WALK ZONE
+            if (((1 << obj.layer) & walkZoneLayer) != 0)
             {
+                SetCursor(CursorType.Walk);
+                return;
+            }
+
+            // WALL
+            if (obj.CompareTag("Wall"))
+            {
+                SetCursor(CursorType.Default);
                 return;
             }
         }
 
-        SetCursor(CursorType.Walk);
+        SetCursor(CursorType.Default);
     }
 
     private void SetCursor(CursorType type)
     {
         switch (type)
         {
+            case CursorType.Default:
+                cursorImage.sprite = defaultSprite;
+                break;
+
             case CursorType.Walk:
                 cursorImage.sprite = walkSprite;
                 break;

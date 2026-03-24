@@ -10504,6 +10504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSolicon
       objectReference: {fileID: 0}
+    - target: {fileID: 1937668134296938, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9604999
