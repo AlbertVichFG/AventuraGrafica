@@ -5504,7 +5504,7 @@ GameObject:
   - component: {fileID: 343180232}
   m_Layer: 7
   m_Name: TalkTrigger
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8730,7 +8730,7 @@ GameObject:
   - component: {fileID: 511628564}
   m_Layer: 7
   m_Name: TalkTrigger
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14806,7 +14806,7 @@ GameObject:
   - component: {fileID: 806170158}
   m_Layer: 7
   m_Name: Interaction
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28332,7 +28332,7 @@ GameObject:
   - component: {fileID: 1553872439}
   m_Layer: 7
   m_Name: Interaction
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
