@@ -40943,7 +40943,7 @@ MonoBehaviour:
   lockedLine: Necesitas una llave.
   animator: {fileID: 94171085}
   triggerTalk: {fileID: 0}
-  sfxDoor: {fileID: 0}
+  sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}
 --- !u!1 &2049808785
 GameObject:
   m_ObjectHideFlags: 0
