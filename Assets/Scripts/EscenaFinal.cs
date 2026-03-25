@@ -18,6 +18,9 @@ public class EscenaFinal : MonoBehaviour
     [SerializeField]
     private GameObject CanvasMouse; 
 
+    [SerializeField]
+    private AudioClip sfxDoor;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -26,7 +29,8 @@ public class EscenaFinal : MonoBehaviour
             player.GetComponent<NavMeshAgent>().Stop();
             animPlayer.SetBool("IsRuning", false);
             animPlayer.SetBool("IsWalking", false);
- 
+            
+            AudioManager.instance.PlaySFX(sfxDoor, transform.position);
             anim.SetTrigger("Final");
             StartCoroutine(FinalCoroutine());
         }

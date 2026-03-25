@@ -25,28 +25,40 @@ public class PalancaPuzzle : Interactable
     public override void Interact(PlayerController player)
     {
         if (activated)
+        {
             return;
+        }      
 
         activated = true;
 
-        // animació palanca
+        // animaciï¿½ palanca
         if (leverAnimator != null)
+        {
             leverAnimator.SetTrigger("On");
-
+        }
+            
         // activar llibre
         if (bookToActivate != null)
+        {
             bookToActivate.SetActive(true);
-
-        // animació porta
+        }
+            
+        // animaciï¿½ porta
         if (doorAnimator != null)
+        {
             doorAnimator.SetTrigger("armariosAbrir");
+        }
 
         // activar npc
         if (npcToActivate != null)
+        {
             npcToActivate.SetActive(true);
-
+        }
+            
         // opcional: desactivar palanca
         if (disableAfterUse)
+        {
             GetComponent<Collider>().enabled = false;
+        }      
     }
 }

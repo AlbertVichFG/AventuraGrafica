@@ -11,7 +11,6 @@ public class TamboretFusta : Interactable
     {
         Debug.Log("Player puja al tamboret");
         player.StartCoroutine(JumpUp(player));
-
     }
 
     IEnumerator JumpUp(PlayerController player)
@@ -36,13 +35,9 @@ public class TamboretFusta : Interactable
             yield return null;
         }
 
-        // POSICIÓ FINAL EXACTA
+        // POSICIï¿½ FINAL EXACTA
         player.transform.position = jumpY.position;
-
         TamboretPuzzle.playerOnStool = true;
-
         player.UnlockMovement();
-
-
     }
 }

@@ -3454,6 +3454,7 @@ MonoBehaviour:
   animPlayer: {fileID: 489857883}
   escenaFinal: MainMenu
   CanvasMouse: {fileID: 810659231}
+  sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}
 --- !u!4 &1395744776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}

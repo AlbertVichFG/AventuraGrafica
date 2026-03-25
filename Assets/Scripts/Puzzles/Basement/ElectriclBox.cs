@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class ElectricalBox : Interactable
 {
-    [SerializeField] private ItemData batteryItem;
-    [SerializeField] private int requiredBatteries = 3;
+    [SerializeField] 
+    private ItemData batteryItem;
+    [SerializeField] 
+    private int requiredBatteries = 3;
 
-    [SerializeField] private DialogueUI dialogueUI;
-    [SerializeField] private GameObject door;
+    [SerializeField] 
+    private DialogueUI dialogueUI;
+    [SerializeField] 
+    private GameObject door;
 
     private int insertedBatteries = 0;
 
@@ -20,7 +24,6 @@ public class ElectricalBox : Interactable
             if (item == batteryItem)
             {
                 insertedBatteries++;
-
                 InventoryManager.instance.RemoveItemInHand();
 
                 //  hem completat  puzzle
@@ -44,7 +47,7 @@ public class ElectricalBox : Interactable
         // Cap pila encara
         if (insertedBatteries == 0)
         {
-            dialogueUI.ShowLine("Esta caja eléctrica debe servir para algo, pero le faltan piezas.");
+            dialogueUI.ShowLine("Esta caja elï¿½ctrica debe servir para algo, pero le faltan piezas.");
             return;
         }
 
@@ -52,8 +55,13 @@ public class ElectricalBox : Interactable
         int remaining = requiredBatteries - insertedBatteries;
 
         if (remaining == 1)
+        {
             dialogueUI.ShowLine("Falta 1 pila.");
+        }
+            
         else
+        {
             dialogueUI.ShowLine("Faltan " + remaining + " pilas.");
+        } 
     }
 }
