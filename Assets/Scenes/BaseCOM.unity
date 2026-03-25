@@ -634,17 +634,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 427120, guid: 6b5fd7cab1f845b289850db8ab502261, type: 3}
   m_PrefabInstance: {fileID: 27958580}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &34992086 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8827156052509168181, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-  m_PrefabInstance: {fileID: 133967692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &35200163
 GameObject:
   m_ObjectHideFlags: 0
@@ -9551,7 +9540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b360880609d4ff409eb576fc59fdd7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneInfo
-  nombreNivel: BaseCOM
+  nombreNivel: "S\xF3tano"
 --- !u!4 &473306828
 Transform:
   m_ObjectHideFlags: 0
@@ -13300,17 +13289,6 @@ Transform:
   - {fileID: 279389629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &709411704 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1620864205647349225, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-  m_PrefabInstance: {fileID: 133967692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &720218653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28683,17 +28661,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
   m_PrefabInstance: {fileID: 1459448023}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1462897305 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5590906593458619809, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-  m_PrefabInstance: {fileID: 133967692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &1463294848
 GameObject:
   m_ObjectHideFlags: 0
@@ -29499,17 +29466,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
   m_PrefabInstance: {fileID: 1503256847}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1508749343 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4030133836249882727, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-  m_PrefabInstance: {fileID: 133967692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1519999491
 GameObject:
   m_ObjectHideFlags: 0
@@ -35305,17 +35261,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 468470, guid: 1d040883b4c941fa9ab5cfdcce009a7b, type: 3}
   m_PrefabInstance: {fileID: 1793193034}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1803510533 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1743466167448312930, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-  m_PrefabInstance: {fileID: 133967692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &1822657499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39750,58 +39695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf3b23e4b5c132499de822a26e02c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VirtualCursorController
---- !u!1 &2057308646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2057308648}
-  - component: {fileID: 2057308647}
-  m_Layer: 0
-  m_Name: DELETEInventor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2057308647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057308646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6a22a2a831dc2343b3d8dd86e548369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  slots:
-  - {fileID: 1803510533}
-  - {fileID: 34992086}
-  - {fileID: 2135429635}
-  - {fileID: 709411704}
-  - {fileID: 1462897305}
-  cursorItemIcon: {fileID: 1508749343}
-  cursor: {fileID: 2053322429}
---- !u!4 &2057308648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057308646}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.73029, y: 3.76183, z: 17.34042}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2058220148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41424,17 +41317,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 415566, guid: d8f3e38cbedc47d88632b646b8e53412, type: 3}
   m_PrefabInstance: {fileID: 2134506136}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2135429635 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8409616297059313370, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
-  m_PrefabInstance: {fileID: 133967692}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &2135585232
 GameObject:
   m_ObjectHideFlags: 0
@@ -44292,6 +44174,5 @@ SceneRoots:
   - {fileID: 366284724}
   - {fileID: 1704782374}
   - {fileID: 473306828}
-  - {fileID: 2057308648}
   - {fileID: 43967510}
   - {fileID: 942633929}

@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class TriggerScene : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     private string sceneToLoad;
-    [SerializeField] 
+    [SerializeField]
     private int door;
 
     private void OnTriggerEnter(Collider other)
@@ -13,6 +13,7 @@ public class TriggerScene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameManager.instance.doorToGo = door;
+            GameManager.instance.RequestAutoSave();
             SceneManager.LoadScene(sceneToLoad);
         }
     }

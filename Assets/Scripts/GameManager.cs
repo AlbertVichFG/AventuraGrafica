@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public bool comeFromLoadGame;
     public int currentSlot = -1;
 
+    // Indica que hay que autoguardar en cuanto cargue la siguiente escena
+    private bool pendingAutoSave = false;
+
     private float sessionTime = 0f;
 
     void Awake()
@@ -31,7 +34,7 @@ public class GameManager : MonoBehaviour
             if (gameData == null)
             {
                 gameData = new GameData();
-            } 
+            }
         }
         else
         {
@@ -59,22 +62,43 @@ public class GameManager : MonoBehaviour
     {
         if (scene.name == "MainMenu") return;
 
+        // SceneInfo ya existe aquí, guardamos el nombre bonito
+        if (gameData != null)
+        {
+            SceneInfo sceneInfo = FindFirstObjectByType<SceneInfo>();
+            Debug.Log("SceneInfo encontrado: " + (sceneInfo != null ? sceneInfo.nombreNivel : "NULL"));
+
+            if (sceneInfo != null)
+                gameData.sceneName = sceneInfo.nombreNivel;
+        }
+
+        // Si venimos de cruzar una puerta, guardamos ahora que
+        // la escena destino ya está cargada y sceneName es correcto
+        if (pendingAutoSave)
+        {
+            pendingAutoSave = false;
+            StartCoroutine(AutoSaveNextFrame());
+        }
+
         if (comeFromLoadGame && gameData != null)
         {
             PlayerController player = FindFirstObjectByType<PlayerController>();
-
             if (player != null)
-            {
                 player.LoadFromSaveData(gameData);
-            }
-                
+
             if (InventoryManager.instance != null)
-            {
                 StartCoroutine(LoadInventoryNextFrame());
-            }
-                
+
             comeFromLoadGame = false;
         }
+    }
+
+    // Esperamos un frame para que el jugador e inventario estén inicializados
+    private IEnumerator AutoSaveNextFrame()
+    {
+        yield return null;
+        SaveGame();
+        Debug.Log("[GameManager] Autoguardado completado en nueva escena.");
     }
 
     private IEnumerator LoadInventoryNextFrame()
@@ -102,25 +126,25 @@ public class GameManager : MonoBehaviour
 
         PlayerController player = FindFirstObjectByType<PlayerController>();
         if (player != null)
-        {
             player.PopulateSaveData(gameData);
-        }
-            
+
         if (InventoryManager.instance != null)
-        
             InventoryManager.instance.PopulateSaveData(gameData);
 
         gameData.SaveScene = SceneManager.GetActiveScene().buildIndex;
-        gameData.sceneName = SceneManager.GetActiveScene().name;
         gameData.totalPlayTime += sessionTime;
+        gameData.lastSaveDate = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         sessionTime = 0f;
 
-        SceneInfo sceneInfo = FindFirstObjectByType<SceneInfo>();
-
-        if (sceneInfo != null)
-            gameData.sceneName = sceneInfo.nombreNivel;
-
         SaveSystem.Save(gameData, currentSlot);
+        Debug.Log("[GameManager] Partida guardada correctamente.");
+    }
+
+    // Llamado desde TriggerScene: marca que hay que autoguardar
+    // en cuanto cargue la escena destino
+    public void RequestAutoSave()
+    {
+        pendingAutoSave = true;
     }
 
     public void LoadGame(int slot)
@@ -128,7 +152,7 @@ public class GameManager : MonoBehaviour
         GameData data = SaveSystem.Load(slot);
         if (data == null)
         {
-            Debug.LogWarning("[GameManager] Ranura vac�a.");
+            Debug.LogWarning("[GameManager] Ranura vacía.");
             return;
         }
 
@@ -147,7 +171,7 @@ public class GameManager : MonoBehaviour
         if (gameData != null && !gameData.pickedUpItems.Contains(key))
         {
             gameData.pickedUpItems.Add(key);
-        }   
+        }
     }
 
     public bool IsItemPickedUp(string key)
