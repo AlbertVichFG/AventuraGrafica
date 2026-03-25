@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RustKey
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: RustKey
-  icon: {fileID: 21300000, guid: a819a9719068a9c4987946fa2ec52866, type: 3}
+  icon: {fileID: 21300000, guid: de6fd33639a3af54381afdca8878f086, type: 3}

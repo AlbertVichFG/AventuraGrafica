@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Glue
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Glue
-  icon: {fileID: 21300000, guid: 25a5761eb74b27a438fc808cf876c339, type: 3}
+  icon: {fileID: 21300000, guid: 8434f5b04b3c31f4eaa604cf331f7ddc, type: 3}
