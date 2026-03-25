@@ -959,7 +959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &47873800
 Transform:
   m_ObjectHideFlags: 0
@@ -13806,6 +13806,17 @@ Transform:
   - {fileID: 279389629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &709411704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1620864205647349225, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1001 &713059105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29147,6 +29158,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425827515834252, guid: 8eb802985616d134da97830b682ac851, type: 3}
   m_PrefabInstance: {fileID: 1459448023}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1462897305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5590906593458619809, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 133967692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0aaca5688e32c49b4602c2eb525898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
 --- !u!1 &1463294848
 GameObject:
   m_ObjectHideFlags: 0
@@ -37770,6 +37792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Glue
   glueItem: {fileID: 11400000, guid: 13d747238fac7604f881882321c42380, type: 2}
   dialogueUI: {fileID: 1824892032}
+  tabureteDestroy: {fileID: 1744754895}
   jumpY: {fileID: 2049808786}
   jumpX: {fileID: 149938625}
   needSomethingLine: No puedo llegar me falta algo para subir
@@ -41006,7 +41029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2057308647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41023,6 +41046,8 @@ MonoBehaviour:
   - {fileID: 1803510533}
   - {fileID: 34992086}
   - {fileID: 2135429635}
+  - {fileID: 709411704}
+  - {fileID: 1462897305}
   cursorItemIcon: {fileID: 1508749343}
   cursor: {fileID: 2053322429}
 --- !u!4 &2057308648

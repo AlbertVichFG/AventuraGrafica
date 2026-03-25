@@ -32,27 +32,27 @@ public class BathtubPuzzle : Interactable
 
     public override void Interact(PlayerController player)
     {
-        Debug.Log("BATHTUB INTERACTUAR");
+      //  Debug.Log("BATHTUB INTERACTUAR");
         dialogueUI.SetPlayer(player);
 
         if (solved)
         {
-            Debug.Log("Puzzle ja resolt");
+    //        Debug.Log("Puzzle ja resolt");
             return;
         }
 
         if (!InventoryManager.instance.HasItemInHand())
         {
-            Debug.Log("NO ITEM");
+     //       Debug.Log("NO ITEM");
             dialogueUI.ShowLine(noItemLine);
             return;
         }
 
         ItemData item = InventoryManager.instance.GetItemInHand();
-        Debug.Log("Item a la m�: " + item.name);
-        Debug.Log("Item requerit: " + requiredItem.name);
+      //  Debug.Log("Item a la ma: " + item.name);
+      //  Debug.Log("Item requerit: " + requiredItem.name);
 
-        Debug.Log("ITEM CORRECTE resolent puzzle");
+      //  Debug.Log("ITEM CORRECTE resolent puzzle");
 
         StartCoroutine(SolvePuzzle());
     }
