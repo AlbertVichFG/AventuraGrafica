@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
+        /*if (instance == null)
         {
             instance = this;
         }
@@ -62,13 +62,14 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        }
+        }*/
 
         agent = GetComponent<NavMeshAgent>();
         mainCamera = Camera.main;
         animator = GetComponentInChildren<Animator>();
 
         agent.speed = walkSpeed;
+        
     }
 
     void Update()
@@ -85,7 +86,10 @@ public class PlayerController : MonoBehaviour
         if (ignoreNavMeshSnap) return;
 
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 0.3f, NavMesh.AllAreas))
+        {
             transform.position = hit.position;
+            Debug.Log("HagoEsto");
+        }
     }
 
     void HandleInput()
