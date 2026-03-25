@@ -703,6 +703,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4515546100433492, guid: 9d27423df749cb04da4c5e052aef40bc, type: 3}
   m_PrefabInstance: {fileID: 94784275}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &99671577 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6788919316652759452, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 1567466164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &99671578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6105086963958710221, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 1567466164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &112974944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1029,11 +1045,11 @@ PrefabInstance:
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: canvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2002331970}
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: cursorRect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 99671577}
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: walkSprite
       value: 
@@ -1041,7 +1057,7 @@ PrefabInstance:
     - target: {fileID: 4062192991003896802, guid: 5952b2f2ba704464384aed3745ec1369, type: 3}
       propertyPath: cursorImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 99671578}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3360,7 +3376,7 @@ GameObject:
   - component: {fileID: 1380792956}
   - component: {fileID: 1380792955}
   - component: {fileID: 1380792957}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4943,6 +4959,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939235874}
   m_CullTransparentMesh: 1
+--- !u!223 &2002331970 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8948458560918524465, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 1567466164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2091826309
 PrefabInstance:
   m_ObjectHideFlags: 0
