@@ -2598,8 +2598,16 @@ PrefabInstance:
       value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_TagString
+      value: ChangeZone
       objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3173,6 +3181,10 @@ PrefabInstance:
     - target: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 102668154040256979, guid: 8f98bfecaf285f34cbfacf8b7b5833db, type: 3}
       propertyPath: m_IsActive
