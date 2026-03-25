@@ -34023,7 +34023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21161213c50a37b48b4950c9f97ac652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorSystem
-  requiredKey: {fileID: 11400000, guid: edfe15aa818515148999d9309058cd09, type: 2}
+  requiredKey: {fileID: 11400000, guid: 82ba0a9b4d190774b9ad54a569e0df59, type: 2}
   dialogueUI: {fileID: 1824892032}
   lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla.\r\n\r\n"
   animator: {fileID: 1725750165}
