@@ -10,15 +10,12 @@ public class Glue : Interactable
     private DialogueUI dialogueUI;
     [SerializeField]
     private GameObject tabureteDestroy;
-    
 
     [Header("Jump Points")]
     [SerializeField] 
     private Transform jumpY;
     [SerializeField] 
     private Transform jumpX;
-
-
 
     [TextArea]
     [SerializeField] 
@@ -96,12 +93,9 @@ public class Glue : Interactable
         }
 
         agent.enabled = true;
-
         TamboretPuzzle.playerOnStool = false;
         player.ignoreNavMeshSnap = false;
-
         player.UnlockMovement();
-
         Destroy(tabureteDestroy);
 
     }

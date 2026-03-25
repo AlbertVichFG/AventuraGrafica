@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour
             SceneManager.sceneLoaded += OnSceneLoaded;
 
             if (gameData == null)
+            {
                 gameData = new GameData();
+            } 
         }
         else
         {
@@ -60,12 +62,17 @@ public class GameManager : MonoBehaviour
         if (comeFromLoadGame && gameData != null)
         {
             PlayerController player = FindFirstObjectByType<PlayerController>();
+
             if (player != null)
+            {
                 player.LoadFromSaveData(gameData);
-
+            }
+                
             if (InventoryManager.instance != null)
+            {
                 StartCoroutine(LoadInventoryNextFrame());
-
+            }
+                
             comeFromLoadGame = false;
         }
     }
@@ -95,9 +102,12 @@ public class GameManager : MonoBehaviour
 
         PlayerController player = FindFirstObjectByType<PlayerController>();
         if (player != null)
+        {
             player.PopulateSaveData(gameData);
-
+        }
+            
         if (InventoryManager.instance != null)
+        
             InventoryManager.instance.PopulateSaveData(gameData);
 
         gameData.SaveScene = SceneManager.GetActiveScene().buildIndex;
@@ -106,6 +116,7 @@ public class GameManager : MonoBehaviour
         sessionTime = 0f;
 
         SceneInfo sceneInfo = FindFirstObjectByType<SceneInfo>();
+
         if (sceneInfo != null)
             gameData.sceneName = sceneInfo.nombreNivel;
 
@@ -117,7 +128,7 @@ public class GameManager : MonoBehaviour
         GameData data = SaveSystem.Load(slot);
         if (data == null)
         {
-            Debug.LogWarning("[GameManager] Ranura vacía.");
+            Debug.LogWarning("[GameManager] Ranura vacï¿½a.");
             return;
         }
 
@@ -134,7 +145,9 @@ public class GameManager : MonoBehaviour
     public void RegisterPickedUpItem(string key)
     {
         if (gameData != null && !gameData.pickedUpItems.Contains(key))
+        {
             gameData.pickedUpItems.Add(key);
+        }   
     }
 
     public bool IsItemPickedUp(string key)

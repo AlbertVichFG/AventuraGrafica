@@ -19,7 +19,6 @@ public class GameData
     }
 
     public float posX, posY, posZ;
-
     public bool doorUnlocked;
     public bool talkedToGuard;
 

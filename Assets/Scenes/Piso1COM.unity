@@ -14189,9 +14189,8 @@ MonoBehaviour:
   affectsGameState: 0
   phases:
   - lines:
-    - 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry''s standard '
-    - Alvaro
+    - "Un libro interesante. Ojal\xE1 entender lo que dice."
+    - Alvaro.
   dialogueUI: {fileID: 100515801}
   requiredItem: {fileID: 0}
   requiredAmount: 0
@@ -30417,7 +30416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorSystem
   requiredKey: {fileID: 11400000, guid: 82ba0a9b4d190774b9ad54a569e0df59, type: 2}
   dialogueUI: {fileID: 100515801}
-  lockedLine: "Est\xE1 cerrada. Necesito una llave para abrirla."
+  lockedLine: "Est\xE1 cerrada. Creo que puedo encontrar la llave en la biblioteca."
   animator: {fileID: 598621890}
   triggerTalk: {fileID: 939152673}
   sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}

@@ -5,10 +5,9 @@ public class OuijaPuzzle : Interactable
     [Header("Item necessari")]
     [SerializeField] private ItemData requiredItem;
 
-    [Header("Animació")]
+    [Header("Animaciï¿½")]
     [SerializeField] 
     private Animator ouijaAnimator;
-
 
     [Header("Objecte")]
     [SerializeField] private GameObject objectToActivate;
@@ -30,8 +29,10 @@ public class OuijaPuzzle : Interactable
         dialogueUI.SetPlayer(player);
 
         if (solved)
+        {
             return;
-
+        }
+            
         // sense item
         if (!InventoryManager.instance.HasItemInHand())
         {
@@ -50,14 +51,17 @@ public class OuijaPuzzle : Interactable
 
         // item correcte
         InventoryManager.instance.RemoveItemInHand();
-
         objectToDesactive.SetActive(false);
 
         if (ouijaAnimator != null)
+        {
             ouijaAnimator.SetTrigger("Ouija");
-
+        }
+            
         if (objectToActivate != null)
+        {
             objectToActivate.SetActive(true);
+        }    
 
         solved = true;
     }
