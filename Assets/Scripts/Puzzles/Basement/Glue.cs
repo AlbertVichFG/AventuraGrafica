@@ -8,6 +8,9 @@ public class Glue : Interactable
     private ItemData glueItem;
     [SerializeField] 
     private DialogueUI dialogueUI;
+    [SerializeField]
+    private GameObject tabureteDestroy;
+    
 
     [Header("Jump Points")]
     [SerializeField] 
@@ -98,5 +101,8 @@ public class Glue : Interactable
         player.ignoreNavMeshSnap = false;
 
         player.UnlockMovement();
+
+        Destroy(tabureteDestroy);
+
     }
 }

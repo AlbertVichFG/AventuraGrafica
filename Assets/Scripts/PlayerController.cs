@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 0.3f, NavMesh.AllAreas))
         {
             transform.position = hit.position;
-            Debug.Log("HagoEsto");
+           // Debug.Log("HagoEsto");
         }
     }
 
