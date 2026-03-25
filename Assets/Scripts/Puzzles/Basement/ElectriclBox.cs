@@ -12,7 +12,7 @@ public class ElectricalBox : Interactable
 
     public override void Interact(PlayerController player)
     {
-        // Si tenim item a la mà
+        //  tenim item  ma
         if (InventoryManager.instance.HasItemInHand())
         {
             ItemData item = InventoryManager.instance.GetItemInHand();
@@ -23,7 +23,7 @@ public class ElectricalBox : Interactable
 
                 InventoryManager.instance.RemoveItemInHand();
 
-                // Si hem completat el puzzle
+                //  hem completat  puzzle
                 if (insertedBatteries >= requiredBatteries)
                 {
                     Destroy(door);

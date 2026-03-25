@@ -143,13 +143,13 @@ public class VirtualCursorController : MonoBehaviour
 
         if (Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
-            Debug.Log("GAMEPAD CLICK DOWN");
+            //Debug.Log("GAMEPAD CLICK DOWN");
             InputState.Change(virtualMouse.leftButton, 1);
         }
 
         if (Gamepad.current.buttonSouth.wasReleasedThisFrame)
         {
-            Debug.Log("GAMEPAD CLICK UP");
+           // Debug.Log("GAMEPAD CLICK UP");
             InputState.Change(virtualMouse.leftButton, 0);
         }
     }
