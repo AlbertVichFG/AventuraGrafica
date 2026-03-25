@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.AI;
 
 public class EscenaFinal : MonoBehaviour
 {
@@ -14,16 +15,19 @@ public class EscenaFinal : MonoBehaviour
     private Animator animPlayer;
     [SerializeField] 
     private string escenaFinal;
+    [SerializeField]
+    private GameObject CanvasMouse; 
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
-            player.StopMovement(); 
+        {           
             player.enabled = false;
-            //anim.SetBool("IsRunning", false);
-            //animPlayer.SetBool("IsWalking", false);
-            animPlayer.SetTrigger("Final");
+            player.GetComponent<NavMeshAgent>().Stop();
+            animPlayer.SetBool("IsRuning", false);
+            animPlayer.SetBool("IsWalking", false);
+ 
+            anim.SetTrigger("Final");
             StartCoroutine(FinalCoroutine());
         }
     }
@@ -32,6 +36,7 @@ public class EscenaFinal : MonoBehaviour
     {
         yield return new WaitForSeconds(6f);
         panelFinal.SetActive(true);
+        CanvasMouse.SetActive(false);
 
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(escenaFinal);

@@ -2236,6 +2236,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791786459}
   m_CullTransparentMesh: 1
+--- !u!1 &810659231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6034139351534952747, guid: fa95d327ee4fbc6469b463f943567f2e, type: 3}
+  m_PrefabInstance: {fileID: 1567466164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &823793793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3436,6 +3441,7 @@ MonoBehaviour:
   anim: {fileID: 1026292431}
   animPlayer: {fileID: 489857883}
   escenaFinal: MainMenu
+  CanvasMouse: {fileID: 810659231}
 --- !u!4 &1395744776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4595088162570560, guid: c8eb34d14f261914a9d96e29df25c9c0, type: 3}
