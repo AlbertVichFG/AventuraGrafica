@@ -11092,7 +11092,7 @@ MonoBehaviour:
     para abrirla."
   animator: {fileID: 1067763802}
   triggerTalk: {fileID: 1116834967}
-  sfxDoor: {fileID: 0}
+  sfxDoor: {fileID: 8300000, guid: 9a951f8344757c846ab159bc75c18a83, type: 3}
 --- !u!208 &621635220
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -23069,6 +23069,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1398413310623440, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
+      propertyPath: m_TagString
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 4132120386261876, guid: ff36c605a739def44ad4a550d4ab7d54, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.246829
@@ -24480,7 +24484,7 @@ GameObject:
   - component: {fileID: 1337045614}
   m_Layer: 7
   m_Name: InteractionPoint
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
