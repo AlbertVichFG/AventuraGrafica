@@ -21,8 +21,11 @@ public static class SaveSystem
         if (!File.Exists(path))
         {
             Debug.Log($"[SaveSystem] Slot {slot} vacío.");
-            return null;
+            {
+                return null;
+            } 
         }
+        
         string json = File.ReadAllText(path);
         Debug.Log($"[SaveSystem] Slot {slot} cargado.");
         return JsonUtility.FromJson<GameData>(json);
@@ -37,7 +40,7 @@ public static class SaveSystem
             Debug.Log($"[SaveSystem] Slot {slot} eliminado.");
         }
     }
-
     public static bool SlotExists(int slot) =>
+    
         File.Exists(GetPath(slot));
 }
